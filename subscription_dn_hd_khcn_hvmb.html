@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<header>
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script>
+    function init() {
+      var leadingTerm = [
+        '"Thẻ đa năng":',
+        '“Chủ thẻ”:',
+        '“Chủ thẻ chính/Khách hàng (KH)”:',
+        '“Chủ thẻ phụ”:',
+        '“Tài sản bảo đảm” (“TSBĐ”):',
+        '“Tín chấp”:',
+        '“Hạn mức tín dụng” (“HMTD”):',
+        '“Hạn mức khả dụng”:',
+        '“Thời hạn thẻ”:',
+        '“Gia hạn thẻ”:',
+        '“Giao dịch Thẻ đa năng”:',
+        '“Giao dịch rút tiền mặt”:',
+        '“Giao dịch thẻ gian lận, giả mạo, thẻ bị lợi dụng”:',
+        'Giao dịch truy thu:',
+        '“Tài khoản thẻ”:',
+        '“Tài khoản gắn thẻ”:',
+        '“Chứng từ giao dịch thẻ”:',
+        '“Sao kê thẻ đa năng” (“Sao kê”):',
+        '“Ngày sao kê”:',
+        'Kỳ sao kê”:',
+        '“Số dư nợ”:',
+        '“Số tiền thanh toán tối thiểu”:',
+        '“Thời gian ân hạn”:',
+        '“Ngày đến hạn thanh toán”:',
+        '“Nợ quá hạn”:',
+        '“Cơ sở dữ liệu”:',
+        '“Dịch vụ gia tăng”:',
+        '“Máy giao dịch tự động”',
+        '“Thiết bị chấp nhận thẻ tại điểm bán bao gồm Point of Sale”',
+
+      ]
+      var trailingTerm = [
+        '(“Thẻ Hybrid” hoặc “Thẻ có tính năng Hybrid”): Là thẻ có tích hợp tính năng của thẻ tín dụng và thẻ ghi nợ quốc tế. Thẻ cho phép chủ thẻ thực hiện giao dịch thẻ trong phạm vi hạn mức tín dụng của thẻ hoặc số dư tài khoản thanh toán gắn với thẻ theo quy định tại Điều kiện giao dịch chung này và các quy định của MB. ',
+        'bao gồm Chủ thẻ chính và Chủ thẻ phụ.',
+        'là cá nhân đứng tên ký hợp đồng phát hành và sử dụng thẻ với tổ chức phát hành thẻ.',
+        'là cá nhân được Chủ thẻ chính cho phép sử dụng thẻ và Chủ thẻ chính cam kết bằng văn bản thực hiện toàn bộ các nghĩa vụ phát sinh liên quan đến việc sử dụng thẻ theo hợp đồng phát hành và sử dụng thẻ.',
+        'là tài sản thuộc quyền sở hữu/quyền sử dụng hợp pháp của KH, được MB chấp nhận làm TSBĐ cho việc sử dụng Hạn mức tín dụng của Chủ thẻ.',
+        'là trường hợp Chủ thẻ được MB phát hành thẻ và cấp một hạn mức tín dụng xác định nhưng không phải sử dụng TSBĐ/biện pháp bảo đảm cho hạn mức tín dụng được cấp.',
+        'là giá trị tín dụng tối đa mà MB cấp cho Chủ thẻ sử dụng trong một kỳ sao kê. Trong phạm vi HMTD, KH được sử dụng cho các giao dịch thẻ/Phương thức khác theo quy định của MB phù hợp quy định pháp luật.',
+        '”: Là hạn mức khách hàng được phép sử dụng trong kỳ sao kê, bao gồm hạn mức tín dụng và số tiền khách hàng nộp thêm trừ đi các khoản rút tiền mặt, thanh toán hàng hóa dịch vụ, phí, lãi và các khoản phong tỏa khác.',
+        'là khoảng thời gian Chủ thẻ được phép sử dụng thẻ. Chủ thẻ có thể tiếp tục sử dụng thẻ sau thời hạn này nếu KH có đề nghị và được MB chấp thuận hoặc theo quy định của  MB về việc phát hành thẻ tín dụng và KH đáp ứng điều kiện gia hạn của MB.',
+        'khi hết thời hạn sử dụng thẻ, nếu KH đáp ứng điều kiện gia hạn thẻ của MB thì MB sẽ thực hiện gia hạn thẻ cho KH bằng cách phát hành cho KH 1 thẻ khác với ngày hiệu lực mới của thẻ và giữ nguyên số thẻ cũ.',
+        'là việc sử dụng thẻ để gửi, rút tiền mặt, thanh toán tiền mua các hàng hóa, dịch vụ hợp pháp theo quy định của pháp luật việt nam (bao gồm trường hợp mua hàng hóa, dịch vụ ở nước ngoài) và sử dụng các dịch vụ khác do TCPHT, TCTTT cung ứng.',
+        'là giao dịch chủ thẻ sử dụng thẻ để rút tiền mặt tại ATM hoặc các POS lắp đặt tại CN, PGD của TCTTT theo thỏa thuận giữa TCPHT với TCTTT.',
+        'là giao dịch bằng thẻ giả, giao dịch sử dụng trái phép thẻ hoặc thông tin thẻ không được sự cho phép của chủ thẻ.',
+        'là giao dịch thu thêm của chủ thẻ đối với các hàng hóa/dịch vụ mà chủ thẻ đã sử dụng nhưng chưa thanh toán hết tại các đơn vi chấp nhận thẻ (ĐVCNT) là khách sạn, thuê xe, xăng dầu, viễn thông hoặc các ĐVCNT theo quy định của TCTQT từng thời kỳ. Trong trường hợp KH chi tiêu trên nguồn TKTT, MB sẽ thực hiện giao dịch truy thu trên tất cả các TKTT của KH hoặc ghi nhận trên tài khoản thẻ như giao dịch vượt hạn mức tín dụng và KH phải có nghĩa vụ thanh toán với NH.',
+        'là tài khoản được mở trên hệ thống quản lý thẻ của MB để thực hiện quản lý các giao dịch của Chủ thẻ. Chủ thẻ phụ sử dụng chung tài khoản thẻ với Chủ thẻ chính.',
+        'là tài khoản thanh toán của KH lựa chọn làm nguồn thanh toán cho thẻ đa năng khi phát hành thẻ. KH có thể thay đổi tài khoản gắn thẻ qua App MBBank theo quy định của MB.',
+        'là bất kỳ giấy tờ, chứng từ nào có chữ ký xác nhận việc thực hiện giao dịch thẻ của Chủ thẻ hay các chứng từ có sử dụng số PIN hoặc bất kỳ chứng từ nào chứng minh việc thực hiện giao dịch thẻ của Chủ thẻ mà không cần có chữ ký của Chủ thẻ.',
+        'là bảng kê chi tiết các giao dịch thẻ của Chủ thẻ, chi tiết các khoản thu lãi, phí, phạt do MB lập để gửi cho Chủ thẻ hàng tháng, trong đó phản ánh các giao dịch thanh toán,giao dịch truy thu, rút tiền mặt cùng phí và lãi phát sinh trên nguồn hạn mức tín dụng của thẻ đa năng số dư nợ cuối kỳ, số tiền thanh toán tối thiểu, ngày đến hạn thanh toán và các thông tin khác liên quan đến việc sử dụng thẻ hàng tháng để làm căn cứ trả nợ. Hình thức gửi sao kê cho Chủ thẻ phụ thuộc vào đăng ký của Chủ thẻ và quy định của MB từng thời kỳ.',
+        'là ngày MB lập sao kê, hiện là ngày 10 hàng tháng. Ngày sao kê có thể thay đổi theo quy định của MB từng thời kỳ.',
+        'là khoảng thời gian giữa hai Ngày sao kê liên tiếp.',
+        'là tổng số tiền Chủ thẻ phải thanh toán cho MB bao gồm giá trị (các) giao dịch thẻ, phí tài chính (lãi vay), phí phát sinh, các khoản phải trả khác liên quan đến việc sử dụng hạn mức tín dụng của thẻ chưa được Chủ thẻ thanh toán cho MB và được liệt kê trong Sao kê.',
+        'là khoản tiền tối thiểu Chủ thẻ phải thanh toán cho MB trong mỗi Kỳ sao kê.',
+        'là khoảng thời gian MB không tính lãi cho vay với những khoản chi tiêu hàng hóa dịch vụ của Chủ thẻ đa năng đã sử dụng trên hạn mức tín dụng trong một kỳ sao kê, tính từ ngày sao kê đến ngày đến hạn thanh toán trong một kỳ sao kê.',
+        'là ngày cuối cùng của thời gian ân hạn trong một kỳ sao kê. Vào Ngày đến hạn thanh toán, Chủ thẻ phải thanh toán cho MB số tiền Chủ thẻ chi tiêu giao dịch trong tháng đã sử dụng trên hạn mức tín dụng. Chủ thẻ có thể thanh toán số tiền thanh toán tối thiểu hoặc toàn bộ dư nợ phát sinh trong kỳ. Nếu chủ thẻ không thanh toán đúng hạn sẽ phải chịu phạt vi phạm nghĩa vụ thanh toán và lãi. Nếu ngày đến hạn thanh toán là ngày nghỉ/ngày lễ thì Ngày đến hạn thanh toán được tính là ngày làm việc liền kề trước đó.',
+        'Là khoản nợ mà một phần hoặc toàn bộ nợ gốc và/hoặc lãi đã đến ngày đến hạn thanh toán nhưng chưa được thanh toán.',
+        '”: là tập hợp các dữ liệu được sắp xếp, tổ chức để truy cập, khai thác, quản lý và cập nhật thông qua phương tiện điện tử.',
+        'là các dịch vụ tăng thêm mà MB cung cấp cho Chủ thẻ, giúp Chủ thẻ có thêm nhiều tiện ích trong quá trình sử dụng thẻ, bao gồm nhưng không giới hạn ởdịch vụ trả góp qua thẻ tín dụng (đối với thẻ đa năng, “dịch vụ trả góp qua thẻ tín dụng” được hiểu là dịch vụ trả góp qua thẻ đa năng có hạn mức tín dụng), thanh toán thẻ qua Google pay, Apple pay…',
+        '(Automated Teller Machine – viết tắt là ATM): là thiết bị mà chủ thẻ có thể sử dụng để thực hiện các giao dịch như: gửi, nạp, rút tiền mặt, chuyển khoản, thanh toán hóa đơn hàng hóa, dịch vụ, vấn tin tài khoản, đổi PIN, tra cứu thông tin thẻ hoặc các giao dịch khác.',
+        '”(viết tắt là POS), Mobile Point of Sale (viết tắt là mPos) và các loại thiết bị chấp nhận thẻ khác: Là các loại thiết bị đọc thẻ, thiết bị đầu cuối được cài đặt và sử dụng tại các ĐVCNT mà chủ thẻ có thể sử dụng thẻ để thanh toán tiền hàng hóa, dịch vụ. POS có thể được lắp đặt tại chi nhánh, phòng giao dịch của TCTTT để cung ứng tiền mặt cho chủ thẻ theo thỏa thuận giữa TCTTT và TCPHT.',
+      ]
+      var str = ''
+
+      for (let index = 0; index < leadingTerm.length; index++) {
+        str += '<div style="margin: 16px 0 16px 0;"><span>' + (index + 1) + '.' + '</span>' + '<span><b>' + leadingTerm[index] + '</b></span>' + '<span>' + trailingTerm[index] + '</span></div>';
+
+      }
+      document.getElementById("list-term").innerHTML = str;
+
+    }
+    window.onload = init
+
+  </script>
+  <style type='text/css'>
+    body {
+      /* min-width: fit-content;
+            max-width: 100%; */
+      align-content: center;
+      margin: 0 12px 0 12px;
+      padding: 0 0 32px 0;
+      min-height: 100vh;
+      padding-bottom: 100px;
+    }
+
+    .header {
+      padding: 1rem;
+      background-color: #e8e5f3;
+      /* height: 140px; */
+      align-content: center;
+      border-bottom-left-radius: 42px;
+      border-bottom-right-radius: 42px;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .item-header1 {
+      width: 30%;
+      height: 30%;
+      padding-top: 4%;
+
+    }
+
+    .item-header2 {
+      text-align: center;
+    }
+
+    #customer-id {
+      text-align: right;
+      margin-right: 10px;
+    }
+
+    #current-date {
+      text-align: left;
+      margin-left: 10px;
+      font-style: italic;
+    }
+
+    .table-header {
+      border: 2px;
+      border-style: solid;
+      border-color: #99a3a8;
+      width: 100%;
+      background-color: #b8dcec;
+      padding: 8px;
+    }
+
+    .table-body {
+      border: 2px;
+      border-style: solid;
+      border-top-style: none;
+      border-color: #99a3a8;
+      width: 100%;
+      padding: 8px;
+    }
+
+    .table-body p {
+      text-align: left;
+      margin: 0;
+      line-height: 25px;
+    }
+
+    #item-card {
+      margin-right: 10px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+
+    .grid-item {
+      border: 1px solid #99a3a8;
+      text-align: center;
+      padding: 6px;
+    }
+
+    ol {
+      padding-inline-start: 1rem;
+    }
+
+
+    .tb-formula td {
+      border: 1px solid;
+      text-align: center;
+    }
+
+    table,
+    th,
+    td {
+      border-collapse: collapse;
+    }
+
+    .ol-custom {
+      counter-reset: list;
+      padding-left: 22px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    .ol-custom>li {
+      list-style: none;
+    }
+
+    .ol-custom>li:before {
+      content: counter(list, lower-alpha) ") ";
+      counter-increment: list;
+    }
+
+    .ul-dash {
+      list-style-type: none;
+      padding-left: 22px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    .ul-dash>li:before {
+      content: "–";
+      /* en dash */
+      position: absolute;
+      margin-left: -1.1em;
+    }
+
+    .ul-plus {
+      list-style-type: none;
+      padding-left: 17px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    .ul-plus>li:before {
+      content: "+";
+      /* en dash */
+      position: absolute;
+      margin-left: -1.1em;
+    }
+
+    thead {
+      font-weight: bold;
+    }
+
+    .p-0 {
+      padding: 0;
+    }
+
+    .pl-15 {
+      padding-left: 1.5rem;
+      margin: 0;
+    }
+
+    p {
+      line-height: 25px;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    span {
+      line-height: 25px;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    li {
+      line-height: 25px;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    strong {
+      font-size: 14px;
+    }
+
+    b {
+      font-size: 13px;
+    }
+
+    label {
+      font-size: 14px;
+    }
+  </style>
+
+</header>
+
+<body style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black'>
+
+  <div class="header">
+    <div class="flex-container">
+      <div class="item-header1">
+        <img style="width: 90%;"
+          src="data:image/png;base64,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">
+
+      </div>
+      <div class="item-header2">
+        <p style="font-size: 80%; font-weight: bold;">ĐỀ NGHỊ KIÊM HỢP ĐỒNG ĐĂNG KÝ GÓI HỘI VIÊN MB DÀNH CHO KHCN
+        <p>
+        <p style="font-size: 80%;">Số hợp đồng:.............</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <p id="customer-id">Mã khách hàng: #hostCifId </p>
+    <p id="current-date">Ngày #day tháng #month năm #year</p>
+    <!-- Table A -->
+    <div class="table-header">
+      <b>A. THÔNG TIN KHÁCH HÀNG (KH)</b>
+    </div>
+    <div class="table-body">
+      <p>Họ và tên: #nm </p>
+
+      <input type="checkbox" disabled id="cmnd" #cmnd />
+      <label for="cmnd" style="margin-right: 1rem;">Thẻ căn cước</label>
+      <input type="checkbox" disabled id="idCard" #idCard />
+      <label for="idCard" style="margin-right: 1rem;">Căn cước công dân</label>
+      <input type="checkbox" disabled id="passport" #passport />
+      <label for="passport" style="margin-right: 1rem;">Hộ chiếu</label>
+      <input type="checkbox" disabled id="other" #other />
+      <label for="other" style="margin-right: 1rem;">Khác:______</label>
+
+      <div style="margin: 0;">
+        <p>Số: #idTypNo</p>
+        <p>Ngày cấp: #idTypDt</p>
+        <p>Nơi cấp: #idTypPlace</p>
+      </div>
+
+      <p>Nơi ở hiện tại: #addr_1</p>
+      <p>Địa chỉ thường trú: #addr_2</p>
+      <p>Điện thoại di động: #phoneNo</p>
+      <!-- <p>Email: #email1</p> -->
+    </div>
+    <!-- Table B -->
+    <div class="table-header" style="border-top-style: none;">
+      <b>B. THÔNG TIN ĐĂNG KÝ GÓI HỘI VIÊN MB</b>
+    </div>
+    <div class="table-body">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+        <p><strong>Loại Gói hội viên (Gói Dịch vụ):</strong> #subName</p>
+
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+        <p><strong>Thời hạn gói:</strong> #subDate</p>
+      </div>
+      <div style="margin: 0;text-align:justify">
+        <p style="margin: 0;text-align:justify">
+          Sau khi hết thời hạn gói, dịch vụ được tự động gia hạn theo thời hạn và loại gói KH đã đăng ký, KH có thể hủy
+          tính năng tự động gia hạn tối thiểu 1 ngày trước thời điểm hết hạn gói hiện tại qua ứng dụng APP MBBank hoặc
+          liên hệ với các quầy giao dịch của MB để được hỗ trợ.
+        </p>
+      </div>
+      <span><b>Hình thức nhận thông báo đăng ký và gia hạn gói thành công: </b></span>
+      <p style="margin: 0;text-align:justify">
+        Email (email KH đã cung cấp tại Đề nghị kiêm hợp đồng sử dụng dịch vụ/Đề nghị kiêm Hợp đồng mở TKTT, thẻ, MB
+        điện tử)
+        <span><b> và/hoặc tài khoản giao dịch điện tử của KH tại APP MBBank. </b></span>
+      </p>
+      <p style="margin: 0; text-align: justify;">
+        <span><b>Sản phẩm Gói hội viên </b></span>
+
+        là sản phẩm cung cấp các dịch vụ quản lý Tài khoản thanh toán và một số ưu đãi kèm theo cập nhật theo chính sách
+        MB từng thời kỳ
+        <span><b>(Sau đây gọi là Dịch vụ)</b></span>
+        <span style="text-align: justify;">
+          được công bố, thông báo trên tài khoản giao dịch điện tử của KH tại APP MBBank và/hoặc website MB:
+          https://www.mbbank.com.vn/.
+        </span>
+      </p>
+      <span><b>Phí: </b></span>
+      <p style="margin: 0;text-align:justify">
+        - Mức phí: Chi tiết theo biểu phí được MB niêm yết, công khai tại website: https://www.mbbank.com.vn/ hoặc địa
+        chỉ khác theo quy định của MB từng thời kỳ.<br>
+        - Phương thức thu phí: Trích nợ từ tài khoản thanh toán số #tktt của KH tại MB.<br>
+        - Thời điểm thu phí: Phí được thu 1 lần ngay sau khi KH thực hiện đăng ký Dịch vụ và/hoặc khi gia hạn Dịch
+        vụ.<br>
+        - Các kỳ thu phí gia hạn tự động: 1 tháng/lần (đối với các gói 1M), 6 tháng/ lần (đối với các gói 6M), 12 tháng/
+        lần (đối với các gói 12M).<br>
+        - KH có thể được MB cho phép đăng ký dùng thử Dịch vụ (không thu phí trong khoảng thời gian cụ thể) theo quy
+        định của MB từng thời kỳ, sau khi hết thời gian dùng thử, MB sẽ tự động trích nợ tài khoản thanh toán của KH để
+        thu phí Dịch vụ theo đăng ký như tại Đề nghị này.
+      </p>
+      <span><b>Chấm dứt dịch vụ: </b></span>
+      <p style="margin: 0;text-align:justify">
+        - Dịch vụ có thể chấm dứt do MB trong các trường hợp: do KH vi phạm các thỏa thuận với MB, Điều khoản điều kiện
+        sản phẩm, Điều kiện giao dịch chung về sử dụng dịch vụ, các chính sách của MB hoặc do quy định pháp luật, yêu
+        cầu của cơ quan nhà nước về việc dừng triển khai dịch vụ, các tính năng/ưu đãi của Gói hoặc do chính sách, quy
+        định của MB từng thời kỳ. MB sẽ dừng cung cấp dịch vụ và thông báo cho KH thông qua một hoặc một số phương thức,
+        bao gồm nhưng không giới hạn: Gửi thông báo bằng văn bản tới địa chỉ của KH, gọi điện thoại, gửi tin nhắn SMS
+        tới số điện thoại của KH đăng ký tại MB, gửi email tới địa chỉ email của KH đăng ký tại MB, gửi thông báo bằng
+        phương thức điện tử gửi qua ứng dụng App MB Bank, thông báo tại địa điểm kinh doanh của MB hoặc trên website
+        chính thức của MB (https://www.mbbank.com.vn/);<br>
+        - Chấm dứt dịch vụ do KH: KH huỷ tính năng gia hạn tự động và/hoặc đề nghị chấm dứt sử dụng dịch vụ. KH thực
+        hiện tắt tính năng gia hạn tự động tối thiểu 1 ngày trước thời điểm hết hạn gói hội viên hiện tại qua ứng dụng
+        APP MBBank hoặc liên hệ với các quầy giao dịch của MB để được hỗ trợ.<br>
+        - Khi thực hiện hủy/chấm dứt sử dụng một Gói hội viên, MB không áp dụng hoàn phí bao gồm hoàn một phần hay hoàn
+        toàn bộ Dịch vụ Gói hội viên mà KH đã thanh toán đầu kỳ, trừ một số trường hợp MB có quyết định/quy định khác.
+        Với việc hủy/chấm dứt sử dụng Gói hội viên, MB có quyền thay đổi, điều chỉnh, chấm dứt các quyền lợi/ sản phẩm/
+        dịch vụ cung cấp cho KH bao gồm nhưng không giới hạn việc: tạm ngừng/ngừng cung cấp các sản phẩm/ dịch vụ hoặc
+        tính năng chuyên biệt, ngừng áp dụng các chương trình khuyến mại, ưu đãi; tạm ngừng/ngừng áp dụng các chính
+        sách, thay đổi các quyền lợi khác dành cho Hội viên MB theo quy định của MB từng thời kỳ.
+      </p>
+
+    </div>
+    <!-- Table C -->
+    <!-- <div class="table-header" style="border-top-style: none;">
+            <b>C. NHẬN BIÊT VÀ CAM KẾT CỦA KHÁCH HÀNG</b>
+        </div>
+        <div class="table-body">
+            <p style="margin: 0;text-align:justify">
+                Bằng việc đánh dấu vào những ô thích hợp và ký tên và Đề nghị kiêm hợp đồng này, Tôi/chúng tôi khai
+                báo
+                về tình trạng thuế theo luật thuế Hoa Kỳ. Tôi/chúng tôi hiểu rằng việc kê khai không đúng hoặc gây
+                hiểu
+                lầm về tình trạng thuế của mình với tư cách công dân Hoa Kỳ sẽ dẫn tới việc vi phạm luật Pháp Hoa
+                Kỳ,
+                bao gồm các quy định của Đạo luật Tuân thủ Thuế đối với Tài khoản ở nước ngoài.
+            </p>
+            <p style="margin: 2px;text-align:justify;">Trường hợp KH có quốc tịch Hoa Kỳ, KH cung cấp thông tin tại mẫu W9</p>
+            <p style="margin: 2px;text-align:justify;">Trường hợp KH có quốc tịch Hoa Kỳ 2, KH cung cấp thông tin tại mẫu W-8BEN và hồ sơ
+                chứng minh tư cách
+                ngoài Mỹ của KH</p>
+        </div> -->
+    <!-- Table C -->
+    <div class="table-header" style="border-top-style: none;">
+      <b>C. NHẬN BIẾT VÀ CAM KẾT CỦA KHÁCH HÀNG</b>
+    </div>
+    <div class="table-body">
+      <ol class="pl-15" style="text-align:justify;">
+        <li>Tôi (KH), cam kết những thông tin cung cấp và đăng ký là đầy đủ, chính xác và cập nhật nhất.</li>
+        <li>Đề nghị kiêm Hợp đồng đăng ký Gói hội viên MB dành cho KHCN là một bộ phận không tách rời của Đề nghị kiêm
+          Hợp đồng sử dụng dịch vụ/Đề nghị kiêm Hợp đồng sử dụng dịch vụ tài khoản thanh toán, thẻ, MB điện tử đã giao
+          kết. </li>
+        <li>KH xác nhận đã được MB tư vấn, đã đọc, hiểu rõ và đồng ý thực hiện quy định tại: (i) Đề nghị kiêm Hợp đồng
+          đăng ký Gói hội viên MB dành cho KHCN kèm theo Điều khoản Điều kiện đã ký/xác nhận giữa MB và Khách hàng; (ii)
+          Đề nghị kiêm Hợp đồng sử dụng dịch vụ/Đề nghị kiêm hợp đồng sử dụng dịch vụ TKTT, thẻ, MB điện tử đã giao kết,
+          cùng với Điều kiện giao dịch chung về việc cung cấp và sử dụng dịch vụ, Chính sách bảo vệ dữ liệu cá nhân
+          thuộc Điều kiện giao dịch chung về việc cung cấp và sử dụng dịch vụ được MB công bố trên website của MB tại
+          địa chỉ https://www.mbbank.com.vn/ (hoặc địa chỉ khác theo thông báo của MB); (iii) (Các) thỏa thuận, văn bản
+          giao kết trực tiếp hoặc trên phương tiện điện tử (nếu có). Các văn bản trên tạo thành một thỏa thuận thống
+          nhất, có hiệu lực áp dụng giữa KH và MB (“thoả thuận”). Trường hợp có khác biệt về nội dung tại các văn bản
+          trên, trừ trường hợp các bên có thỏa thuận khác, thứ tự ưu tiên áp dụng như sau: (1) Đề nghị kiêm Hợp đồng
+          này, (2) Điều kiện giao dịch chung (bao gồm cả Điều khoản Điều kiện sản phẩm Gói Hội viên) được công khai tại
+          địa điểm giao dịch và công bố trên website của MB tại địa chỉ https://www.mbbank.com.vn/ (hoặc địa chỉ khác
+          theo thông báo của MB), (3) Đề nghị kiêm Hợp đồng sử dụng dịch vụ/Đề nghị kiêm Hợp đồng sử dụng dịch vụ tài
+          khoản thanh toán, thẻ, MB điện tử kèm Điều khoản điều kiện về sử dụng dịch vụ đã giao kết. </li>
+        <li>KH đồng ý MB được sửa đổi, bổ sung thay thế Điều kiện giao dịch chung về việc cung cấp và sử dụng dịch vụ
+          (bao gồm cả Điều khoản Điều kiện sản phẩm Gói hội viên), và thông báo trên Website MB hoặc các phương thức
+          khác tại Điều khoản điều kiện có giá trị áp dụng kể từ thời điểm ghi tại bản Điều kiện giao dịch chung hoặc
+          thời điểm khác theo thông báo của MB.</li>
+        <li><span><b>Giới hạn trách nhiệm: </b></span> Các kết quả tổng hợp, phân tích, đánh giá của MB khi triển khai
+          tính năng/ưu đãi theo từng Gói Dịch vụ chỉ mang tính chất tham khảo. KH cam kết và hiểu rằng: MB không tuyên
+          bố hay bảo đảm về tính chính xác, sự đầy đủ cũng như sự hoàn thiện đối với các thông tin, khuyến nghị và các
+          tài liệu đính kèm có liên quan. Trong mọi trường hợp, MB không chịu trách nhiệm hoặc có nghĩa vụ pháp lý đối
+          với bất kỳ cá nhân, tổ chức nào về các tổn thất hoặc thiệt hại dù là trực tiếp hay gián tiếp phát sinh từ các
+          quyết định hoặc hành động do KH thực hiện hoặc đưa ra dựa trên các nội dung kết quả tổng hợp, đánh giá, phân
+          tích của MB. KH chịu trách nhiệm kiểm tra kỹ và cân nhắc về việc sử dụng một phần/toàn bộ/không sử dụng kết
+          quả tổng hợp, đánh giá, phân tích của MB đồng thời chịu hoàn toàn trách nhiệm trước các quyết định và hành
+          động của mình.</li>
+        <li>KH đồng ý và cho phép MB và các công ty con, công ty liên kết của MB (sau đây gọi chung là “Tập đoàn MB”) và
+          bên liên quan – với tư cách là Bên kiểm soát và xử lý dữ liệu hoặc Bên xử lý dữ liệu tùy từng trường hợp, được
+          phép xử lý dữ liệu cá nhân của KH và người liên quan do KH cung cấp (bao gồm cả dữ liệu cá nhân cơ bản và dữ
+          liệu cá nhân nhạy cảm) đối với tất cả các hoạt động trong quy trình xử lý và theo cách thức phù hợp (gồm thu
+          thập, ghi, ghi âm, ghi hình, phân tích, xác nhận, lưu trữ, chỉnh sửa, công khai, kết hợp, truy cập, truy xuất,
+          thu hồi, mã hóa, giải mã, sao chép, chia sẻ, truyền đưa, cung cấp, chuyển giao, xóa, hủy thông tin KH và/hoặc
+          hoạt động khác tác động tới dữ liệu của KH), cho các mục đích, phạm vi và nội dung như được quy định tại Chính
+          sách bảo vệ dữ liệu cá nhân, Điều kiện giao dịch chung và thỏa thuận khác (nếu có) mà không cần thêm bất kỳ
+          chấp thuận nào khác của KH:</li>
+      </ol>
+      <div class="grid-container">
+        <div class="grid-item"><strong>Mục đích xử lý</strong></div>
+        <div class="grid-item"><strong>Đồng ý</strong></div>
+        <div class="grid-item" style="text-align:justify; ">
+          <p><strong>1) Cung cấp, phát triển sản phẩm dịch vụ, tiện ích bao gồm nhưng không giới hạn:<span
+                style="text-align: justify; color: red; text-decoration: underline; font-style: italic;"> Cung cấp, thực
+                hiện các tính năng và/hoặc các ưu đãi trong Gói Dịch vụ;</span></strong><span
+              style="text-align: justify; font-style: italic;"> phân tích nhu cầu; đo lường, cung
+              cấp, đối soát, vận hành và quản lý, khai thác, cải tiến, phát triển sản phẩm, dịch vụ và tiện ích của Tập
+              đoàn
+              MB và/hoặc Bên liên quan; nhận biết, xác minh danh tính và xác thực, xác nhận thông tin, chấm điểm, xếp
+              hạng
+              tín dụng, đánh giá thông tin tín dụng, đánh giá tín nhiệm về tín dụng; phân tích, lưu trữ dữ liệu; thực
+              hiện
+              các hoạt động quản lý và tuân thủ của Tập đoàn MB (như: tuân thủ pháp luật Việt Nam và quốc tế thực hiện
+              quy
+              tắc, thỏa thuận, tiêu chuẩn ngành mà Tập đoàn MB tham gia; thanh tra, kiểm tra, kiểm toán, báo cáo, thống
+              kê;
+              quản lý rủi ro, tuân thủ, phòng, chống gian lận, vi phạm pháp luật, rửa tiền, tội phạm, tài trợ khủng bố,
+              tuân
+              thủ cấm vận; điều tra và giải quyết khiếu nại, khiếu kiện, tranh chấp; hoạt động quản lý nội bộ khác của
+              MB và
+              Tập đoàn MB)</span></p>
+        </div>
+        <div class="grid-item" style="align-content: left; text-align: left"><input type="checkbox" disabled
+            checked="true" /></div>
+        <div class="grid-item" style="text-align:justify; "><strong>2) Thực hiện, bảo vệ quyền và nghĩa vụ của các bên
+            theo hợp đồng, theo quy định pháp luật.</strong></div>
+        <div class="grid-item" style="align-content: left; text-align: left"><input type="checkbox" disabled
+            checked="true" /></div>
+        <div class="grid-item" style="text-align:justify; ">
+          <p><strong>3) Cung cấp, hỗ trợ thông tin sản phẩm, dịch vụ, tiện ích như: </strong><span
+              style="text-align: justify; font-style: italic;">Liên hệ, chăm sóc, thông báo, trao đổi, cập nhật, xử lý,
+              phản hồi, hỗ trợ thông tin; giới thiệu, truyền thông, quảng cáo sản phẩm, dịch vụ, tiện ích của Tập đoàn
+              MB
+              và/hoặc bên liên quan; cho mục đích hướng tới phục vụ nhu cầu thông tin, cung cấp sản phẩm dịch vụ, tiện
+              ích
+              hiện tại và trong tương lai.</span></p>
+        </div>
+        <div class="grid-item" style="align-content: left; text-align: left"><input type="checkbox" disabled
+            checked="true" /></div>
+      </div>
+      <br />
+      <div class="grid-container">
+        <div class="grid-item" style="background-color: #b8dcec;"><b>Xác nhận của khách hàng</b></div>
+        <div class="grid-item" style="background-color: #b8dcec;"><b>Xác nhận của ngân hàng</b></div>
+        <div class="grid-item" style="padding: 40px 0 40px 0;"><b>ĐÃ GIAO KẾT</b></div>
+        <div class="grid-item" style="padding: 40px 0 40px 0;"><b>ĐÃ GIAO KẾT</b></div>
+        <div class="grid-item" style="background-color: #b8dcec;"><b>#nm</b></div>
+        <div class="grid-item" style="background-color: #b8dcec;"><b>NGÂN HÀNG TMCP QUÂN ĐỘI</b></div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <p align=center><b style='text-align:center;font-size:larger;'>ĐIỀU KHOẢN ĐIỀU KIỆN SẢN PHẨM GÓI HỘI VIÊN (“Điều khoản
+      Điều kiện”)</b></a></p>
+  <!-- Page 1 -->
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>1. Sản phẩm gói Hội viên</strong> là sản phẩm cung cấp các dịch vụ quản lý Tài khoản thanh toán và một số
+      ưu đãi kèm theo cập nhật theo chính sách MB từng thời kỳ <strong>(Sau đây gọi là Dịch vụ)</strong> được công bố,
+      thông báo trên tài khoản giao dịch điện tử của KH tại APP MBBank và/hoặc website MB: https://www.mbbank.com.vn/
+    </p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2. Nội dung dịch vụ:</strong></p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.1. Tùy theo chính sách của MB từng thời kỳ, KH sẽ được hưởng các quyền lợi sau:</strong></p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.1.1.</strong> Sử dụng các sản phẩm/dịch vụ do MB hoặc đối tác của MB cung cấp với chính sách ưu đãi.
+    </p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.1.2.</strong> Được trải nghiệm và sử dụng các tính năng/ưu đãi chuyên biệt được thiết kế dành riêng cho
+      KH đăng ký sử dụng Dịch vụ.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.1.3.</strong> Được tham gia các chương trình và dịch vụ chuyên biệt được thiết kế dành riêng cho KH
+      đăng ký sử dụng Dịch vụ.</p>
+  </div>
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.1.4. Các quyền lợi khác theo quy định của MB từng thời kỳ.</strong></p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.2. Tùy thuộc vào Gói hội viên mà KH đăng ký, các ưu đãi/tính năng, giá trị/mức ưu đãi áp dụng cho các KH có thể
+      khác nhau, các tính năng/ưu đãi này có thời hạn sử dụng nhất định và điều kiện áp dụng khác nhau. MB có thể thay
+      đổi, điều chỉnh các tính năng/ưu đãi, giá trị/mức ưu đãi trong Gói Hội viên và điều kiện áp dụng của từng tính
+      năng/ưu đãi theo quy định của MB từng thời kỳ. Chi tiết các tính năng/ưu đãi, giá trị/mức ưu đãi của từng Gói hội
+      viên, điều kiện áp dụng của từng tính năng/ưu đãi được hiển thị và cập nhật cho KH trên ứng dụng APP MBBank
+      hoặc/và website: https://www.mbbank.com.vn/.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.3. Ưu đãi “Mất tiền MB đền”:</strong><br>
+      Trường hợp KH được áp dụng ưu đãi “Mất tiền MB đền”:</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.3.1. Đối tượng KH – Người được bảo hiểm:</strong> KH là chủ tài khoản thanh toán tại MB hoặc chủ thẻ do
+      MB phát hành đáp ứng các điều kiện theo quy định của MB từng thời kỳ.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.3.2. Đối tượng bảo hiểm:</strong> Tài khoản thanh toán và thẻ của 01 KHCN cùng chung 1 số CIF được cấp
+      bởi MB tại thời điểm MB mua bảo hiểm, không bao gồm: các tài khoản phát sinh sau ngày hiệu lực bảo hiểm; các tài
+      khoản tiết kiệm; các loại tài khoản khác (nếu có) tại MB.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.3.3. Phạm vi bảo hiểm:</strong><br>
+      a) Trừ các trường hợp thuộc điều khoản loại trừ thuộc mục 2.3.6 dưới đây, Tổng công ty cổ phần bảo hiểm quân đội
+      (MIC) sẽ bồi thường cho <strong>tổn thất tài chính</strong> cho Người được bảo hiểm nếu xảy ra một trong các tình
+      huống sau:</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>i) Mất tiền trong Tài khoản thanh toán và thẻ của Người được bảo hiểm tại MB do:</p>
+  </div>
+  <!-- Page 2 -->
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>- Một <strong>bên thứ ba</strong> thực hiện chuyển tiền hoặc các giao dịch mua sắm trực tuyến từ tài khoản được
+      bảo hiểm, hoặc MB nếu MB hành động theo các <strong>liên lạc điện tử</strong> giả mạo được cho là đã được thực
+      hiện bởi Người được bảo hiểm mặc dù không phải như vậy.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>ii) Người được bảo hiểm hành động theo <strong>liên lạc điện tử</strong> giả mạo và chuyển tiền từ tài khoản cá
+      nhân của mình tại MB tới tài khoản của một <strong>bên thứ ba</strong>;</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>b) Tổn thất tài chính bao gồm:</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>i) thiệt hại về tiền từ tài khoản cá nhân của Người được bảo hiểm tại MB.<br>
+      ii) tất cả chi phí, tiền phạt hoặc lãi suất mà Người được bảo hiểm phải thanh toán cho MB.<br>
+      iii) các khoản phí từ Thẻ của Người được bảo hiểm đã phát sinh.<br>
+      <strong>Không bao gồm:</strong> thuế, tổn thất quyền lợi thuế hoặc tiền phạt theo quy định pháp luật.
+    </p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>c) Liên lạc điện tử:<br>
+      i) Thư điện tử;<br>
+      ii) Thông báo/hướng dẫn được cung cấp từ ứng dụng di động của ngân hàng/tổ chức tín dụng hoặc<br>
+      iii) Thông báo/hướng dẫn trên nền tảng công nghệ số, ngân hàng trực tuyến của ngân hàng/tổ chức tài chính;<br>
+      iv) Tin nhắn thương hiệu – tin nhắn được gửi đến từ ngân hàng/công ty viễn thông<br>
+      v) hướng dẫn được đưa ra qua phần mềm ứng dụng di động (Ứng dụng) của nhà cung cấp dịch vụ ví điện tử (Chỉ đối với
+      quyền lợi giao dịch gian lận – áp dụng cho ví điện tử).</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.3.4. Thời hạn bảo hiểm:</strong> Thời hạn bảo hiểm là 1 tháng hoặc 01 năm được quy định trên Giấy chứng
+      nhận bảo hiểm cấp cho Người được bảo hiểm.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.3.5. Số tiền bồi thường tối đa:</strong><br>
+      MIC sẽ bồi thường cho các tổn thất tài chính của Người được bảo hiểm phát sinh từ một rủi ro an ninh mạng mà Người
+      được bảo hiểm phát hiện lần đầu tiên trong thời hạn bảo hiểm phù hợp với Số tiền bảo hiểm tối đa dưới đây.<br>
+      <em>Sự kiện rủi ro an ninh mạng mà Người được bảo hiểm phát hiện lần đầu tiên:</em> Là sự kiện rủi ro mà việc
+      thiệt hại tài chính đã được thông báo đến người được bảo hiểm bằng liên lạc điện tử.
+    </p>
+  </div>
+  <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0"
+    style="margin-left:7.1pt;border-collapse:collapse;border:none;font-family:'Calibri',sans-serif;font-size:13px;">
+    <tr>
+      <td width="283" valign="top" style="width:2.95in;border:solid windowtext 1.0pt;background:#F2F2F2;padding:6pt;">
+        <p align="center" style="text-align:center;line-height:150%"><b><span>Khiên Mất tiền MB đền 1 năm<br>(Thời hạn
+              bảo hiểm là 1 năm)</span></b></p>
+      </td>
+      <td width="331" valign="top"
+        style="width:248.0pt;border:solid windowtext 1.0pt;border-left:none;background:#F2F2F2;padding:6pt;">
+        <p align="center" style="text-align:center;line-height:150%"><b><span>Khiên mất tiền MB đền 1 tháng<br>(Thời hạn
+              bảo hiểm là 1 tháng)</span></b></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" style="border:solid windowtext 1.0pt;border-top:none;padding:6pt;">
+        <ul style="margin:0;padding-left:18px;line-height:150%;">
+          <li>Số tiền bảo hiểm 1 vụ: 60 triệu đồng/vụ/thời hạn bảo hiểm.</li>
+          <li>Số tiền bảo hiểm cho mọi vụ tổn thất/hợp đồng/thời hạn bảo hiểm: 100 triệu đồng.</li>
+        </ul>
+      </td>
+      <td valign="top" style="border:solid windowtext 1.0pt;border-top:none;border-left:none;padding:6pt;">
+        <ul style="margin:0;padding-left:18px;line-height:150%;">
+          <li>Số tiền bảo hiểm 1 vụ: 50 triệu đồng/vụ/thời hạn bảo hiểm.</li>
+          <li>Số tiền bảo hiểm cho mọi vụ tổn thất/hợp đồng/thời hạn bảo hiểm: 50 triệu đồng.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+  <!-- Page 3 -->
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.3.6. Các trường hợp loại trừ:</strong></p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>Chính sách này không bảo hiểm cho các trường hợp sau đây:</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>a) Bất kỳ tổn thất phát sinh từ hoặc là hậu quả của bất kỳ điều kiện bất thường hoặc tình trạng khẩn cấp được
+      tuyên bố bởi chính quyền địa phương (bằng văn bản hoặc hình thức khác), trừ khi Người được bảo hiểm chứng minh
+      được tổn thất đó xảy ra độc lập với các điều kiện bất thường hoặc tình trạng khẩn cấp theo tuyên bố của chính
+      quyền địa phương.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>b) Bất kỳ tổn thất nào liên quan đến tiền kỹ thuật số, tiền ảo hoặc tiền mã hóa.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>c) Bất kỳ tổn thất phát sinh từ hoặc là hậu quả của bất kỳ hoạt động nào do Người được bảo hiểm thực hiện cho mục
+      đích thương mại, kinh doanh hoặc chuyên môn, bao gồm bất kỳ tổn thất liên quan đến tài khoản tại một tổ chức tài
+      chính được sử dụng cho mục đích thương mại, kinh doanh hoặc chuyên môn.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>d) Bất kỳ tổn thất phát sinh từ hoặc là hậu quả của một hành động bội tín bao gồm những ý định lừa đảo đối với
+      Người được bảo hiểm, chẳng hạn như các dự định, các khoản đầu tư, các hợp đồng, các khoản vay không thực tế và các
+      ý định tương tự, nhằm đạt được sự tin cậy hoặc cảm tình của Người được bảo hiểm và sau đó sử dụng sự tín nhiệm đó
+      để lừa đảo.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>e) Bất kỳ tổn thất phát sinh từ hoặc là hậu quả của bất kỳ hành động không trung thực, hành động mang tính tội
+      phạm, hành động ác ý hoặc hành vi lừa đảo mà Người được bảo hiểm tự nguyện tham gia hoặc chỉ đạo các hành động đó.
+    </p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>f) Bất kỳ tổn thất gián tiếp hoặc tổn thất mang tính hậu quả dưới bất kỳ hình thức nào, trừ khi đã được quy định
+      rõ trong đơn bảo hiểm.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>g) Bất kỳ tổn thất phát sinh từ hoặc là hậu quả của việc mất điện hoặc gián đoạn các dịch vụ điện hoặc dịch vụ
+      viễn thông được vận hành bởi nhà cung cấp dịch vụ bên thứ ba.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>h) Bất kỳ tổn thất phát sinh từ hoặc là hậu quả của việc mất hoặc mất trộm thẻ hoặc mất trộm thiết bị di động
+      được cài đặt tài khoản ví điện tử/ứng dụng internet banking.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>i) Bất kỳ tổn thất phát sinh từ hoặc là hậu quả trực tiếp hoặc gián tiếp của việc thiết bị điện tử của Người được
+      bảo hiểm không cài đặt bảo mật (vân tay, mật khẩu, nhận diện gương mặt hoặc các hình thức bảo mật khác do hãng sản
+      xuất cung cấp).</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>j) Bất kỳ tổn thất phát sinh từ hoặc là hậu quả của việc Người được bảo hiểm tự nguyện tiết lộ bất kỳ mã hoặc
+      thông tin bảo mật cho người khác mà người này sau đó thực hiện hoặc thông đồng với Người được bảo hiểm trong một
+      rủi ro an ninh mạng.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>k) Rủi ro hạt nhân:<br>
+      - tổn thất hoặc phá hủy hoặc thiệt hại đối với bất kỳ tài sản nào hoặc bất kỳ tổn thất hoặc chi phí nào phát sinh
+      là hậu quả của rủi ro hạt nhân hoặc bất kỳ tổn thất hậu quả nào; hoặc</p>
+  </div>
+
+  <!-- Page 4 -->
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>- trách nhiệm pháp lý dưới bất kỳ hình thức nào, cho dù là trực tiếp hay gián tiếp gây ra bởi hoặc đóng góp bởi
+      hoặc phát sinh từ:<br>
+      + bức xạ ion hóa hoặc ô nhiễm bởi phóng xạ từ bất kỳ nhiên liệu hạt nhân nào hoặc từ bất kỳ chất thải hạt nhân nào
+      từ quá trình đốt cháy nhiên liệu hạt nhân; hoặc<br>
+      + các chất phóng xạ, chất độc hại, chất nổ hoặc chất nguy hiểm khác của bất kỳ tổ hợp chất nổ hạt nhân hoặc thành
+      phần hạt nhân nào của chúng.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>l) Khủng bố: Bất kỳ tổn thất phát sinh từ hoặc là hậu quả của:<br>
+      - bất kỳ hành động khủng bố nào, bất kể có điều khoản nào trái với đơn bảo hiểm hoặc bất kỳ sửa đổi bổ sung nào
+      sau đó; hoặc<br>
+      - bất kỳ hành động nào được thực hiện để kiểm soát, ngăn chặn, đàn áp hoặc bất kỳ cách nào liên quan đến bất kỳ
+      hành động khủng bố nào.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>m) Bất kỳ tổn thất phát sinh từ hoặc do hậu quả của:<br>
+      - chiến tranh, xâm lược, hành động của kẻ thù nước ngoài, sự thù địch hoặc các hoạt động có liên quan đến chiến
+      tranh (dù có tuyên chiến hay không), nội chiến; hoặc<br>
+      - bạo động dân sự có thể dẫn tới một cuộc nổi dậy trên diện rộng, binh biến, nổi loạn, cách mạng, quân đội chiếm
+      đoạt quyền lực, lệnh giới nghiêm hoặc tình trạng bao vây hoặc bất kỳ sự kiện hoặc nguyên nhân nào quyết định việc
+      tuyên bố hoặc duy trì lệnh giới nghiêm hoặc nhà nước hoặc bất kỳ hành động nào của bất kỳ người nào hành động thay
+      mặt hoặc liên quan tới bất kỳ tổ chức nào có các hoạt động hướng tới lật đổ chính phủ hoặc chính quyền bằng vũ lực
+      hoặc ảnh hưởng của nó bởi khủng bố hoặc bạo lực.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>n) Bất kỳ tổn thất gián tiếp hoặc tổn thất mang tính hậu quả dưới bất kỳ hình thức nào, trừ khi đã được quy định
+      rõ trong đơn bảo hiểm.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>o) Bất kỳ tổn thất phát sinh từ hoặc là hậu quả của bất kỳ thực tế, hoàn cảnh, hành động, mối đe dọa hoặc sự kiện
+      nào mà Người được bảo hiểm đã biết trước ngày bắt đầu thời hạn bảo hiểm của đơn bảo hiểm.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>p) Bất kỳ tổn thất vật chất hoặc thiệt hại đối với tài sản hữu hình.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>q) Bất kỳ tổn thất từ hoặc là hậu quả của việc mất điện hoặc gián đoạn các dịch vụ điện hoặc dịch vụ viễn thông
+      được vận hành bởi nhà cung cấp dịch vụ bên thứ ba.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>r) Thương tật thân thể: Bất kỳ tổn thất nào phát sinh từ hoặc là hậu quả của chấn thương thân thể, bệnh tật hoặc
+      tổn thương về mặt tinh thần, chăm sóc y tế hoặc tử vong.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>s) Bệnh truyền nhiễm: Loại trừ các tổn thất, thiệt hại, mất yếu tố thời gian phát sinh trực tiếp hoặc gián tiếp
+      từ các bệnh truyền nhiễm.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>t) Hao mòn: Bất kỳ tổn thất phát sinh từ hoặc là hậu quả của bất kỳ sự hao mòn thông thường, giảm hiệu suất, suy
+      giảm hoặc khấu hao dần dần.</p>
+  </div>
+  <!-- Page 5 -->
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.3.7. Các quy định khác:</strong></p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>a) Thông báo khiếu nại:</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>(i) Người được bảo hiểm phải liên lạc với Đơn vị giải quyết sự cố qua số Hotline: 1900 54 54 26 sớm nhất có thể
+      (chậm nhất trong vòng 24 giờ) sau khi phát hiện có bất kỳ sự kiện hoặc trường hợp nào có khả năng dẫn đến tổn thất
+      được bảo hiểm theo đơn bảo hiểm này trong thời hạn bảo hiểm.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>(ii) Người được bảo hiểm phải cung cấp cho MIC/Đơn vị giải quyết sự cố tất cả thông tin, sự hỗ trợ và hợp tác mà
+      MIC/Đơn vị giải quyết sự cố yêu cầu một cách hợp lý và phải:<br>
+      - thực hiện tất cả các biện pháp hợp lý để giảm thiểu hoặc hạn chế tổn thất theo đơn bảo hiểm này.<br>
+      - hợp tác đầy đủ và tuân thủ quy trình của Đơn vị giải quyết sự cố để giảm thiểu tổn thất theo đơn bảo hiểm
+      này.<br>
+      - hợp tác khi Đơn vị giải quyết sự cố hỗ trợ và cố gắng để thu đòi tổn thất liên quan đến khiếu nại từ bên thứ ba
+      mà bên thứ ba đó có thể phải chịu trách nhiệm một phần hoặc toàn bộ tổn thất; và<br>
+      - không làm bất cứ điều gì có thể ảnh hưởng đến quyền thu đòi bên thứ ba của MIC liên quan đến tổn thất.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>(iii) Liên quan đến <strong>Tổn thất tài chính</strong>: Người được bảo hiểm phải thông báo với cơ quan công an
+      cũng như tổ chức phát hành thẻ của Người được bảo hiểm (nếu có) và/hoặc tổ chức tài chính nơi mở tài khoản cá nhân
+      của Người được bảo hiểm (nếu có) ngay khi có thể sau khi Người được bảo hiểm phát hiện ra rủi ro an ninh mạng;</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>b) Nghĩa vụ cẩn trọng: Người được bảo hiểm phải:</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>(i) đảm bảo rằng hệ thống máy tính của Người được bảo hiểm được sử dụng và bảo trì theo khuyến nghị của nhà sản
+      xuất hoặc nhà cung cấp;</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>(ii) thực hiện các biện pháp hợp lý để bảo vệ hệ thống máy tính của Người được bảo hiểm, bao gồm cả việc cài đặt
+      phần mềm chống mã độc. Người được bảo hiểm nên cập nhật phần mềm chống mã độc thường xuyên theo khuyến nghị của
+      nhà sản xuất và thường xuyên sao lưu tài sản kỹ thuật số của mình;</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>(iii) thực hiện các biện pháp hợp lý khi xử lý và phá hủy hệ thống máy tính của Người được bảo hiểm để bảo vệ tài
+      sản kỹ thuật số của mình;</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>(iv) thực hiện các biện pháp hợp lý để bảo vệ thông tin cá nhân, thẻ và thông tin chi tiết về tài khoản của mình
+      tại các tổ chức tài chính;</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>(v) thực hiện các biện pháp hợp lý để xác thực và xác minh danh tính của người gửi một liên lạc điện tử cho Người
+      được bảo hiểm, yêu cầu chuyển tiền bao gồm tư cách pháp lý của người gửi.</p>
+  </div>
+  <!-- Page 6 -->
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>yêu cầu và nhận số tiền đó, trước khi số tiền đó được chuyển từ tài khoản cá nhân của Người được bảo hiểm tại tổ
+      chức tài chính vào tài khoản của một bên thứ ba.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>c) Gian lận: Nếu Người được bảo hiểm đưa ra bất kỳ khiếu nại gian lận nào, liên quan đến số tiền hoặc bất kỳ điểm
+      nào khác, chính sách này sẽ bị vô hiệu ngay từ khi bắt đầu thời hạn bảo hiểm và tất cả các khiếu nại theo đó sẽ bị
+      hủy bỏ.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>d) Cấm vận: MIC sẽ không được coi là cung cấp bảo hiểm và sẽ không chịu trách nhiệm thanh toán cho bất kỳ khiếu
+      nại hoặc cung cấp bất kỳ quyền lợi nào theo đơn bảo hiểm trong phạm vi quy định của bảo hiểm đó, nếu việc thanh
+      toán đó sẽ khiến MIC phải chịu bất kỳ chế tài, cấm vận hoặc hạn chế nào theo các nghị quyết của Liên Hợp Quốc hoặc
+      các lệnh trừng phạt thương mại hoặc kinh tế, luật pháp hoặc quy định của Liên minh Châu Âu, Hợp chủng quốc Hoa Kỳ,
+      Vương quốc Anh và/hoặc bất kỳ luật hoặc quy định trừng phạt kinh tế hoặc thương mại nào khác.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.3.8. Quy trình bồi thường:</strong></p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>a) Quy trình và thời gian ứng phó sự cố và giải quyết bồi thường</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>(i) Bước 1: Thông báo tổn thất<br>
+      Bên thực hiện: Người được bảo hiểm, MB247<br>
+      Ngay khi phát hiện bất kỳ sự kiện hoặc trường hợp nào có khả năng dẫn đến tổn thất được bảo hiểm theo đơn bảo hiểm
+      này, Người được bảo hiểm cần liên lạc ngay với MB qua hotline: 1900545426.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>(ii) Bước 2: Tiếp nhận, hỗ trợ và điều tra sự cố<br>
+      Bên thực hiện: MIC</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>(iii) Bước 3: Giải quyết bồi thường<br>
+      Bên thực hiện: MIC, MB<br>
+      Sau khi nhận thông tin, MIC sẽ xử lý và phản hồi cho MB247 về kết quả điều tra sự cố & kết quả xử lý (bao gồm:
+      đồng ý bồi thường/từ chối bồi thường hoặc yêu cầu bổ sung hồ sơ/thông tin nếu có).<br>
+      Căn cứ kết quả phản hồi của MIC, MB thông báo cho Người được bảo hiểm về phương án bồi thường. Trường hợp Người
+      được bảo hiểm đồng ý với phương án bồi thường, Người được bảo hiểm hoàn thiện văn bản yêu cầu bồi thường và gửi
+      lại cho MIC. Sau khi nhận được đầy đủ hồ sơ yêu cầu bồi thường của Người được bảo hiểm về việc đồng ý với phương
+      án bồi thường của MIC, MIC sẽ tiến hành thanh toán về tài khoản/số thẻ của Người được bảo hiểm tại MB.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>Chứng từ Người được bảo hiểm cần cung cấp:</strong><br>
+      - Sao kê tài khoản thanh toán hoặc sao kê thẻ tín dụng với tóm tắt thông tin giao dịch trong vòng 01 tháng tính
+      tới thời điểm xảy ra sự kiện bảo hiểm (bao gồm cả giao dịch thuộc sự kiện bảo hiểm).</p>
+  </div>
+  <!-- Page 7 -->
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>- Bản sao/ Ảnh chụp màn hình của tất cả các liên lạc giả mạo (văn bản/email/ đoạn hội thoại)</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>- Chuyển toàn bộ các liên lạc giả mạo bao gồm nhưng không giới hạn là email, tin nhắn, các hướng dẫn qua app....
+      mà người được bảo hiểm đã nhận được sang cho MIC. Cụ thể như là: copy nội dung tin nhắn kèm ảnh màn hình, hoặc là
+      chuyển tiếp/copy nội dung email giả mạo...</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>- Các chứng từ khác theo yêu cầu của bên điều tra sự cố (nếu có).</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>Quy trình bồi thường cũng như các tài liệu về bồi thường, khai báo sự cố sẽ được MIC bổ sung, điều chỉnh theo
+      từng thời điểm để phù hợp với rủi ro và thực tiễn.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.3.9. Các nội dung khác</strong> thực hiện theo Quy tắc bảo hiểm An ninh mạng dành cho cá nhân được công
+      bố trên website của MIC: https://www.mic.vn/.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.4. Ưu đãi “hoàn tiền khi chi tiêu thẻ Hi Cashback”:</strong></p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>Trường hợp KH được áp dụng ưu đãi hoàn tiền khi chi tiêu thẻ Hi Cashback:</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.4.1. KH cần tích lũy chi tiêu số tiền tối thiểu nhất định theo quy định của MB từng thời kỳ và doanh số chi
+      tiêu hợp lệ để được áp dụng ưu đãi, mức hoàn/tỷ lệ hoàn tiền theo quy định của MB từng thời kỳ. KH cần tích lũy
+      tối thiểu theo quy định của MB từng thời kỳ để rút được số tiền hoàn về hạn mức/số dư thẻ.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.4.2. Số tiền không được tính vào giá trị Giao dịch chi tiêu để hưởng khuyến mại/ưu đãi hoàn tiền:</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>a) Giao dịch rút tiền mặt<br>
+      b) Giao dịch nghi ngờ rút tiền mặt hoặc gian lận<br>
+      c) Giao dịch hoàn lại/hủy (chargeback/refund/reversal)<br>
+      d) Giao dịch tại ĐVCNT quảng cáo trực tuyến (bao gồm nhưng không giới hạn Google Ads, Facebook Ads, Tiktok
+      Ads)<br>
+      e) Các quy định khác theo quy định MB từng thời kỳ.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.4.3. Mỗi KH sở hữu tối đa 01 thẻ Hi Mastercard Cashback tại 1 thời điểm.<br>
+      Trường hợp KH hủy Gói Hội Viên hoặc hết hiệu lực gói mà không tiếp tục gia hạn, thẻ Hi Cashback vẫn được sử dụng
+      như 01 thẻ đa năng thông thường và không áp dụng các chương trình hoàn tiền.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.4.4. Thể lệ hoàn tiền trong các trường hợp đặc biệt:</p>
+  </div>
+  <div
+    style="margin-top: 16px; border: 1px solid black; border-collapse: collapse; font-family: 'Calibri', sans-serif; font-size: 13px; width: 100%;">
+    <div style="display: flex; background: #F2F2F2;">
+      <div style="width: 50%; border: 1pt solid black; padding: 6pt; text-align: center;"><strong>Trường hợp</strong>
+      </div>
+      <div style="width: 50%; border: 1pt solid black; padding: 6pt; text-align: center;"><strong>Cách thức tính hoàn
+          tiền</strong></div>
+    </div>
+
+    <div style="display: flex;">
+      <div style="width: 50%; border: 1pt solid black; padding: 6pt; text-align: justify;">
+        Đầu kỳ sao kê KH nắm giữ Gói hội viên A, giữa kỳ sao kê (ngày T) KH đổi sang Gói hội viên B
+      </div>
+      <div style="width: 50%; border: 1pt solid black; padding: 6pt; text-align: justify;">
+        <ul style="margin-top: 0; margin-bottom: 0; padding-left: 20px;">
+          <li>Từ ngày bắt đầu Gói hội viên A đến ngày T-1: KH được hoàn tiền theo tỷ lệ và mức hoàn tiền tối đa của Gói
+            hội viên A.</li>
+          <li>Từ ngày T đến hết kỳ sao kê hiện tại: KH được hoàn tiền theo tỷ lệ và mức hoàn tiền tối đa của Gói hội
+            viên B.</li>
+        </ul>
+        <p style="margin-top: 6px;">➔ Số tiền hoàn trong kỳ sao kê là tổng giá trị hoàn tiền từ hai giai đoạn, nhưng
+          không vượt quá giới hạn hoàn tiền tối đa của Gói có mức hoàn tiền cao hơn.</p>
+      </div>
+    </div>
+
+    <div style="display: flex;">
+      <div style="width: 50%; border: 1pt solid black; padding: 6pt; text-align: justify;">
+        Giao dịch chi tiêu của KH được ghi nhận thành công trên hệ thống MB vào ngày KH thay đổi Gói hội viên (thông
+        thường giao dịch được ghi nhận sau 1-5 ngày từ khi KH thực hiện giao dịch)
+      </div>
+      <div style="width: 50%; border: 1pt solid black; padding: 6pt; text-align: justify;">
+        Tỷ lệ và mức hoàn tiền tối đa áp dụng theo Gói hội viên mới.
+      </div>
+    </div>
+
+    <div style="display: flex;">
+      <div style="width: 50%; border: 1pt solid black; padding: 6pt; text-align: justify;">
+        Giao dịch chi tiêu của KH được ghi nhận thành công trên hệ thống MB vào đúng ngày hết hạn gói (thông thường giao
+        dịch được ghi nhận sau 1-5 ngày từ khi KH thực hiện giao dịch)
+      </div>
+      <div style="width: 50%; border: 1pt solid black; padding: 6pt; text-align: justify;">
+        Tỷ lệ và mức hoàn tiền tối đa áp dụng theo Gói hội viên sắp hết hạn.
+      </div>
+    </div>
+  </div>
+
+  <!-- Page 8 -->
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.5. Ưu đãi lãi suất cho vay:</strong></p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>Trường hợp KH được áp dụng ưu đãi lãi suất cho vay:</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.5.1. Áp dụng đối với các khoản vay (khoản giải ngân) được thực hiện bằng phương thức điện tử (trên APP MBBank);
+      giá trị/mức ưu đãi theo quy định của MB từng thời kỳ, sẽ được hiển thị cụ thể cho KH trên App MBBank và website:
+      https://www.mbbank.com.vn/.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.5.2. Áp dụng cho khoản vay (khoản giải ngân) mở mới trên kênh số, không áp dụng cho khoản vay (khoản giải ngân)
+      đã giải ngân trước thời điểm KH đăng ký Gói hội viên.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.5.3. Trường hợp sau khi áp dụng ưu đãi: (i) lãi suất cho vay nhỏ hơn (&lt;) mức lãi suất tối thiểu theo quy
+      định của MB từng thời kỳ, thì KH sẽ được áp dụng mức Lãi suất cho vay là Lãi suất tối thiểu theo quy định của MB;
+      (ii) mức lãi suất sau ưu đãi cao hơn mức lãi suất trần theo quy định của Ngân hàng Nhà Nước (nếu có) tại thời điểm
+      KH sử dụng voucher, mức lãi suất áp dụng là lãi suất trần theo quy định của Ngân hàng Nhà Nước.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.5.4. Số lần được áp dụng: 1 voucher ưu đãi lãi suất chỉ được áp trên 1 VBNN.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.5.5. Sản phẩm áp dụng: Theo quy định MB từng thời kỳ và sẽ được hiển thị cụ thể cho KH trên App MBBank và
+      website: https://www.mbbank.com.vn/.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.5.6. Thời hạn ưu đãi lãi suất: bằng thời hạn hiệu lực của voucher ưu đãi.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.5.7. Chi tiết cụ thể về lãi suất cho vay theo thỏa thuận tại từng văn bản nhận nợ, hợp đồng cho vay giao kết
+      giữa KH và MB.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.6. Ưu đãi lãi suất tiền gửi số:</strong><br>
+      Trường hợp KH được áp dụng ưu đãi lãi suất tiền gửi:</p>
+  </div>
+  <!-- Page 9 -->
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.6.1. Sản phẩm áp dụng: Theo quy định MB từng thời kỳ và sẽ được hiển thị cụ thể cho KH trên App MBBank và
+      website: https://www.mbbank.com.vn/.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.6.2. Giá trị/mức ưu đãi theo quy định của MB từng thời kỳ, sẽ được hiển thị cụ thể cho KH trên App MBBank và
+      website https://www.mbbank.com.vn/ và được áp dụng cho toàn bộ kỳ hạn tiền gửi theo Hợp đồng tiền gửi của KH.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.6.3. Không áp dụng với số tiền gửi quay vòng. Khi quay vòng, lãi suất áp dụng được cập nhật theo biểu lãi suất
+      tiền gửi niêm yết
+      (sản phẩm gốc mà KH tham gia) theo quy định của MB từng thời kỳ.
+    </p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.6.4. Trường hợp sau khi áp dụng voucher lãi suất, mức lãi suất sau ưu đãi cao hơn mức lãi suất trần theo QĐ của
+      Ngân hàng Nhà Nước
+      tại thời điểm Khách hàng sử dụng voucher, mức lãi suất áp dụng cuối cùng là lãi suất trần theo QĐ của Ngân hàng
+      Nhà Nước.
+    </p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.7. Ưu đãi Mã giảm phí Tài khoản số đẹp:</strong> Trường hợp KH được hưởng ưu đãi mã giảm phí Tài khoản
+      số đẹp, KH được sử dụng 01 lần, áp dụng cho toàn bộ loại tài khoản số đẹp. Giá trị/mức ưu đãi theo quy định của MB
+      từng thời kỳ, sẽ được hiển thị cụ thể cho KH trên App MBBank và website https://www.mbbank.com.vn/.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>2.8. Tính năng “quản lý dòng tiền”:</strong></p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.8.1. Tính năng cung cấp cho KH tổng quan thông tin về dòng tiền ra vào tài khoản (Tài khoản thanh toán, Thẻ,….)
+      trong các khoảng thời gian cụ thể (1 tuần/1 tháng/3 tháng/…). Các thông tin này có thể được tổng hợp từ nguồn dữ
+      liệu giao dịch qua App MBBank hoặc KH cũng có thể bổ sung thêm các giao dịch ngoài App MBBank.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.8.2. Tính năng giúp KH phân loại mục đích sử dụng của từng khoản chi tiêu bằng cách gắn nhãn cho từng giao
+      dịch. Các nhãn dán này có thể bao gồm: mua sắm, ăn uống, giải trí,…</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.8.3. Để triển khai tính năng này, KH đồng ý MB được phép xử lý dữ liệu cá nhân của KH và người liên quan do KH
+      cung cấp (bao gồm cả dữ liệu cá nhân nhạy cảm) bao gồm nhưng không giới hạn: thu thập, ghi, ghi âm, ghi hình, phân
+      tích, tổng hợp, đánh giá, xác nhận, lưu trữ, chỉnh sửa, công khai, kết hợp, truy cập, truy xuất, thu hồi, mã hóa,
+      giải mã, sao chép, chia sẻ, truyền đưa, cung cấp, chuyển giao, xóa, hủy thông tin KH và/hoặc hoạt động khác tác
+      động tới dữ liệu của KH.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.8.4. Các kết quả tổng hợp, phân tích, đánh giá của MB khi triển khai tính năng chỉ mang tính chất tham khảo. KH
+      cam kết và hiểu rằng: MB không tuyên bố hay bảo đảm về tính chính xác, sự đầy đủ cũng như sự hoàn thiện đối với
+      các thông tin, khuyến nghị và các tài liệu đính kèm có liên quan. Trong mọi trường hợp, MB không chịu trách nhiệm
+      hoặc có nghĩa vụ pháp lý đối với bất kỳ cá nhân, tổ chức nào về các tổn thất hoặc thiệt hại dù là trực tiếp hay
+      gián tiếp phát sinh từ các quyết định hoặc hành động do KH thực hiện hoặc đưa ra dựa trên các nội dung kết quả
+      tổng hợp, đánh giá, phân tích của MB. KH chịu trách nhiệm kiểm tra kỹ và cân nhắc về việc sử dụng.</p>
+  </div>
+  <!-- Page 10 -->
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>một phần/toàn bộ/không sử dụng kết quả tổng hợp, đánh giá, phân tích của MB đồng thời chịu hoàn toàn trách nhiệm
+      trước các quyết định và hành động của mình.</p>
+  </div>
+
+  <!-- <div style="display: flex; justify-content: space-between;text-align:justify;">
+  <p><strong>2.9. Tính năng “Tiết kiệm và đầu tư tự động”:</strong></p>
+</div>
+
+<div style="display: flex; justify-content: space-between;text-align:justify;">
+  <p>2.9.1. Tính năng hỗ trợ KH tiết kiệm & đầu tư sinh lời thông qua trải nghiệm tự động hóa</p>
+</div>
+
+<div style="display: flex; justify-content: space-between;text-align:justify;">
+  <p>2.9.2. KH chủ động cài đặt các nguyên tắc của tính năng theo nhu cầu cá nhân, bao gồm: nguyên tắc trích tiền tự động, nguyên tắc về tần suất trích tiền, nguyên tắc về tài khoản thanh toán nào sẽ được lựa chọn để trích tiền, nguyên tắc về loại giao dịch để hệ thống nhất diện trích tiền, nguyên tắc về hạng mục đầu tư cho số tiền đã được trích tự động,… và một số các nguyên tắc khác theo quy định của MB từng thời kỳ. Các nguyên tắc sẽ được áp dụng ngay sau khi KH thực hiện chọn/ thay đổi nguyên tắc đã chọn trước đó.</p>
+</div>
+
+<div style="display: flex; justify-content: space-between;text-align:justify;">
+  <p>2.9.3. KH đồng ý được MB mở 01 tài khoản thanh toán (TKTT) làm tài khoản trung gian nhận số tiền được trích tự động trước khi số tiền này được chuyển tới các hạng mục đầu tư mà KH cài đặt khi sử dụng tính năng. Tài khoản trung gian này sẽ không hiển thị trong danh sách TKTT khi KH thực hiện giao dịch. Tài khoản trung gian này vẫn được hưởng các quyền lợi của 1 TKTT thông thường và tuân theo quy định sản phẩm về TKTT của MB.</p>
+</div>
+
+<div style="display: flex; justify-content: space-between;text-align:justify;">
+  <p>2.9.4. KH đồng ý để MB thực hiện mở sổ tiền gửi số hoặc các tài khoản của hình thức đầu tư khác cho KH khi số dư TK trung gian đạt tới mốc tối thiểu theo quy định của sản phẩm đầu tư từng thời kỳ hoặc theo cài đặt của KH, đảm bảo tuân thủ đúng các quy định sản phẩm. Các điều kiện điều khoản về tiền gửi số hoặc các sản phẩm đầu tư khác áp dụng theo quy định sản phẩm của MB từng thời kỳ.</p>
+</div> -->
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>2.9. Các tính năng/ưu đãi khác như: tặng phiếu sử dụng dịch vụ của đối tác,… theo quy định của MB từng thời kỳ,
+      được hiển thị và cập nhật cho KH trên ứng dụng APP MBBank hoặc/và website https://www.mbbank.com.vn.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>3. Phí Dịch vụ</strong></p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>3.1. MB áp dụng thu phí dịch vụ đối với KH tham gia dịch vụ Gói hội viên. Các loại phí được quy định rõ trong
+      biểu phí Dịch vụ Tài khoản thanh toán thuộc Biểu phí Khách hàng cá nhân của MB và có thể thay đổi và cập nhật từng
+      thời kỳ.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>3.2. Phí dịch vụ được hiển thị là mức phí đã bao gồm thuế VAT.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>3.3. KH có thể truy cập website https://www.mbbank.com.vn, hoặc đến chi nhánh/PGD của MB để nhận được thông tin
+      chi tiết.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>3.4. Thời điểm thu phí: Phí được thu 1 lần ngay sau khi Khách Hàng thực hiện đăng ký Dịch vụ và/hoặc khi gia hạn
+      Dịch vụ.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>3.5. Các kỳ thu phí gia hạn tự động: 1 tháng/lần (đối với các gói 1M), 6 tháng/ lần (đối với các gói 6M), 12
+      tháng/ lần (đối với các gói 12M).</p>
+  </div>
+
+  <!-- Page 11 -->
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>3.6. Khách hàng có nghĩa vụ thanh toán đầy đủ và đúng hạn phí dịch vụ theo biểu phí hiện hành của MB và các chi
+      phí phát sinh khác liên quan đến Dịch vụ Gói hội viên MB nếu có.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>3.7. Trong mọi trường hợp, nếu KH không thanh toán đầy đủ và đúng hạn các khoản phí khi sử dụng Dịch vụ của MB
+      thì MB được quyền chấm dứt Dịch vụ.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>4. Thời hạn Gói hội viên, thay đổi và gia hạn</strong></p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>4.1. Thời hạn Gói hội viên được MB cung cấp bao gồm: 01 tháng, 06 tháng và 12 tháng. Thời hạn Gói hội viên có thể
+      được bổ sung, thay đổi theo chính sách của MB từng thời kỳ.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>4.2. Thời hạn Gói hội viên được áp dụng tính từ ngày KH thanh toán thành công phí dịch vụ Gói hội viên tương ứng
+      cho tới ngày tương ứng của tháng kế tiếp (với Gói hội viên có thời hạn 01 tháng); hoặc cho tới ngày tương ứng của
+      06 tháng kế tiếp (với Gói hội viên có thời hạn 06 tháng); hoặc cho tới ngày tương ứng của năm kế tiếp (với Gói hội
+      viên có thời hạn 12 tháng). Ví dụ nếu KH đăng ký Gói hội viên có thời hạn 1 tháng từ ngày 01/01/2024 thì ngày hết
+      hạn của gói sẽ là 01/02/2024; tương tự với các Gói hội viên có thời hạn 6 tháng và 12 tháng.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>4.3. KH có thể tắt tính năng gia hạn tự động đối với các Gói hội viên tối thiểu 1 ngày trước ngày hết hạn gói
+      hiện tại. Theo đó, ngay sau thời điểm hết hạn Gói hội viên hiện hành (ngày hiệu lực cuối cùng của Gói hội viên),
+      trường hợp KH chưa tắt tính năng gia hạn tự động, MB sẽ thực hiện gia hạn 1 thời hạn tương tự Gói hội viên hiện
+      hành của KH, tính từ ngày kế tiếp sau ngày hiệu lực cuối cùng của Gói hội viên.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>4.4. Trường hợp Khách hàng đang nắm giữ Gói hội viên A và thực hiện thay đổi/nâng cấp lên Gói hội viên B, hiệu
+      lực Gói hội viên B được áp dụng ngay sau khi thực hiện thanh toán thành công Gói hội viên B.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>5. Chấm dứt Gói hội viên MB</strong></p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>5.1. KH có thể chấm dứt sử dụng Gói hội viên tại bằng cách tắt tính năng gia hạn tự động trên ứng dụng MBBank tối
+      thiểu 1 ngày trước thời điểm hết hạn gói hiện tại. Các quyền lợi thuộc Gói hội viên được tiếp tục duy trì tới hết
+      thời hạn Gói hội viên, ngoại trừ trường hợp quyền lợi được áp dụng tuân theo chính sách cập nhật tại các văn bản
+      thể lệ, quy định khác của MB từng thời kỳ.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>5.2. MB có quyền nhưng không có nghĩa vụ chấm dứt cung cấp Dịch vụ cho KH trong trường hợp: KH không đáp ứng đủ
+      điều kiện để được duy trì Gói hội viên theo quy định của MB từng thời kỳ; KH vi phạm các thỏa thuận với MB, Điều
+      khoản điều kiện sản phẩm, Điều kiện giao dịch chung về sử dụng dịch vụ, các chính sách của MB; hoặc do quy định
+      pháp luật, yêu cầu của cơ quan nhà nước về việc dừng triển khai dịch vụ, các tính năng/ưu đãi của Gói; hoặc do
+      chính sách, quy định của MB từng thời kỳ.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>5.3. Khi thực hiện hủy/chấm dứt sử dụng một Gói hội viên, MB không áp dụng hoàn phí bao gồm hoàn một phần hay
+      hoàn toàn bộ Dịch vụ Gói hội viên mà KH đã thanh toán đầu kỳ, trừ một số trường hợp MB có quyết định/ quy định
+      khác. Với việc hủy/chấm dứt sử dụng Gói hội viên,</p>
+  </div>
+
+  <!-- Page 12 -->
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>5.4. Khi hủy/chấm dứt quyền lợi dành cho Hội viên, tùy theo quy định của MB từng thời kỳ, MB có thể thông báo cho
+      Khách hàng thông qua một hoặc một số phương thức như quy định tại Mục 6 dưới đây.</p>
+  </div>
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>5.5. Chính sách đối với trường hợp KH thay đổi gói mới khi chưa hết hạn gói cũ:</p>
+  </div>
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>- Đối với ưu đãi đã áp dụng/KH đã dùng, khách hàng được tiếp tục hưởng các ưu đãi này cho đến khi hết thời hạn
+      hiệu lực của ưu đãi.</p>
+  </div>
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>- Đối với ưu đãi chưa áp dụng/KH chưa sử dụng, khách hàng sẽ được hưởng các ưu đãi theo chính sách của gói hội
+      viên mới.</p>
+  </div>
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>- Đối với các ưu đãi/tính năng gồm: Tính năng quản lý dòng tiền, ưu đãi hoàn tiền thẻ Hi Cashback, mất tiền MB
+      đền khách hàng được áp dụng theo chính sách của gói hội viên mới mà khách hàng đăng ký thay đổi.</p>
+  </div>
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>5.6. Chính sách đối với trường hợp MB chấm dứt cung cấp dịch vụ:</p>
+  </div>
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>- Đối với ưu đãi đã áp dụng/KH đã dùng, khách hàng được tiếp tục hưởng các ưu đãi này cho đến khi hết thời hạn
+      hiệu lực của ưu đãi.</p>
+  </div>
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>- Đối với ưu đãi chưa áp dụng/KH chưa sử dụng: Khách hàng không được sử dụng/áp dụng các ưu đãi này.</p>
+  </div>
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>- Đối với các ưu đãi/tính năng gồm: Tính năng quản lý dòng tiền, ưu đãi hoàn tiền thẻ Hi Cashback, mất tiền MB
+      đền: MB sẽ chấm dứt cung cấp và KH không được tiếp tục sử dụng các tính năng/ưu đãi này, KH sẽ được rút số tiền
+      hoàn theo ưu đãi hoàn tiền thẻ Hi Cashback mà KH chưa rút về hạn mức/số dư thẻ.</p>
+  </div>
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>6. Trao đổi thông tin và bảo vệ dữ liệu cá nhân</strong></p>
+  </div>
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>6.1. Trao đổi thông tin: Các thông báo, cung cấp thông tin của MB với KH (bao gồm nhưng không giới hạn thông tin,
+      sản phẩm, dịch vụ, chương trình, ưu đãi, các thông tin sửa đổi, bổ sung, thay thế, điều chỉnh các chính sách của
+      MB đối với Dịch vụ Gói hội viên, chương trình, ưu đãi) được gửi bằng một trong các phương thức giao trực tiếp,
+      đường bưu điện, phương thức điện tử tới địa chỉ: fax, email, số điện thoại, địa chỉ của KH đã cung cấp cho KH; tài
+      khoản giao dịch điện tử của KH trên App, website của MB hoặc các tài khoản trên các phương tiện điện tử hoặc địa
+      chỉ theo thông báo thay đổi của KH từng thời kỳ. Thông báo của MB gửi tới một trong các địa chỉ này đều được coi
+      là việc MB đã thông báo và KH đã tiếp nhận thông báo một cách hợp pháp, chính thức kể cả trường hợp thông báo bị
+      trả lại do không có người nhận.</p>
+  </div>
+  <!-- Page 13 -->
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>6.2. Bảo vệ dữ liệu cá nhân: Nhằm mục đích cung cấp sản phẩm dịch vụ và đáp ứng trải nghiệm KH, KH đồng ý: Tập
+      đoàn MB (bao gồm MB và/hoặc các công ty con của MB) và Bên liên quan (bao gồm nhưng không giới hạn: đối tác, bên
+      cung cấp hàng hóa dịch vụ, Bên tư vấn, bên đại diện, bên nhận ủy nhiệm, bên nhận ủy thác hoặc đại lý, bên nhận
+      chuyển giao quyền và nghĩa vụ, bên kiểm toán, bên liên kết cung cấp sản phẩm dịch vụ, tổ chức và cá nhân có thẩm
+      quyền, các bên khác có liên quan của Tập đoàn MB) được phép xử lý dữ liệu cá nhân của KH và người liên quan do KH
+      cung cấp đối với tất cả các hoạt động trong quy trình xử lý và theo cách thức phù hợp (gồm thu thập, ghi, ghi âm,
+      ghi hình, phân tích, xác nhận, lưu trữ, chỉnh sửa, công khai, kết hợp, truy cập, truy xuất, thu hồi, mã hóa, giải
+      mã, sao chép, chia sẻ, truyền đưa, cung cấp, chuyển giao, xóa, hủy thông tin KH và/hoặc hoạt động khác tác động
+      tới dữ liệu của KH), để: liên hệ, chăm sóc KH, phản hồi các nhu cầu hỗ trợ của KH; nghiên cứu, xây dựng, phát
+      triển, đo lường, cung cấp, cải tiến sản phẩm dịch vụ và các tiện ích, tính năng khác của Tập đoàn MB và/hoặc Bên
+      liên quan; giới thiệu, truyền thông về sản phẩm dịch vụ, tiện ích, xúc tiến thương mại; thực hiện phân tích dữ
+      liệu nội bộ của Tập đoàn MB; nhận biết, xác minh danh tính và xác thực thông tin; thực hiện các biện pháp bảo mật,
+      bảo vệ dữ liệu, bảo đảm an toàn, xác định và đánh giá rủi ro nguy cơ giả mạo hoặc nghi ngờ giả mạo, bảo vệ KH khỏi
+      hành vi gian lận, bất hợp pháp; phòng chống rửa tiền, tội phạm và tài trợ khủng bố, tuân thủ cấm vận; giám sát,
+      kiểm tra, kiểm toán, quản lý rủi ro, quản lý tuân thủ, an ninh an toàn theo các chính sách của Tập đoàn MB; tuân
+      thủ pháp luật và các yêu cầu, chỉ đạo của cơ quan, tổ chức, cá nhân có thẩm quyền, các điều ước quốc tế, các quy
+      tắc, thỏa thuận mà Tập đoàn MB phải tuân thủ, tiêu chuẩn ngành của Tập đoàn MB; cung cấp thông tin theo yêu cầu
+      truy xuất thông tin phù hợp quy định pháp luật; phục vụ việc giải quyết hoặc điều tra bất kỳ khiếu nại, yêu cầu
+      pháp lý hoặc tranh chấp nào; có cơ sở thiết lập, thực thi và bảo vệ các quyền hợp pháp của Tập đoàn MB phù hợp
+      quy định pháp luật; cho bất kỳ mục đích nào dành riêng cho hoạt động của Tập đoàn MB; các mục đích khác nhằm hướng
+      tới phục vụ nhu cầu thông tin, cung cấp sản phẩm dịch vụ hiện tại và trong tương lai của KH.</p>
+  </div>
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>Dữ liệu cá nhân theo Điều khoản Điều kiện này bao gồm dữ liệu cá nhân cơ bản và dữ liệu cá nhân nhạy cảm, dữ liệu
+      cá nhân tại các tài khoản định danh điện tử, cơ sở dữ liệu quốc gia, cơ sở dữ liệu chuyên ngành (bảo hiểm, thuế…),
+      dữ liệu khác của KH, dữ liệu cá nhân của KH và những người liên quan do KH cung cấp, dữ liệu cá nhân được KH tạo
+      ra, được ghi nhận trên hệ thống của Tập đoàn MB khi KH tương tác, sử dụng các dịch vụ, tiện ích của Tập đoàn MB.
+      KH cần đảm bảo đã được sự đồng ý của người có liên quan của KH trước khi cung cấp dữ liệu cá nhân của người có
+      liên quan cho MB.</p>
+  </div>
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>Để bảo đảm các quyền của Chủ thể dữ liệu theo đúng quy định pháp luật, MB tiếp nhận các yêu cầu của KH đối với dữ
+      liệu cá nhân thông qua kênh trực tiếp tại địa điểm mạng lưới của MB, kênh trực tuyến của MB (như ứng dụng/phần mềm
+      MB điện tử, website của MB, kênh MB 24/7 và các kênh trực tuyến khác) và có thể yêu cầu KH cung cấp thêm các tài
+      liệu chứng minh nếu cần thiết. KH có quyền đồng ý và/hoặc rút lại sự đồng ý đối một hoặc nhiều mục đích nêu trên.
+      Việc KH đồng ý với một hoặc một số mục đích, rút lại sự đồng ý, hạn chế xử lý dữ liệu, xóa dữ liệu hoặc cung cấp
+      dữ liệu cá nhân không chính xác, đầy đủ có thể dẫn đến việc Tập đoàn MB không thể hoặc không được phép cung cấp
+      dịch vụ hoặc bắt buộc phải chấm dứt dịch vụ với KH theo chính sách của Tập đoàn MB hoặc quy định pháp luật chuyên
+      ngành.</p>
+  </div>
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>Bằng trách nhiệm của mình, Tập đoàn MB sẽ nỗ lực tối đa trong việc áp dụng các giải pháp bảo vệ dữ liệu cá nhân.
+      Mặc dù vậy, việc xử lý dữ liệu trên đây có thể phát sinh các sự kiện rủi ro, bất khả kháng nằm ngoài tầm kiểm soát
+      của Tập đoàn MB. Trong trường hợp này, KH có trách nhiệm phối hợp theo yêu cầu của Tập đoàn MB và/hoặc Bên liên
+      quan để bảo vệ dữ liệu cá nhân.</p>
+  </div>
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>Không phụ thuộc vào thời điểm KH giao dịch với MB và/hoặc KH chấm dứt sử dụng sản phẩm dịch vụ, các quy định về
+      Bảo vệ dữ liệu cá nhân có hiệu lực kể từ thời điểm dữ liệu cá nhân được ghi, nhận trên hệ thống của Tập đoàn MB
+      cho đến khi KH và MB có thỏa thuận chấm dứt xử lý dữ liệu cá nhân hoặc MB được phép thực hiện phù hợp quy định
+      pháp luật hoặc các trường hợp khác theo quy định pháp luật.</p>
+  </div>
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p><strong>7. Thỏa thuận khác</strong></p>
+  </div>
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>7.1. MB được sửa đổi, bổ sung, thay thế các điều khoản tại Điều khoản Điều kiện này và niêm yết công khai trên
+      website của MB và tại các địa chỉ giao dịch của MB. Điều khoản điều kiện sau khi được sửa đổi, bổ sung, thay thế
+      có hiệu lực áp dụng với KH. KH có trách nhiệm theo dõi thực hiện. Trường hợp KH không đồng ý các nội dung sửa đổi
+      Điều khoản Điều kiện, KH vui lòng liên hệ với các chi nhánh/PGD của MB để được hướng dẫn.</p>
+  </div>
+  <div style="display: flex; justify-content: space-between;text-align:justify;">
+    <p>7.2. Những nội dung nào chưa được quy định tại Điều khoản điều kiện này sẽ thực hiện theo quy định sản phẩm, dịch
+      vụ của MB trong từng thời kỳ và các quy định của pháp luật có liên quan.</p>
+  </div>
+
+</body>

@@ -1,0 +1,2405 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Quy Định Chương Trình Bảo Hiểm - MB Life</title>
+    <style>
+        /* Thiết lập chung */
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 11.5pt;
+            line-height: 1.6;
+            color: #060606;
+            margin: 0;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+
+        /* Bảng biểu (Tables) */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 11pt;
+            border: 0.75pt solid #ff5299;
+        }
+
+        th,
+        td {
+            border: 0.75pt solid #ff5299;
+            padding: 8px 10px;
+            vertical-align: middle;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f7d7e7;
+            color: #dd0071;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .bg-pink-light {
+            background-color: #f7d7e7;
+        }
+
+        .bg-pink-extremely-light {
+            background-color: #fff0f6;
+        }
+
+        tbody tr:nth-child(odd) td.bg-pink-extremely-light {
+            background-color: #ffffff;
+        }
+
+        .bg-pink-header {
+            background-color: #e981a6;
+            color: #ffffff;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .bg-gray {
+            background-color: #f0f0f0;
+        }
+
+        .table-gray-pink-border {
+            border: 0.75pt solid #ff5299;
+        }
+
+        .table-gray-pink-border th,
+        .table-gray-pink-border td {
+            border: 0.75pt solid #ff5299;
+        }
+
+        .table-gray-pink-border th {
+            background-color: #f0f0f0;
+            color: #060606;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .table-gray-pink-border td.bg-gray {
+            background-color: #f0f0f0;
+        }
+
+        /* Bảng màu xám (Gray tables) */
+        .table-gray {
+            border: 0.75pt solid #cccccc;
+        }
+
+        .table-gray th,
+        .table-gray td {
+            border: 0.75pt solid #cccccc;
+        }
+
+        .table-gray th {
+            background-color: #f0f0f0;
+            color: #060606;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .table-gray td.bg-gray {
+            background-color: #f0f0f0;
+        }
+
+        /* Bảng biểu phí (Fee tables) */
+        .table-fee {
+            border: 0.75pt solid #cccccc;
+        }
+
+        .table-fee th,
+        .table-fee td {
+            border: 0.75pt solid #cccccc;
+        }
+
+        p {
+            margin: 6px 0;
+            text-align: justify;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .font-bold {
+            font-weight: bold;
+        }
+
+        .font-italic {
+            font-style: italic;
+        }
+
+        /* Màu sắc chủ đạo */
+        .color-primary {
+            color: #dd0071;
+        }
+
+        /* Màu xanh MB Life */
+        .color-secondary {
+            color: #006fba;
+        }
+
+        /* Định dạng Tiêu đề */
+        h1 {
+            font-size: 16pt;
+            font-weight: bold;
+            text-align: center;
+            color: #dd0071;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 14pt;
+            font-weight: bold;
+            color: #dd0071;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 12pt;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        /* Danh sách (Lists) */
+        ul,
+        ol {
+            margin: 5px 0 15px 0;
+            padding-left: 25px;
+            text-align: justify;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* Thành phần giao diện đặc thù */
+        .page-break {
+            border-top: 2px dashed #dd0071;
+            margin: 40px 0;
+            padding-top: 20px;
+        }
+
+        p:has(.form-line) {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            gap: 4px;
+        }
+
+        .form-line {
+            border-bottom: 1px dotted #000;
+            display: inline-block;
+            min-width: 50px;
+            max-width: 100%;
+            flex: 1 1 0px;
+            vertical-align: bottom;
+        }
+
+        .checkbox {
+            font-size: 14pt;
+            line-height: 1;
+        }
+
+        /* Footer trang */
+        .footer {
+            font-size: 9pt;
+            color: #888;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display: flex; justify-content: space-between;">
+        <div></div>
+        <img src="data:image/png;base64,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"
+            style="width: 93px; height: 47px; display: block;" alt="MB Life Logo">
+    </div>
+    <h1>QUY ĐỊNH CHƯƠNG TRÌNH BẢO HIỂM <br>
+        <span class="color-secondary">BỆNH LÝ NGHIÊM TRỌNG – MB ĐỒNG HÀNH</span>
+    </h1>
+    <p>Đây là tài liệu tóm tắt các quyền lợi và loại trừ bảo hiểm của gói sản phẩm bảo hiểm. Xin lưu ý rằng tài liệu này
+        không thay thế cho các quy định và/hoặc điều khoản chi tiết được nêu trong Quy tắc, điều khoản Sản phẩm. </p>
+    <p>Nội dung chi tiết của các điều khoản đề nghị Quý khách vui lòng đọc <b>“Quy tắc, điều khoản Sản phẩm Bảo hiểm tử
+            kỳ”</b> và <b>“Quy tắc, điều khoản Sản phẩm bảo hiểm Bệnh lý nghiêm trọng – Bản Tiêu chuẩn (CIR2.0 TC
+            01.2025)"</b> của Công ty MB Life. </p>
+    <h2 style="color:black">I. CÁC ĐỊNH NGHĨA / GIẢI THÍCH TỪ NGỮ</h2>
+    <ol>
+        <li>
+            <span class="font-bold">MB Life / Công ty:</span> là Công ty TNHH Bảo hiểm Nhân thọ MB Life được Bộ Tài
+            chính cấp phép thành lập và hoạt động theo pháp luật Việt Nam.
+        </li>
+        <li>
+            <span class="font-bold">Bên mua bảo hiểm (BMBH):</span> là (a) Tổ chức được thành lập và hoạt động hợp pháp
+            tại Việt Nam; hoặc (b) Cá nhân từ đủ 18 tuổi trở lên hiện đang sinh sống tại Việt Nam, có năng lực hành vi
+            dân sự đầy đủ tại thời điểm tham gia Chương trình này. Tại thời điểm tham gia, BMBH phải có quyền lợi có thể
+            được bảo hiểm với Người được bảo hiểm theo quy định pháp luật hiện hành. BMBH được ghi nhận trong Chứng nhận
+            bảo hiểm hoặc xác nhận thay đổi Hợp đồng (nếu có).
+        </li>
+        <li>
+            <span class="font-bold">Người được bảo hiểm (NĐBH):</span> là cá nhân có tính mạng và sức khỏe được bảo
+            hiểm, hiện đang cư trú tại Việt Nam tại thời điểm tham gia Chương trình này và được MB Life chấp nhận bảo
+            hiểm. Đối với Sản phẩm Tử kỳ: NĐBH từ đủ 30 ngày tuổi đến 65 tuổi vào Ngày hiệu lực sản phẩm; Tuổi tối đa
+            khi kết thúc là 70 tuổi. Đối với Sản phẩm BLNT: NĐBH từ 30 ngày tuổi đến 70 tuổi vào Ngày hiệu lực sản phẩm;
+            Tuổi tối đa khi kết thúc Thời hạn tham gia là 80 tuổi.
+        </li>
+        <li>
+            <span class="font-bold">Người thụ hưởng:</span> là cá nhân và hoặc tổ chức do BMBH và NĐBH thống nhất chỉ
+            định bằng văn bản để nhận Quyền lợi bảo hiểm theo Chương trình này. Người thụ hưởng được ghi tên trên Chứng
+            nhận bảo hiểm và/hoặc văn bản xác nhận thay đổi Hợp đồng (nếu có).
+        </li>
+        <li>
+            <span class="font-bold">Tuổi bảo hiểm (Tuổi):</span> là tuổi của NĐBH tính theo ngày sinh nhật đã qua gần
+            nhất với Ngày hiệu lực Hợp đồng hoặc các Ngày kỷ niệm năm Hợp đồng. Nếu năm dương lịch không có ngày tương
+            ứng của ngày sinh nhật thì ngày cuối cùng của tháng sinh sẽ được coi là ngày sinh nhật của NĐBH.
+        </li>
+        <li>
+            <span class="font-bold">Hợp đồng bảo hiểm (Hợp đồng):</span> là thỏa thuận bằng văn bản giữa MB Life và BMBH
+            về việc tham gia Sản phẩm bảo hiểm chính và (các) Sản phẩm bảo hiểm bán kèm trong đó có (các) sản phẩm thuộc
+            Chương trình này.
+        </li>
+        <li>
+            <span class="font-bold">Sản phẩm bảo hiểm chính / Sản phẩm bảo hiểm bán kèm:</span> Sản phẩm Tử kỳ là Sản
+            phẩm bảo hiểm chính của Chương trình. Sản phẩm Bệnh lý nghiêm trọng – Bản Tiêu chuẩn là Sản phẩm bảo hiểm
+            bán kèm Sản phẩm Tử kỳ. Sản phẩm chính và sản phẩm bán kèm được ghi nhận tại Giấy chứng nhận bảo hiểm
+            và/hoặc xác nhận thay đổi Hợp đồng (nếu có).
+        </li>
+        <li>
+            <span class="font-bold">Số tiền bảo hiểm (STBH):</span> là số tiền được dùng làm cơ sở để xác định Quyền lợi
+            bảo hiểm theo Chương trình này. STBH của các Quyền lợi do BMBH và MB Life thỏa thuận, và được thể hiện tại
+            Giấy chứng nhận bảo hiểm và/hoặc xác nhận thay đổi Hợp đồng (nếu có).
+        </li>
+        <li>
+            <span class="font-bold">Phí bảo hiểm:</span> là khoản tiền BMBH đóng cho MB Life để được bảo hiểm theo
+            Chương trình này.
+        </li>
+        <li>
+            <span class="font-bold">Ngày hiệu lực sản phẩm:</span> là ngày NĐBH bắt đầu được MB Life bảo hiểm theo sản
+            phẩm tương ứng thuộc Chương trình này, được thể hiện trên Chứng nhận bảo hiểm hoặc văn bản xác nhận thay đôi
+            Hợp đồng (nếu có).
+        </li>
+        <li>
+            <span class="font-bold">Ngày kỷ niệm năm hợp đồng:</span> là ngày tương ứng hàng năm của Ngày hiệu lực Hợp
+            đồng; nếu năm đó không có ngày tương ứng, ngày cuối cùng của tháng tương ứng được coi là Ngày kỷ niệm năm
+            hợp đồng.
+        </li>
+        <li>
+            <span class="font-bold">Ngày đến hạn đóng phí:</span> là ngày tương ứng hàng tháng của Ngày hiệu lực sản
+            phẩm hoặc ngày cuối cùng của tháng dương lịch nếu tháng đó không có ngày tương ứng, trừ trường hợp có thỏa
+            thuận khác giữa BMBH và MB Life. Ngày đến hạn đóng phí đầu tiên là ngày tương ứng của tháng thứ hai kể từ
+            Ngày hiệu lực sản phẩm (do BMBH được miễn Phí bảo hiểm tháng đầu tiên theo Khoản 10.2).
+        </li>
+        <li>
+            <span class="font-bold">Ngày tái tục sản phẩm:</span> là Ngày kỷ niệm năm Hợp đồng theo đó sản phẩm thuộc
+            Chương trình này được tái tục.
+        </li>
+        <li>
+            <span class="font-bold">Thời hạn bảo hiểm:</span> là khoảng thời gian sản phẩm thuộc Chương trình này có
+            hiệu lực. Kết thúc Thời hạn bảo hiểm, sản phẩm có thể được tái tục theo quy định.
+        </li>
+        <li>
+            <span class="font-bold">Thời hạn tham gia:</span> là khoảng thời gian sản phẩm được phép tái tục theo thỏa
+            thuận của BMBH và MB Life, được thể hiện trên Giấy chứng nhận bảo hiểm hoặc xác nhận thay đổi Hợp đồng (nếu
+            có). Thời hạn tham gia không vượt quá Thời hạn Hợp đồng, tối đa là 30 năm và kết thúc trước khi NĐBH đạt 80
+            tuổi, tùy thời điểm nào đến trước.
+        </li>
+        <li>
+            <span class="font-bold">Sự kiện bảo hiểm:</span> là sự kiện NĐBH bị Tử vong, Thương tật toàn bộ vĩnh viễn
+            hoặc được Chẩn đoán mắc BLNT thỏa mãn các điều kiện để MB Life chỉ trả Quyền lợi bảo hiểm theo Chương trình
+            này.
+        </li>
+        <li>
+            <span class="font-bold">Bệnh lý nghiêm trọng (BLNT):</span> là các bệnh, tình trạng bệnh được quy định cụ
+            thể tại Phụ lục Danh mục BLNT của Quy tắc, điều khoản Sản phẩm bảo hiểm Bệnh lý nghiêm trọng – Bản Tiêu
+            chuẩn. Việc xác định BLNT cần dựa trên Chẩn đoán mắc BLNT.
+        </li>
+        <li>
+            <span class="font-bold">Chẩn đoán mắc BLNT:</span> là chẩn đoán xác định của một hay nhiều BLNT được thực
+            hiện bởi Bác sĩ hoặc nhóm Bác sĩ chuyên khoa của Bệnh viện/Cơ sở y tế đủ tiêu chuẩn. Kết quả chẩn đoán BLNT
+            phải được MB Life chấp nhận. Trong trường hợp có tranh chấp về kết quả chẩn đoán, MB Life có quyền yêu cầu
+            NĐBH tiến hành xét nghiệm y khoa tại một trung tâm xét nghiệm độc lập theo chỉ định của MB Life; chi phí do
+            MB Life chỉ trả; kết quả sau cùng có giá trị ràng buộc các bên.
+        </li>
+        <li>
+            <span class="font-bold">Bệnh viện / Cơ sở y tế đủ tiêu chuẩn:</span> là Bệnh viện (tên ghi trong Giấy phép
+            thành lập và hoạt động có chữ "Bệnh viện" hoặc "Viện") và thỏa mãn các điều kiện: được cấp phép thành lập và
+            hoạt động hợp pháp theo pháp luật Việt Nam; có đủ thiết bị, chuyên môn để chẩn đoán, điều trị, phẫu thuật,
+            có y tá chăm sóc 24/24 và có bác sĩ trực thường xuyên; thực hiện điều trị theo phương pháp Tây y. Không bao
+            gồm: cơ sở điều dưỡng/an dưỡng/chăm sóc người già hoặc người nghiện; cơ sở y học cổ truyền/châm cứu/phục hồi
+            chức năng; bệnh viện phong; trung tâm y tế dự phòng; trung tâm y tế cấp quận/huyện/tỉnh.
+        </li>
+        <li>
+            <span class="font-bold">Bác sĩ:</span> là người có bằng cấp chuyên môn y khoa được Cơ quan có thẩm quyền cấp
+            phép hoặc thừa nhận. Bác sĩ không được đồng thời là: NĐBH/BMBH; thành viên gia đình của NĐBH/BMBH (bố, mẹ,
+            vợ, chồng, con, anh chị em ruột); người có mối quan hệ lợi ích với NĐBH/BMBH (trừ trường hợp được thuê cung
+            cấp dịch vụ và trả tiền độc lập). Không bao gồm Bác sĩ đông y, y học cổ truyền, vật lý trị liệu, chẩn đoán
+            hình ảnh, châm cứu, điều dưỡng.
+        </li>
+        <li>
+            <span class="font-bold">Bệnh có sẵn:</span> là (i) tình trạng bệnh tật thương tật của NĐBH đã được bác sĩ
+            chẩn đoán hoặc điều trị trước Ngày hiệu lực sản phẩm hoặc Ngày khôi phục hiệu lực sản phẩm gần nhất; hoặc
+            (ii) tình trạng có xuất hiện dấu hiệu triệu chứng đặc thù khởi phát trong vòng 36 tháng trước Ngày hiệu lực
+            hoặc Ngày khôi phục hiệu lực gần nhất mà nếu biết được MB Life đã không chấp nhận bảo hiểm/khôi phục hiệu
+            lực hoặc chấp nhận có điều kiện. Việc xác định Bệnh có sẵn căn cứ vào hồ sơ y tế, tài liệu y khoa hợp pháp
+            hoặc thông tin do BMBH/NĐBH tự kê khai.
+        </li>
+        <li>
+            <span class="font-bold">Thương tật toàn bộ vĩnh viễn (TTTBVV):</span> là trường hợp (a) NĐBH bị mất, liệt
+            hoàn toàn và không thể phục hồi chức năng của: hai tay; hoặc hai chân; hoặc một tay và một chân; hoặc hai
+            mắt; hoặc một tay và một mắt; hoặc một chân và một mắt (tay tính từ cổ tay trở lên, chân tỉnh từ mắt cá chân
+            trở lên, mắt là mất/mù hoàn toàn); HOẶC (b) NĐBH bị tổn thương cơ thể từ 81% trở lên theo xác nhận của cơ
+            quan y tế Hội đồng giám định Y khoa cấp tỉnh thành phố trực thuộc trung ương hoặc tổ chức giám định y tế hợp
+            pháp được Công ty chấp thuận. Việc chứng nhận mất hoàn toàn bộ phận cơ thể có thể được thực hiện ngay sau
+            khi xảy ra Sự kiện bảo hiểm; chứng nhận liệt mù hoàn toàn/tổn thương ≥81% được thực hiện không sớm hơn 180
+            ngày kể từ ngày xảy ra Sự kiện bảo hiểm hoặc từ ngày bệnh lý được chẩn đoán.
+        </li>
+        <li>
+            <span class="font-bold">Thời gian chờ:</span> là khoảng thời gian trong đó Sự kiện bảo hiểm, nếu có, sẽ
+            không được bảo hiểm (không áp dụng cho nguyên nhân do Tai nạn). Đối với Sản phẩm Tử kỳ: không áp dụng Thời
+            gian chờ. Đối với Sản phẩm BLNT: Thời gian chờ là 90 ngày, tính từ Ngày hiệu lực sản phẩm hoặc Ngày khôi
+            phục hiệu lực sản phẩm gần nhất, tùy ngày nào đến sau. MB Life sẽ không áp dụng Thời gian chờ khi sản phẩm
+            được tái tục.
+        </li>
+        <li>
+            <span class="font-bold">Tai nạn:</span> là một sự kiện hoặc một chuỗi sự kiện liên tục, khách quan, xảy ra
+            do tác động của một lực, một vật bất ngờ từ bên ngoài, không chủ động và ngoài ý muốn lên cơ thể của NĐBH.
+            Sự kiện hoặc chuỗi sự kiện đó phải là nguyên nhân trực tiếp, duy nhất và không liên quan đến bất kỳ nguyên
+            nhân nào khác gây ra thương tật tử vong cho NĐBH trong vòng 180 ngày kể từ ngày xảy ra.
+        </li>
+        <li>
+            <span class="font-bold">Hành vi gian lận bảo hiểm:</span> được hiểu theo quy định tại Luật Kinh doanh bảo
+            hiểm hiện hành, bao gồm các hành vi của BMBH, NĐBH, Người thụ hưởng, Người nhận Quyền lợi bảo hiểm nhằm
+            chiếm đoạt tiền bảo hiểm hoặc trục lợi bảo hiểm.
+        </li>
+    </ol>
+    <h2 style="color:black">II. QUYỀN VÀ NGHĨA VỤ CỦA CÁC BÊN</h2>
+    <h3>Điều 1. Quyền và nghĩa vụ của MB Life</h3>
+    <p>
+        <span class="font-bold">1.1. MB Life có các quyền sau đây:</span>
+    </p>
+    <ul>
+        <li>Thu Phí bảo hiểm theo thỏa thuận trong Hợp đồng bảo hiểm;</li>
+        <li>Yêu cầu BMBH cung cấp đầy đủ, trung thực thông tin liên quan đến việc giao kết và thực hiện Hợp đồng; </li>
+        <li>Hủy bỏ Hợp đồng bảo hiểm trong trường hợp BMBH vi phạm nghĩa vụ cung cấp thông tin;</li>
+        <li>Đơn phương chấm dứt thực hiện Hợp đồng nếu BMBH không đóng Phí bảo hiểm theo quy định và/hoặc trong trường
+            hợp BMBH không chấp nhận yêu cầu về thay đổi mức độ rủi ro được bảo hiểm;</li>
+        <li>Từ chối giải quyết Quyền lợi bảo hiểm trong các trường hợp loại trừ trách nhiệm bảo hiểm theo Quy định
+            chương trình này;</li>
+        <li>Các quyền khác (nếu có) theo Quy định chương trình này và quy định pháp luật.</li>
+    </ul>
+    <p>
+        <span class="font-bold">1.2. MB Life có các nghĩa vụ sau đây:</span>
+    </p>
+    <ul>
+        <li>Cung cấp các tài liệu của Hợp đồng cho BMBH theo hình thức đã thỏa thuận;</li>
+        <li>Cung cấp đầy đủ thông tin liên quan đến Hợp đồng, giải thích rõ ràng cho BMBH về Quyền lợi bảo hiểm, điều
+            khoản loại trừ trách nhiệm, quyền và nghĩa vụ của BMBH;</li>
+        <li>Giải quyết Quyền lợi bảo hiểm khi xảy ra Sự kiện bảo hiểm; giải thích bằng văn bản lý do từ chối giải quyết
+            Quyền lợi bảo hiểm (nếu có);</li>
+        <li>Bảo mật thông tin do BMBH, NĐBH cung cấp, trừ trường hợp theo yêu cầu của cơ quan nhà nước có thẩm quyền
+            hoặc được sự đồng ý của BMBH, NĐBH;</li>
+        <li>Các nghĩa vụ khác (nếu có) theo Quy định chương trình này và quy định pháp luật.</li>
+    </ul>
+    <h3>Điều 2. Quyền và nghĩa vụ của Bên mua bảo hiểm</h3>
+    <p>
+        <span class="font-bold">2.1. BMBH có các quyền sau đây:</span>
+    </p>
+    <ul>
+        <li>Yêu cầu MB Life cung cấp các tài liệu của Hợp đồng theo hình thức đã thỏa thuận;</li>
+        <li>Yêu cầu MB Life giải quyết Quyền lợi bảo hiểm khi xảy ra Sự kiện bảo hiểm;</li>
+        <li>Hủy bỏ Hợp đồng trong trường hợp MB Life cố ý không thực hiện nghĩa vụ cung cấp thông tin;</li>
+        <li>Đơn phương chấm dứt thực hiện Hợp đồng trong trường hợp MB Life không chấp nhận yêu cầu về thay đổi mức độ
+            rủi ro được bảo hiểm;</li>
+        <li>Thay đổi STBH, thay đổi Người thụ hưởng, yêu cầu khôi phục hiệu lực sản phẩm theo Quy định chương trình này;
+        </li>
+        <li>Từ chối tái tục sản phẩm theo Quy định chương trình này;</li>
+        <li>Các quyền khác (nếu có) theo Quy định chương trình này và quy định của pháp luật.</li>
+    </ul>
+    <p>
+        <span class="font-bold">2.2. BMBH có các nghĩa vụ sau đây:</span>
+    </p>
+    <ul>
+        <li>Kê khai đầy đủ, trung thực mọi thông tin có liên quan đến Hợp đồng bảo hiểm theo yêu cầu của MB Life để đánh
+            giá khả năng chấp nhận bảo hiểm, khôi phục hiệu lực, thay đổi các điều kiện liên quan hoặc chỉ trả Quyền lợi
+            bảo hiểm;</li>
+        <li>Đọc và hiểu rõ Quy định chương trình, các quyền và nghĩa vụ của BMBH khi giao kết Hợp đồng và nội dung khác
+            của Hợp đồng;</li>
+        <li>Đóng Phí bảo hiểm đầy đủ, đúng hạn theo quy định;</li>
+        <li>Thông báo cho MB Life bằng văn bản trong trường hợp có sự thay đổi thông tin cá nhân, nghề nghiệp, ra khỏi
+            lãnh thổ Việt Nam của BMBH/NĐBH theo quy định tại Điều 4 Chương này;</li>
+        <li>Thông báo cho MB Life về việc xảy ra Sự kiện bảo hiểm theo quy định về Thời hạn yêu cầu giải quyết Quyền lợi
+            bảo hiểm;</li>
+        <li>Các nghĩa vụ khác (nếu có) theo Quy định chương trình này và quy định pháp luật.</li>
+    </ul>
+    <h3>Điều 3. Nghĩa vụ kê khai, cung cấp thông tin của BMBH, NĐBH</h3>
+    <ol>
+        <li>
+            <span class="font-bold">3.1.</span> BMBH, NĐBH có nghĩa vụ kê khai, cung cấp đầy đủ, chính xác và trung thực
+            mọi thông tin có liên quan đến Hợp đồng bảo hiểm theo yêu cầu của MB Life. Việc MB Life chỉ định kiểm tra
+            và/hoặc thẩm định sức khoẻ của NĐBH (nếu có) không thay thế cho nghĩa vụ kê khai này.
+        </li>
+        <li>
+            <span class="font-bold">3.2.</span> Trường hợp BMBH, NĐBH cố ý không kê khai, không cung cấp, hoặc kê khai,
+            cung cấp không rõ ràng, không đầy đủ, không chính xác (bao gồm cả trường hợp sử dụng giấy tờ giả/ký, xác
+            nhận mạo danh): <ul>
+                <li>
+                    <span class="font-bold">3.2.1.</span> Nếu biết trước thông tin chính xác, MB Life đã không chấp nhận
+                    bảo hiểm hoặc không chấp nhận khôi phục hiệu lực, MB Life có quyền: (a) Hủy bỏ Hợp đồng/sản phẩm;
+                    và/hoặc (b) Không chỉ trả Quyền lợi bảo hiểm; và/hoặc (c) Hoàn lại tổng số Phí bảo hiểm đã đóng
+                    (không có lãi) sau khi trừ đi: Phí bảo hiểm đã hoàn lại; Khoản nợ; Chi phí kiểm tra sức khỏe; Các
+                    Quyền lợi bảo hiểm đã trả; và các chi phí khác liên quan đến việc phát hành và quản lý Hợp đồng.
+                </li>
+                <li>
+                    <span class="font-bold">3.2.2.</span> Nếu biết trước thông tin chính xác, MB Life vẫn chấp nhận bảo
+                    hiểm hoặc chấp nhận khôi phục hiệu lực, MB Life có quyền áp dụng một hoặc một số biện pháp sau kể từ
+                    Ngày hiệu lực sản phẩm: (a) Điều chỉnh Phí bảo hiểm (hoàn lại phần thừa hoặc thu thêm phần chênh
+                    lệch); (b) Điều chỉnh STBH và/hoặc Quyền lợi bảo hiểm; (c) Không chịu trách nhiệm bảo hiểm đối với
+                    Sự kiện bảo hiểm liên quan đến thông tin đã không kê khai kê khai sai.
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span class="font-bold">3.3.</span> Khi NĐBH còn sống, các nội dung kê khai không chính xác hoặc bỏ sót
+            trong Yêu cầu bảo hiểm và các giấy tờ có liên quan sẽ được MB Life miễn truy xét sau 24 tháng kể từ Ngày
+            hiệu lực sản phẩm hoặc kể từ Ngày khôi phục hiệu lực sản phẩm gần nhất, tùy ngày nào xảy ra sau. Quy định
+            miền truy xét này không áp dụng trong trường hợp BMBH/NĐBH cố ý vi phạm nghĩa vụ kê khai tại Khoản 3.2.
+        </li>
+    </ol>
+    <h2 style="color:black">III. PHẠM VI BẢO HIỂM</h2>
+    <h3>Điều 4. Quy định chi tiết quyền lợi bảo hiểm</h3>
+    <p>
+        <span class="font-bold font-italic">4.1. Quyền lợi bảo hiểm Tử vong hoặc TTTBVV (Sản phẩm Tử kỳ)</span>
+        <br> Khi sản phẩm Tử kỳ đang có hiệu lực, nếu NĐBH bị Tử vong hoặc TTTBVV, MB Life sẽ chỉ trả 100% Số tiền bảo
+        hiểm sau khi trừ Khoản nợ (nếu có).
+    </p>
+    <p>
+        <span class="font-bold font-italic">4.2. Quyền lợi bảo hiểm 03 BLNT (Cơ bản)</span>
+        <br> Khi sản phẩm BLNT đang có hiệu lực, nếu NĐBH mắc một trong ba BLNT theo Phụ lục – Danh mục BLNT của Quy
+        tắc, điều khoản Sản phẩm BLNT, bao gồm:
+    </p>
+    <ul>
+        <li>Ung thư nghiêm trọng;</li>
+        <li>Đột quỵ;</li>
+        <li>Nhồi máu cơ tim,</li>
+    </ul>
+    <p>thì MB Life sẽ chi trả Số tiền bảo hiểm của Quyền lợi này. MB Life chi trả Quyền lợi này tối đa 02 lần trong Thời
+        hạn tham gia cho 02 BLNT khác nhau. Khoảng thời gian tối thiểu giữa các lần Chẩn đoán mắc BLNT là 12 tháng.</p>
+    <p>
+        <span class="font-bold font-italic">4.3. Quyền lợi bảo hiểm BLNT theo giới tính (Nâng cao)</span>
+        <br> Khi sản phẩm BLNT đang có hiệu lực, nếu NĐBH mắc BLNT là Ung thư nghiêm trọng theo Phụ lục Danh mục BLNT,
+        và là bệnh ung thư theo giới tính dưới đây:
+    </p>
+    <ul>
+        <li>Đối với nam giới: ung thư phổi, ung thư tuyến tiền liệt, ung thư gan, ung thư tinh hoàn.</li>
+        <li>Đối với nữ giới: ung thư vú, ung thư cổ tử cung, ung thư tử cung, ung thư buồng trứng, ung thư âm đạo. </li>
+    </ul>
+    <p>thì MB Life sẽ chi trả 25% Số tiền bảo hiểm. MB Life chỉ trả Quyền lợi này 01 lần trong Thời hạn tham gia. </p>
+    <p>
+        <span class="font-bold font-italic">4.4. Nguyên tắc chi trả Quyền lợi BLNT</span>
+    </p>
+    <ol>
+        <li>
+            <span class="font-bold">4.4.1.</span> MB Life sẽ không chỉ trả Quyền lợi bảo hiểm nếu NĐBH tử vong trong
+            vòng 14 ngày kể từ ngày được Chẩn đoán mắc BLNT.
+        </li>
+        <li>
+            <span class="font-bold">4.4.2.</span> Với Quyền lợi bảo hiểm 03 BLNT, nếu NĐBH mắc nhiều hơn một BLNT do
+            cùng một nguyên nhân (Tai nạn hoặc bệnh lý) hoặc được chẩn đoán mắc nhiều BLNT trong cùng một lần Chẩn đoán,
+            MB Life sẽ chỉ chi trả Quyền lợi bảo hiểm cho một BLNT.
+        </li>
+    </ol>
+    <h3>Điều 5. Loại trừ trách nhiệm bảo hiểm</h3>
+    <p>
+        <span class="font-bold font-italic">5.1. Đối với Sản phẩm Tử kỳ</span>
+        <br> MB Life sẽ không chỉ trả Quyền lợi bảo hiểm nếu NĐBH tử vong hoặc bị TTTBVV do bất kỳ nguyên nhân hoặc
+        trong trường hợp nào dưới đây:
+    </p>
+    <ul>
+        <li>Tự tử, hậu quả của hành vi tự tử không thành (dù trong bất kỳ trạng thái tinh thần nào) trong vòng 24 tháng
+            kể từ Ngày hiệu lực Hợp đồng hoặc Ngày khôi phục hiệu lực Hợp đồng gần nhất, tùy ngày nào xảy ra sau;</li>
+        <li>Hành vi vi phạm pháp luật hình sự, hành vi cố ý gây thương tích của BMBH, NĐBH, Người thụ hưởng, Người nhận
+            Quyền lợi bảo hiểm. Trường hợp Tử vong/TTTBVV do hành vi này của Người thụ hưởng/Người nhận Quyền lợi bảo
+            hiểm, MB Life vẫn chi trả với tỷ lệ thụ hưởng tương ứng cho người không tham gia vào các hành vi đó;</li>
+        <li>Sử dụng các chất kích thích, chất gây nghiện, chất độc, ma túy và các tiền chất khác không theo chỉ định của
+            Bác sĩ (không bao gồm sử dụng rượu bia và các chất có cồn khác);</li>
+        <li>Trộm cắp; hoặc tử vong do thi hành án tử hình;</li>
+        <li>Chiến tranh (có tuyên bố hay không tuyên bố), khủng bố, nội chiến, nổi loạn, bạo động, và các hành động thủ
+            địch hoặc mang tính chiến tranh khác;</li>
+        <li>Bệnh có sẵn (trừ trường hợp đã kê khai và được MB Life chấp nhận bảo hiểm).</li>
+    </ul>
+    <p>
+        <span class="font-bold font-italic">5.2. Đối với Sản phẩm BLNT</span>
+        <br> MB Life sẽ không chi trả Quyền lợi bảo hiểm nếu NĐBH được Chẩn đoán mắc BLNT do bất kỳ nguyên nhân nào dưới
+        đây:
+    </p>
+    <ul>
+        <li>Bất kỳ bệnh lý hoặc tổn thương nào không do Tai nạn mà phát sinh trong Thời gian chờ;</li>
+        <li>Bệnh có sẵn (trừ trường hợp đã kê khai và được MB Life chấp nhận bảo hiểm);</li>
+        <li>Nhiễm HIV hoặc các bệnh có liên quan đến HIV/AIDS;</li>
+        <li>Tự tử, hậu quả của hành vi tự tử không thành (dù trong bất kỳ trạng thái tinh thần nào) trong vòng 24 tháng
+            kể từ Ngày nộp khoản phí bảo hiểm đầu tiên, hoặc Ngày khôi phục hiệu lực gần nhất, tủy ngày nào xảy ra sau;
+        </li>
+        <li>Hành vi tự gây thương tích, tự gây tai nạn dù trong bất kỳ trạng thái tinh thần nào;</li>
+        <li>Sử dụng rượu, bia, chất có cồn (nồng độ cồn trong máu ≥10,9 mmol/l hoặc tương đương); hoặc sử dụng các chất
+            kích thích, chất gây nghiện, ma túy và các tiền chất ma túy khác trái với quy định của pháp luật hiện hành;
+        </li>
+        <li>Tham gia các hoạt động nguy hiểm: diễn tập, huấn luyện quân sự của các lực lượng vũ trang; lặn có bình dưỡng
+            khí, hoạt động thể thao chuyên nghiệp, các môn thể thao trên không, nhảy dù, leo núi, đua ngựa hay đua trên
+            các phương tiện có bánh xe hay bất kỳ hình thức đua nào khác, đấm bốc (boxing), săn bắn;</li>
+        <li>Hành vi phạm tội của BMBH, NĐBH, Người thụ hưởng, Người nhận Quyền lợi bảo hiểm;</li>
+        <li>Chiến tranh (có tuyên bố hay không tuyên bố), khủng bố, nội chiến, nổi loạn, bạo động, và các hành động thủ
+            địch hoặc mang tính chiến tranh khác;</li>
+        <li>Các trường hợp áp dụng loại trừ bổ sung khác được xác định dựa trên kết quả thẩm định rủi ro của MB Life do
+            NĐBH có tình trạng sức khỏe dưới chuẩn hoặc các yếu tố rủi ro dưới chuẩn khác như nghề nghiệp, quốc gia cư
+            trú. Các trường hợp loại trừ bổ sung này được MB Life thông báo cho BMBH.</li>
+    </ul>
+    <h2 style="color:black">IV. THỜI GIAN CHỜ</h2>
+    <h3>Điều 6. Quy định về Thời gian chờ</h3>
+    <ol>
+        <li>
+            <span class="font-bold">6.1.</span> Thời gian chờ là khoảng thời gian trong đó Sự kiện bảo hiểm, nếu có, sẽ
+            không được bảo hiểm. Thời gian chờ không áp dụng cho nguyên nhân do Tai nạn.
+        </li>
+        <li>
+            <span class="font-bold">6.2.</span> Đối với Sản phẩm Tử kỳ: không áp dụng Thời gian chờ. Riêng đối với
+            trường hợp tự tử, quy định loại trừ trách nhiệm bảo hiểm vẫn được áp dụng theo Khoản 7.1.
+        </li>
+        <li>
+            <span class="font-bold">6.3.</span> Đối với Sản phẩm BLNT: Thời gian chờ là 90 ngày, tính từ Ngày hiệu lực
+            sản phẩm hoặc Ngày khôi phục hiệu lực sản phẩm gần nhất, tùy ngày nào đến sau.
+        </li>
+        <li>
+            <span class="font-bold">6.4.</span> MB Life sẽ không áp dụng lại Thời gian chờ khi sản phẩm được tái tục
+            liên tục theo quy định tại Điều 7 Chương V.
+        </li>
+    </ol>
+    <h2 style="color:black">V. TÁI TỤC SẢN PHẨM</h2>
+    <h3>Điều 7. Quy định về tái tục sản phẩm</h3>
+    <p>
+        <span class="font-bold">7.1. Điều kiện tái tục:</span> Trong Thời hạn tham gia, sản phẩm thuộc Chương trình này
+        sẽ được tái tục nếu thỏa mãn tất cả các điều kiện sau:
+    </p>
+    <ul>
+        <li>Hợp đồng và sản phẩm có hiệu lực đến thời điểm tái tục;</li>
+        <li>BMBH không có thông báo về việc từ chối tái tục sản phẩm trước thời điểm tái tục;</li>
+        <li>Phí bảo hiểm tái tục của sản phẩm được đóng đủ khi đến hạn hoặc trong vòng 60 ngày kể từ ngày đến hạn đóng
+            phí tái tục;</li>
+        <li>Sản phẩm bảo hiểm vẫn đang được cung cấp tại MB Life tại thời điểm tái tục;</li>
+        <li>BMBH, NĐBH, và/hoặc Người nhận Quyền lợi bảo hiểm không có Hành vi gian lận bảo hiểm theo quy định tại Luật
+            Kinh doanh bảo hiểm.</li>
+    </ul>
+    <p>
+        <span class="font-bold">7.2. Thời hạn bảo hiểm khi tái tục:</span> Sẽ được giữ nguyên như Thời hạn bảo hiểm
+        trước đó. Tuy nhiên, Thời hạn bảo hiểm tại lần tái tục cuối cùng có thể được điều chỉnh ngắn hơn để đáp ứng quy
+        định về Thời hạn tham gia (không vượt quá 30 năm và kết thúc trước khi NĐBH đạt 80 tuổi).
+    </p>
+    <p>
+        <span class="font-bold">7.3. Phí bảo hiểm khi tái tục:</span> Trong trường hợp Phí bảo hiểm có sự thay đổi khi
+        tái tục, MB Life sẽ thông báo mức phí mới cho BMBH trước thời điểm tái tục. Bằng việc đóng phí theo mức phí bảo
+        hiểm mới, BMBH được coi là đã đồng ý với mức phí mới này.
+    </p>
+    <h2 style="color:black">VI. ĐÓNG PHÍ BẢO HIỂM</h2>
+    <h3>Điều 8. Quy định về đóng Phí bảo hiểm</h3>
+    <ol>
+        <li>
+            <span class="font-bold">8.1.</span> Phí bảo hiểm được xác định tại Ngày hiệu lực sản phẩm hoặc Ngày tái tục
+            sản phẩm (nếu sản phẩm được tái tục), dựa trên Số tiền bảo hiểm, Quyền lợi bảo hiểm, Tuổi và giới tính của
+            NĐBH, cùng với kết quả thẩm định của MB Life về tình trạng sức khỏe, nghề nghiệp, và các yếu tố rủi ro của
+            NĐBH.
+        </li>
+        <li>
+            <span class="font-bold">8.2. Định kỳ và phương thức đóng phí:</span> BMBH thanh toán toàn bộ phí bảo hiểm.
+            Ngày đến hạn đóng phí được xác định dựa trên Ngày hiệu lực sản phẩm. Phương thức thanh toán Phí bảo hiểm
+            được thực hiện theo thỏa thuận giữa BMBH và MB Life (bao gồm nhưng không giới hạn ở khấu trừ tự động qua tài
+            khoản ngân hàng, thẻ tín dụng, hoặc các phương thức thanh toán điện tử khác trên Nền Tảng).
+        </li>
+        <li>
+            <span class="font-bold">8.3. Thời gian gia hạn đóng phí:</span> Thời gian gia hạn đóng Phí bảo hiểm là 60
+            ngày kể từ Ngày đến hạn đóng phí khi BMBH không đóng đủ Phí bảo hiểm định kỳ đến hạn. Trong Thời gian gia
+            hạn đóng phí, sản phẩm bảo hiểm vẫn có hiệu lực và Quyền lợi bảo hiểm vẫn được chi trả khi xảy ra Sự kiện
+            bảo hiểm, với điều kiện BMBH hoàn tất nghĩa vụ đóng Phí bảo hiểm còn nợ theo quy định.
+        </li>
+        <li>
+            <span class="font-bold">8.4. Hậu quả khi không đóng phí sau Thời gian gia hạn:</span> Sau khi kết thúc Thời
+            gian gia hạn đóng phí 60 ngày, nếu BMBH vẫn không đóng đủ Phí bảo hiểm định kỳ đến hạn, sản phẩm bảo hiểm sẽ
+            bị đơn phương chấm dứt thực hiện tại ngày liền sau ngày kết thúc Thời gian gia hạn đóng phí.
+        </li>
+        <li>
+            <span class="font-bold">8.5.</span> Với sự chấp thuận của Bộ Tài chính, MB Life có thể điều chỉnh mức Phí
+            bảo hiểm của sản phẩm. MB Life sẽ thông báo bằng văn bản cho BMBH trước thời điểm áp dụng ít nhất 03 tháng.
+        </li>
+    </ol>
+    <h2 style="color:black">VIII. CHẤM DỨT HỢP ĐỒNG</h2>
+    <h3>Điều 9. Các trường hợp chấm dứt hiệu lực</h3>
+    <p>
+        <span class="font-bold">9.1. Đối với Sản phẩm Tử kỳ (Sản phẩm chính):</span> Hợp đồng sẽ chấm dứt hiệu lực khi
+        xảy ra một trong các sự kiện sau, tùy trường hợp nào xảy ra trước:
+    </p>
+    <ul>
+        <li>Ngày kết thúc Thời hạn Hợp đồng;</li>
+        <li>Hợp đồng bị đơn phương chấm dứt thực hiện do BMBH không đóng đủ Phí bảo hiểm sau khi hết Thời gian gia hạn
+            đóng phí 60 ngày theo quy định tại Khoản 8.3;</li>
+        <li>Hợp đồng bị hủy bỏ do vi phạm nghĩa vụ kê khai thông tin theo quy định tại Khoản 3.2.1;</li>
+        <li>BMBH yêu cầu chấm dứt Hợp đồng theo Khoản 9.3;</li>
+        <li>NĐBH tử vong;</li>
+        <li>NĐBH bị Thương tật toàn bộ vĩnh viễn;</li>
+        <li>Các trường hợp khác theo quy định của pháp luật và Hợp đồng.</li>
+    </ul>
+    <p>
+        <span class="font-bold">9.2. Đối với Sản phẩm BLNT (Sản phẩm bán kèm):</span> Sản phẩm sẽ chấm dứt hiệu lực khi
+        xảy ra một trong các sự kiện sau, tùy trường hợp nào xảy ra trước:
+    </p>
+    <ul>
+        <li>Sản phẩm Tử kỳ (Sản phẩm chính) chấm dứt hiệu lực;</li>
+        <li>Thời hạn bảo hiểm của sản phẩm BLNT kết thúc và không được tái tục;</li>
+        <li>Sản phẩm BLNT bị đơn phương chấm dứt thực hiện;</li>
+        <li>NĐBH tử vong;</li>
+        <li>Có bằng chứng chứng minh NĐBH và/hoặc BMBH có Hành vi gian lận bảo hiểm;</li>
+        <li>MB Life đã chỉ trả 02 lần Quyền lợi bảo hiểm 03 BLNT (Cơ bản);</li>
+        <li>Các trường hợp khác theo quy định của pháp luật và Hợp đồng.</li>
+    </ul>
+    <p>
+        <span class="font-bold">9.3.</span> Ngoài các trường hợp trên, BMBH có quyền yêu cầu chấm dứt sản phẩm/Hợp đồng
+        bằng văn bản trong thời gian Hợp đồng có hiệu lực. Ngày chấm dứt hiệu lực là ngày MB Life nhận được Yêu cầu chấm
+        dứt của BMBH (hoặc ngày ghi trên thông báo của MB Life) và MB Life sẽ không hoàn trả Phí bảo hiểm mà BMBH đã
+        đóng.
+    </p>
+    <h2 style="color:black">IX. GIẢI QUYẾT QUYỀN LỢI BẢO HIỂM</h2>
+    <h3>Điều 10. Người nhận Quyền lợi bảo hiểm</h3>
+    <ol>
+        <li>
+            <span class="font-bold">10.1.</span> Đối với Quyền lợi bảo hiểm của Sản phẩm Tử kỳ, MB Life sẽ chỉ trả Quyền
+            lợi bảo hiểm theo thứ tự ưu tiên sau: <ul>
+                <li>Người thụ hưởng;</li>
+                <li>Người thừa kế hợp pháp của Người thụ hưởng, nếu Người thụ hưởng đã tử vong;</li>
+                <li>Nếu Hợp đồng không có chỉ định Người thụ hưởng: <ul>
+                        <li>Trường hợp BMBH là cá nhân: BMBH hoặc người thừa kế của BMBH nếu BMBH tử vong;</li>
+                        <li>Trường hợp BMBH là tổ chức: Người thừa kế của NĐBH.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span class="font-bold">10.2.</span> Đối với Quyền lợi bảo hiểm của Sản phẩm BLNT, trừ trường hợp có thỏa
+            thuận khác giữa MB Life và BMBH, MB Life sẽ chỉ trả Quyền lợi bảo hiểm theo thứ tự ưu tiên sau: <ul>
+                <li>Trường hợp BMBH là cá nhân: (a) BMBH; (b) Người thừa kế hợp pháp của BMBH trong trường hợp BMBH tử
+                    vong;</li>
+                <li>Trường hợp BMBH là tổ chức: (a) NĐBH đủ 18 tuổi hoặc Người giám hộ hợp pháp của NĐBH chưa đủ 18 tuổi
+                    tại thời điểm chỉ trả; (b) Người thừa kế hợp pháp của NĐBH trong trường hợp NĐBH tử vong. </li>
+            </ul>
+        </li>
+    </ol>
+    <h3>Điều 11. Thời hạn yêu cầu giải quyết Quyền lợi bảo hiểm</h3>
+    <ol>
+        <li>
+            <span class="font-bold">11.1.</span> Thời hạn nộp hồ sơ yêu cầu giải quyết Quyền lợi bảo hiểm là 12 tháng kể
+            từ ngày xảy ra Sự kiện bảo hiểm. Thời gian xảy ra sự kiện bất khả kháng hoặc trở ngại khách quan không tính
+            vào thời hạn nộp hồ sơ trả tiền bảo hiểm.
+        </li>
+        <li>
+            <span class="font-bold">11.2.</span> Trường hợp Người thụ hưởng hoặc Người yêu cầu giải quyết Quyền lợi bảo
+            hiểm chứng minh được rằng không biết thời điểm xảy ra Sự kiện bảo hiểm thì thời hạn quy định tại Khoản 11.1
+            được tính từ ngày Người thụ hưởng hoặc Người yêu cầu giải quyết quyền lợi biết việc xảy ra Sự kiện bảo hiểm
+            đó.
+        </li>
+        <li>
+            <span class="font-bold">11.3.</span> Quá thời hạn 12 tháng theo Điều này, MB Life có quyền từ chối giải
+            quyết Quyền lợi bảo hiểm.
+        </li>
+    </ol>
+    <h3>Điều 12. Hồ sơ yêu cầu giải quyết Quyền lợi bảo hiểm</h3>
+    <ol>
+        <li>
+            <span class="font-bold">12.1.</span> Người yêu cầu giải quyết Quyền lợi bảo hiểm cần cung cấp cho MB Life
+            các giấy tờ sau: <ul>
+                <li>Giấy yêu cầu giải quyết Quyền lợi bảo hiểm theo mẫu của MB Life đã được điền đầy đủ và chính xác;
+                </li>
+                <li>Giấy ủy quyền thu thập thông tin theo mẫu của MB Life;</li>
+                <li>Giấy tờ chứng minh Sự kiện bảo hiểm: <ul>
+                        <li>Đối với Sự kiện Tử vong: Bản gốc hoặc bản sao hợp pháp bằng chứng sự kiện tử vong;</li>
+                        <li>Đối với Sự kiện TTTBVV: Bản gốc hoặc bản sao hợp pháp kết quả giám định tình trạng thương
+                            tật của NĐBH do Hội đồng giám định Y khoa cấp tỉnh, thành phố trực thuộc trung ương hoặc tổ
+                            chức giám định y tế hợp pháp được MB Life chấp thuận cấp;</li>
+                        <li>Đối với Sự kiện Chẩn đoán mắc BLNT: Tất cả các biên bản, Giấy ra viện (nếu có), tóm tắt Bệnh
+                            án (nếu có), chứng từ y tế gắn liền với Sự kiện bảo hiểm (kết quả xét nghiệm, kết quả chẩn
+                            đoán, kết quả điều trị, đơn thuốc, phim chụp gắn liền với Sự kiện bảo hiểm); </li>
+                    </ul>
+                </li>
+                <li>Hồ sơ tai nạn và bản tường trình tai nạn (nếu có) gắn liền với Sự kiện bảo hiểm: Biên bản tai
+                    nạn/Biên bản khám nghiệm hiện trường Kết luận giám định pháp y/Kết luận điều tra của cơ quan có thẩm
+                    quyền;</li>
+                <li>Bằng chứng về quyền được nhận Quyền lợi bảo hiểm: <ul>
+                        <li>Bản sao hợp pháp Căn cước/Căn cước công dân/Chứng minh thư nhân dân/hộ chiếu của NĐBH/Người
+                            thụ hưởng/Người nhận Quyền lợi bảo hiểm;</li>
+                        <li>Bằng chứng về quyền được nhận Quyền lợi bảo hiểm như giấy ủy quyền, di chúc, văn bản thỏa
+                            thuận phân chia di sản hoặc văn bản khai nhận di sản hoặc thỏa thuận cử người nhận Quyền lợi
+                            bảo hiểm theo đúng quy định của pháp luật.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span class="font-bold">12.2.</span> Các hồ sơ, giấy tờ nêu tại Điều này do Bên thứ ba cung cấp và/hoặc xác
+            nhận phải là bản gốc/bản sao được chứng thực bởi cơ quan có thẩm quyền theo quy định của pháp luật, hoặc bản
+            sao hợp lệ được MB Life chấp thuận. Tùy theo sự cần thiết trong quá trình giám định, xác minh Sự kiện bảo
+            hiểm cụ thể, MB Life có thể lược bỏ yêu cầu một số loại giấy tờ và/hoặc yêu cầu cung cấp thêm các tài liệu
+            hoặc bằng chứng bổ sung.
+        </li>
+        <li>
+            <span class="font-bold">12.3.</span> Người yêu cầu giải quyết Quyền lợi bảo hiểm/Người nhận Quyền lợi bảo
+            hiểm có nghĩa vụ thu thập và cung cấp một cách đầy đủ và trung thực các giấy tờ cần thiết và các thông tin
+            có liên quan và tự thanh toán các chi phí để thu thập và cung cấp các giấy tờ, bằng chứng này.
+        </li>
+    </ol>
+    <h3>Điều 13. Giám định y tế và xác minh thông tin</h3>
+    <ol>
+        <li>
+            <span class="font-bold">13.1.</span> MB Life có quyền tự mình hoặc sử dụng dịch vụ của bên thứ ba để điều
+            tra, xác minh các thông tin Khách hàng đã kê khai, cung cấp, và/hoặc đánh giá, thẩm định rủi ro và hậu quả
+            của rủi ro và/hoặc thu thập tài liệu, bằng chứng liên quan để phục vụ cho việc giải quyết Quyền lợi bảo
+            hiểm. BMBH/NĐBH/Người thụ hưởng/Người nhận Quyền lợi bảo hiểm có nghĩa vụ hợp tác, hỗ trợ để MB Life thực
+            hiện việc này.
+        </li>
+        <li>
+            <span class="font-bold">13.2.</span> MB Life có quyền trưng cầu giám định và NĐBH có nghĩa vụ hợp tác đối
+            với yêu cầu giám định này tại các cơ quan giám định/chuyên viên giám định được chỉ định hoặc chấp thuận.
+        </li>
+    </ol>
+    <h3>Điều 14. Thời gian giải quyết Quyền lợi bảo hiểm</h3>
+    <ol>
+        <li>
+            <span class="font-bold">14.1.</span> MB Life có trách nhiệm giải quyết Quyền lợi bảo hiểm trong vòng 30 ngày
+            kể từ ngày nhận được đầy đủ Hồ sơ yêu cầu giải quyết Quyền lợi bảo hiểm hợp lệ. Phương thức thanh toán Quyền
+            lợi bảo hiểm sẽ do Người yêu cầu giải quyết Quyền lợi bảo hiểm lựa chọn khi yêu cầu giải quyết.
+        </li>
+        <li>
+            <span class="font-bold">14.2.</span> Trường hợp từ chối giải quyết Quyền lợi bảo hiểm, MB Life sẽ gửi thông
+            báo bằng văn bản đến Người yêu cầu giải quyết Quyền lợi bảo hiểm nêu rõ lý do từ chối.
+        </li>
+        <li>
+            <span class="font-bold">14.3.</span> Nếu quả thời hạn nêu tại Khoản 14.1 (trừ trường hợp không do lỗi của MB
+            Life), MB Life có trách nhiệm thanh toán thêm khoản lãi theo lãi suất chậm trả công bố trên cổng thông tin
+            điện tử (website) của MB Life.
+        </li>
+    </ol>
+    <h2 style="color:black">X. GIẢI QUYẾT TRANH CHẤP</h2>
+    <h3>Điều 15. Giải quyết tranh chấp</h3>
+    <ol>
+        <li>
+            <span class="font-bold">15.1.</span> Quy định chương trình này được điều chỉnh và giải thích theo pháp luật
+            Việt Nam.
+        </li>
+        <li>
+            <span class="font-bold">15.2.</span> Mọi tranh chấp liên quan đến Chương trình bảo hiểm này, nếu không giải
+            quyết được bằng thương lượng, một trong các bên có quyền khởi kiện tại Tòa án nhân dân có thẩm quyền nơi MB
+            Life có trụ sở tại Việt Nam.
+        </li>
+    </ol>
+    <h2 style="color:black">XI. CAM KẾT VÀ THỎA THUẬN CỦA KHÁCH HÀNG</h2>
+    <p>Bằng việc đồng ý với Quy định chương trình này, BMBH và NĐBH đồng thời xác nhận đã đọc, hiểu rõ và đồng ý với
+        toàn bộ các cam kết, thỏa thuận và lưu ý dưới đây. Các cam kết và thỏa thuận này là một phần không tách rời của
+        Hợp đồng bảo hiểm.</p>
+    <h3>Điều 16: Cam kết về Thông tin chung và thông tin sức khỏe của NĐBD/BMBH</h3>
+    <ul>
+        <li>NĐBH/BMBH không hút thuốc</li>
+        <li>NĐBH/BMBH chưa từng mắc bất kỳ bệnh lý sau đây: <ul>
+                <li>Ung thư, u, nang, bướu hoặc bất kỳ loại khối u nào.</li>
+                <li>Tăng huyết áp, tăng cholesterol máu, đái tháo đường hoặc bệnh tuyến giáp.</li>
+                <li>Nhồi máu cơ tim, tiếng thổi tại tim, bệnh van tim, đau ngực, khó thở, rối loạn nhịp tim hoặc bệnh lý
+                    tim, mạch khác.</li>
+                <li>Đột quỵ, cơn thiếu máu não thoáng qua, liệt, động kinh, co giật, hoặc đau đầu kéo dài.</li>
+                <li>Hen suyễn, viêm phế quản, viêm phổi, lao phổi hoặc bất kỳ bệnh hô hấp khác.</li>
+                <li>Viêm gan B, viêm gan C, bệnh lý gan mật.</li>
+                <li>Viêm, loét dạ dày hoặc tá tràng, đi ngoài ra máu, trĩ, hoặc bất kỳ bệnh của dạ dày hoặc ruột. </li>
+                <li>Thoát vị đĩa đệm, bệnh gút, viêm khớp, đau khớp, đau lưng mãn tính.</li>
+                <li>Bệnh thận, bệnh của bảng quang hoặc các bệnh của hệ tiết niệu, sinh dục.</li>
+                <li>Suy giảm thính lực, thị lực, suy giảm khả năng nói hoặt bất kỳ bệnh của tai, mắt không bao gồm tật
+                    khúc xạ hoặc nhiễm trùng cấp tính chỉ xảy ra một lần đã hồi phục, mũi và họng.</li>
+                <li>Thiếu máu, tan máu bẩm sinh (thalassemia), hoặc bất kỳ bệnh máu.</li>
+                <li>Lupus ban đỏ hệ thống (SLE), viêm khớp dạng thấp hoặc bất kỳ bệnh của hệ thống miễn dịch.</li>
+                <li>Cơn hoảng loạn, lo âu, trầm cảm hoặc bất kỳ bệnh tâm thần, bệnh thần kinh.</li>
+                <li>Dị tật bẩm sinh, khiếm khuyết thể chất hoặc dị dạng.</li>
+                <li>Đã từng nhận tư vấn y tế hoặc điều trị liên quan đến AIDS (bao gồm HIV dương tính hoặc bất kỳ bệnh
+                    lây qua đường tình dục).</li>
+            </ul>
+        </li>
+        <li>Trong vòng 3 năm qua, NĐBH/BMBH chưa từng: <ul>
+                <li>Nhập viện để điều trị bệnh hoặc chấn thương từ 5 ngày liên tục trở lên, không bao gồm nhập viện do
+                    cảm cúm, ngộ độc thực phẩm hoặc do chấn thương/tai nạn và đã hoàn toàn hồi phục, không cần theo dõi
+                    trong ít nhất 6 tháng và không có biến chứng.</li>
+                <li>Được kê toa thuốc hoặc điều trị y tế liên tục từ 7 ngày trở lên.</li>
+                <li>Đã từng thực hiện 1 trong các xét nghiệm sau đây với kết quả bất thường và được tư vấn phải điều
+                    trị: xét nghiệm máu, phân, nước tiểu, chụp X-quang phổi, nhũ ảnh, siêu âm, xét nghiệm tế bào cổ tử
+                    cung, điện tâm đồ (ECG), sinh thiết tế bào học, chụp MRI hoặc cắt lớp vi tính.</li>
+                <li>Được tư vấn thực hiện các kiểm tra y tế chuyên sâu hoặc đang chờ kết quả xét nghiệm, điều trị hoặc
+                    phẫu thuật.</li>
+            </ul>
+        </li>
+        <li>Quý khách chưa từng có hợp đồng bảo hiểm Nhân thọ hoặc Bệnh hiểm nghèo, Tai nạn hoặc Bảo hiểm sức khỏe bị từ
+            chối, tạm hoãn hoặc chỉ được chấp nhận với điều kiện kèm theo (ví dụ: tăng phí, loại trừ quyền lợi).</li>
+    </ul>
+    <h3>Điều 17. Trách nhiệm kê khai thông tin và Cam kết về FATCA</h3>
+    <ol>
+        <li>
+            <span class="font-bold">17.1.</span> BMBH và NĐBH chịu trách nhiệm đảm bảo thông tin được kê khai trong Hồ
+            sơ yêu cầu bảo hiểm và các tài liệu liên quan là chính xác, trung thực, đầy đủ và chịu hoàn toàn trách nhiệm
+            về nội dung thông tin đã kê khai dù là trong trường hợp BMBH/NĐBH trực tiếp kê khai hay ủy quyền kê khai
+            thông tin. Việc kê khai chỉ được coi là hoàn tất khi BMBH/NĐBH xác nhận thông tin. Trường hợp thông tin kê
+            khai chưa chính xác, đầy đủ, BMBH/NĐBH có trách nhiệm cập nhật thông tin chính xác trước khi xác nhận. Mọi
+            thông tin được BMBH/NĐBH xác nhận được xem như là đã được kê khai, kiểm tra, xác nhận bởi chính BMBH/NDBH.
+        </li>
+        <li>
+            <span class="font-bold">17.2.</span> BMBH/NĐBH có trách nhiệm thông báo cho MB Life nếu thuộc một trong các
+            trường hợp sau (liên quan đến nghĩa vụ tuân thủ Đạo luật FATCA của Hoa Kỳ): <ul>
+                <li>Là công dân hoặc thường trú tại Hoa Kỳ; hoặc</li>
+                <li>Sinh tại Hoa Kỳ; hoặc</li>
+                <li>Có địa chỉ thường trú, địa chỉ hòm thư, địa chỉ liên lạc, gửi giữ thư tại Hoa Kỳ; hoặc</li>
+                <li>Có số điện thoại tại Hoa Kỳ; hoặc</li>
+                <li>Có yêu cầu thanh toán từ một tài khoản này sang tài khoản khác ở Hoa Kỳ; hoặc</li>
+                <li>Có Giấy tờ ủy quyền hiện hành cho người có địa chỉ tại Hoa Kỳ.</li>
+            </ul>
+        </li>
+    </ol>
+    <h3>Điều 18. Xác nhận về kênh phân phối</h3>
+    <p>BMBH xác nhận đã được giới thiệu, tư vấn và hỗ trợ thực hiện yêu cầu bảo hiểm này thông qua kênh phân phối phù
+        hợp được lựa chọn tại Hồ sơ yêu cầu bảo hiểm (Kênh đại lý / Kênh Bancassurance / Kênh trực tuyến).</p>
+    <h3>Điều 19. Thỏa thuận giao dịch điện tử và xử lý dữ liệu cá nhân</h3>
+    <p>
+        <span class="font-bold">19.1. Đăng ký giao dịch điện tử</span>
+        <br> BMBH/NDBH xác nhận:
+    </p>
+    <ul>
+        <li>Đồng ý giao kết các văn bản, thỏa thuận và/hoặc thực hiện các giao dịch với MB Life liên quan đến Yêu cầu
+            bảo hiểm/Hợp đồng bảo hiểm thông qua phương tiện điện tử trên (các) nền tảng điện tử (website, ứng dụng...)
+            do MB Life thiết lập và/hoặc đối tác cung cấp dịch vụ được MB Life ủy quyền ("Nền Tảng").</li>
+        <li>MB Life được quyền gửi thông tin về Tên đăng nhập, mật khẩu, mã xác thực một lần (OTP) và các thông tin khác
+            liên quan tới giao dịch điện tử qua email và/hoặc số điện thoại di động mà BMBH/NĐBH đăng ký với MB Life.
+        </li>
+        <li>Đã đọc, hiểu và đồng ý tuân thủ các điều khoản áp dụng đối với giao dịch điện tử thực hiện thông qua Nền
+            Tảng, bao gồm nhưng không giới hạn ở Điều khoản sử dụng website và các ứng dụng điện tử được MB Life công bố
+            trên website chính thức, Điều khoản cung cấp sản phẩm dịch vụ bảo hiểm trên môi trường mạng ("Điều Khoản
+            Giao Dịch Trực Tuyến"). Điều Khoản Giao Dịch Trực Tuyến là một phần đính kèm và không tách rời của Hợp đồng
+            bảo hiểm được giao kết và/hoặc thực hiện thông qua phương tiện điện tử.</li>
+        <li>Mọi giao dịch thực hiện thông qua Nền Tảng và tất cả các tài liệu đính kèm gửi cho MB Life với Tên đăng nhập
+            và Mật khẩu của BMBH/NĐBH và/hoặc được BMBH/NĐBH xác nhận thông qua Nền Tảng đều có giá trị pháp lý và là cơ
+            sở để MB Life xử lý các yêu cầu của BMBH/NĐBH tương tự như bản gốc được chính BMBH/NĐBH ký trực tiếp.
+            BMBH/NĐBH cam kết chịu mọi trách nhiệm về tính hợp pháp của tất cả các tài liệu này.</li>
+        <li>Mọi thông tin trao đổi gửi đến hoặc gửi từ Số điện thoại và/hoặc Email mà BMBH/NĐBH đã cung cấp/cập nhật cho
+            MB Life mặc nhiên được hiểu là gửi đến hoặc gửi từ BMBH/NĐBH.</li>
+        <li>BMBH/NĐBH sẽ luôn duy trì Số điện thoại, Email trong tình trạng nhận được thông tin và sẽ thông báo cho MB
+            Life nếu có bất kỳ thay đổi nào. MB Life sẽ không phải chịu bất kỳ trách nhiệm nào trong trường hợp Số điện
+            thoại và/hoặc Email của BMBH/NĐBH không thể nhận được thông tin vì bất cứ lý do gì.</li>
+    </ul>
+    <p>
+        <span class="font-bold">19.2. Thỏa thuận xử lý dữ liệu cá nhân</span>
+        <br> Bằng việc đồng ý với Quy định chương trình này, BMBH/NĐBH xác nhận đã đọc, hiểu rõ và tự nguyện đồng ý hoàn
+        toàn với nội dung của Chính sách bảo mật và Bảo vệ dữ liệu cá nhân được đăng tải công khai trên website chính
+        thức của MB Life tại (https://mblife.vn/page/chinh-sach-bao-mat) và đồng ý cho phép xử lý Dữ liệu cá nhân của
+        mình và/hoặc dữ liệu cá nhân do mình cung cấp theo Chính Sách.
+    </p>
+    <h3>Điều 20. Cam kết của BMBH/NĐBH/Người đại diện theo pháp luật của NĐBH</h3>
+    <p>BMBH/NĐBH/Người đại diện theo pháp luật của NĐBH (sau đây gọi chung là "Khách hàng") cam kết:</p>
+    <ol>
+        <li>
+            <span class="font-bold">20.1.</span> Khách hàng xác nhận rằng Yêu cầu bảo hiểm được kê khai, hoàn tất trong
+            thời gian Khách hàng đang cư trú tại Việt Nam. Khách hàng đã được tư vấn, giải thích đầy đủ các thông tin,
+            số liệu trong Tài liệu minh họa Hợp đồng bảo hiểm, Yêu cầu bảo hiểm, Quy tắc điều khoản sản phẩm bảo
+            hiểm/Quyền lợi bảo hiểm bán kèm, Quyền và nghĩa vụ của BMBH/NĐBH, hiểu rõ các trường hợp loại trừ bảo hiểm,
+            các loại phí, chỉ phí, phương thức phân bố phí bảo hiểm và hoàn toàn tự nguyện, không bị ép buộc khi tham
+            gia sản phẩm bảo hiểm.
+        </li>
+        <li>
+            <span class="font-bold">20.2.</span> Khách hàng cam kết những nội dung kê khai tại Yêu cầu bảo hiểm và các
+            thông tin khác cung cấp cho MB Life, bác sỹ hoặc Bên thứ ba do MB Life chỉ định là đầy đủ, chính xác và
+            trung thực, là cơ sở để MB Life đánh giá khả năng chấp nhận bảo hiểm. Mọi thông tin trao đổi bằng lời nói
+            trái với các nội dung của Yêu cầu bảo hiểm và Quy tắc, điều khoản của Hợp đồng bảo hiểm sẽ không có hiệu
+            lực.
+        </li>
+        <li>
+            <span class="font-bold">20.3.</span> Khách hàng hiểu rõ và đồng ý rằng MB Life có quyền đề nghị NĐBH đi kiểm
+            tra sức khỏe và việc MB Life tiến hành kiểm tra, thẩm định sức khỏe của NĐBH (nếu có) không thay thế cho
+            nghĩa vụ kê khai trung thực của Khách hàng. Khách hàng đồng ý rằng nếu BMBH/NĐBH/Người đại diện theo pháp
+            luật của NĐBH cố ý vi phạm nghĩa vụ kê khai trung thực những thông tin mà nếu với thông tin chính xác MB
+            Life sẽ không chấp nhận bảo hiểm, MB Life sẽ không có nghĩa vụ giải quyết bất cứ Quyền lợi bảo hiểm nào.
+        </li>
+        <li>
+            <span class="font-bold">20.4.</span> Khách hàng đồng ý cho các cơ quan y tế, bệnh viện, bác sĩ, (các) công
+            ty bảo hiểm khác, tổ chức, cá nhân, khi nhận được bản sao Yêu cầu bảo hiểm này, được phép cung cấp cho MB
+            Life tất cả các tài liệu hồ sơ bệnh án về Khách hàng, bao gồm cả những thông tin, tài liệu về sức khỏe, y tế
+            có liên quan đến BMBH/NĐBH nhằm mục đích giao kết và thực hiện Hợp đồng bảo hiểm.
+        </li>
+        <li>
+            <span class="font-bold">20.5.</span> Khách hàng đồng ý cho MB Life được phép tiết lộ, chuyển giao hoặc sử
+            dụng các dữ liệu cá nhân do Khách hàng cung cấp trong các trường hợp sau: thu thập, sử dụng, chuyển giao
+            theo yêu cầu của cơ quan nhà nước có thẩm quyền hoặc cho mục đích thẩm định, tính toán phí bảo hiểm/phí bảo
+            hiểm rủi ro, phát hành hợp đồng bảo hiểm, thu phí bảo hiểm phí bảo hiểm rủi ro, tái bảo hiểm, trích lập dự
+            phòng nghiệp vụ, dịch vụ khách hàng, giải quyết chi trả quyền lợi bảo hiểm, nghiên cứu thiết kế sản phẩm,
+            phòng chống gian lận, trục lợi bảo hiểm, nghiên cứu, đánh giá tình hình tài chính, khả năng thanh toán, mức
+            độ đầy đủ vốn, yêu cầu vốn, xử lý, lưu trữ và quản trị dữ liệu. Các trường hợp chuyển giao thông tin khác sẽ
+            được thực hiện theo quy định tại Chính Sách bảo mật và Bảo vệ dữ liệu cá nhân của MB Life.
+        </li>
+        <li>
+            <span class="font-bold">20.6.</span> Khách hàng sẽ hoàn toàn chịu trách nhiệm về việc ủy quyền cho người
+            khác thay Khách hàng kê khai thông tin hoặc nộp phí bảo hiểm cho MB Life. MB Life không có trách nhiệm hoặc
+            nghĩa vụ phải xác minh việc Khách hàng ủy quyền cho bên thứ ba. Khách hàng sẽ cung cấp các chứng từ liên
+            quan đến nguồn gốc các khoản thanh toán nói trên khi có yêu cầu. Khách hàng xác nhận rằng mọi khoản tiền
+            dùng để đóng phí bảo hiểm không có nguồn gốc từ hành vi phạm tội hoặc hoạt động vi phạm pháp luật phòng
+            chống rửa tiền của Việt Nam.
+        </li>
+        <li>
+            <span class="font-bold">20.7.</span> Khách hàng đồng ý sử dụng thông tin cư trú, địa chỉ thư điện tử (email)
+            đã đăng ký với MB Life để nhận bộ Hợp đồng bảo hiểm và các thông báo/tài liệu liên quan đến Hợp đồng bảo
+            hiểm. Khách hàng có trách nhiệm thông báo cho MB Life trong trường hợp có thay đổi các thông tin đã đăng ký,
+            bảo mật tài khoản email, mật khẩu sử dụng và các thông tin mà MB Life đã chuyển cho Khách hàng, tự chịu
+            trách nhiệm với mọi thiệt hại, tổn thất liên quan đến Hợp đồng bảo hiểm do việc Khách hàng chậm/không thông
+            báo thông tin thay đổi hoặc để lộ thông tin về Hợp đồng bảo hiểm và/hoặc địa chỉ thư điện tử, mật khẩu sử
+            dụng dẫn đến người khác có thể tiếp cận các thông tin mà MB Life cung cấp và/hoặc thông tin trong thư điện
+            tử bị sử dụng bởi một bên không có thẩm quyền, trừ khi do lỗi của MB Life.
+        </li>
+        <li>
+            <span class="font-bold">20.8.</span> Liên quan đến quy định về thuế tại Hoa Kỳ (FATCA), Khách hàng đồng ý
+            cung cấp thêm thông tin khi được yêu cầu.
+        </li>
+        <li>
+            <span class="font-bold">20.9.</span> Trường hợp phát sinh yêu cầu kê khai bổ sung, thay đổi thông tin, NĐBH
+            theo đây ủy quyền cho BMBH thay mặt NĐBH xác nhận trên các tài liệu, chứng từ mà MB Life yêu cầu bổ sung.
+            Thông tin, tài liệu được BMBH xác nhận trên cơ sở ủy quyền tại Khoản này được hiểu là thông tin, tài liệu đó
+            đã được chính NĐBH kê khai và xác nhận; NĐBH và BMBH cam kết chịu hoàn toàn trách nhiệm về tính chính xác,
+            trung thực và đầy đủ của nội dung thông tin được kê khai và xác nhận dù là trực tiếp hay thông qua ủy quyên.
+        </li>
+    </ol>
+    <h3>Điều 21. Lưu ý quan trọng</h3>
+    <ol>
+        <li>
+            <span class="font-bold">21.1.</span> Đề nghị Quý khách kiểm tra lại toàn bộ Yêu cầu bảo hiểm và các tài liệu
+            kèm theo để đảm bảo rằng Quý khách hoàn toàn hài lòng và đồng ý với thông tin đã kê khai trước khi tự mình
+            xác nhận toàn bộ nội dung Yêu cầu bảo hiểm và các tài liệu kèm theo. Nếu MB Life phát hiện BMBH/NĐBH/Người
+            đại diện theo pháp luật của NĐBH không tự mình xác nhận nội dung Yêu cầu bảo hiểm, MB Life sẽ có quyền hủy
+            bỏ Hợp đồng bảo hiểm đã ký và giải quyết theo quy định của pháp luật và Quy tắc, điều khoản sản phẩm.
+        </li>
+        <li>
+            <span class="font-bold">21.2.</span> Yêu cầu bảo hiểm được xem là một bộ phận của Hợp đồng bảo hiểm khi yêu
+            cầu bảo hiểm được MB Life chấp nhận.
+        </li>
+    </ol>
+    </div>
+    <div class="page-break"></div>
+    <div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-top: 20px;">
+            <h1 style="font-size: 28px; margin: 0; text-align: left; color: #dd0071; text-transform: uppercase;">YÊU CẦU
+                BẢO HIỂM</h1>
+            <img src="data:image/png;base64,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"
+                style="width: 39px; height: 38px;" alt="Wing Icon">
+        </div>
+        <p>
+            <span class="font-bold">Số hồ sơ:</span>
+            <span class="form-line" style="width: 200px;"></span>
+        </p>
+        <p>
+            <span class="font-bold">Họ và Tên Chuyên viên tư vấn bảo hiểm:</span>
+            <span class="form-line" style="width: 300px;"></span>
+            <span class="font-bold">Mã số:</span>
+            <span class="form-line" style="width: 150px;"></span>
+        </p>
+        <h2>I. THÔNG TIN BÊN MUA BẢO HIỂM (BMBH)/NGƯỜI ĐƯỢC BẢO HIỂM (NĐBH)</h2>
+        <div style="margin: 6px 0 12px 0;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAvQAAAAHCAYAAABnRdmIAAACQklEQVR4AeyYMUvcYBjHnyfJ6XUo2BY6lOaQFhzaqf0GkbZToVPDbcalQ+nUpYNLpP0K/QB2aAp28Bv0oNChggini1GOQxQE0UMH9Uzy+LwnHOd+4r3mH/K7cMuR+z3/vPknDmGDARiAARiAARiAARiAARiw1kC/0AsJtybiic37c/7avS81AAfIADJwNQPwMQwfzUff/M/fm/7bvwc1UA4HH5ea/v/6G3/r1bMagINRykD93Zz/tJ74T94v1IA9DszMJqM/VX36YKW39ws90TxndPq1KIp0jBwAB8gAMoAMXEMGKt2T9Pjh3X8Vx0tBORycu27q5pKyHtlx01KA/2nFnPPxO6t5hTaL6lgK7HGgM9uQfHeaSHpl3nwMFPp1FhGXmDyt+4DgATlABpCB4WdAF94Ki/4us8egFA505p7edj1zZHOPBTp3cw2AG8+Ddh2TS0C969MWD0zskePwQJ8nR0++t8/TcyF2lrXUJ5aA8xSBAzhABqzLQGFmtiRijqAcHijRh7hEb746ewICBzIiDrQA/ta3uYk2Q0BijYNC5JeuJ7v6El5HeLn3C31MsfzsjC9MdV5GO50qgANkABm4RRkYnTWtOf1i5jVPfjrsrkSgHA4er+zNHu2fz7a7DyIAB6OUAZGpD60zb6a1vREBexy0z9yo/aO+SqSvCuhy6xd6/Spa6gumMA8ozgAcIAPIADIw/AyEi2Eehpw3giAD5XAQx0EWNBrAFgclOs9FXY/I0IgzAvY4MDMbKPPa4ekCAAD//1kWNDsAAAAGSURBVAMA1W9Y0WfVm8YAAAAASUVORK5CYII="
+                style="width: 100%; height: auto; max-height: 5px; display: block; border: none;" alt="Divider">
+        </div>
+        <p>
+            <span class="font-bold">Bên mua bảo hiểm đồng thời là Người được bảo hiểm</span>
+        </p>
+        <p>
+            <span class="font-bold">Họ và tên:</span>
+            <span class="form-line" style="width: 300px;"></span>
+        </p>
+        <p>
+            <span class="font-bold">Ngày sinh:</span>
+            <span class="form-line" style="width: 150px;"></span>
+            <span class="font-bold">Giới tính:</span>
+            <span class="form-line" style="width: 100px;"></span>
+        </p>
+        <p>
+            <span class="font-bold">Loại giấy tờ tùy thân:</span>
+            <span class="form-line" style="width: 250px;"></span>
+        </p>
+        <p>
+            <span class="font-bold">Số giấy tờ tùy thân:</span>
+            <span class="form-line" style="width: 200px;"></span>
+            <span class="font-bold">Nơi cấp:</span>
+            <span class="form-line" style="width: 200px;"></span>
+            <span class="font-bold">Quốc tịch:</span>
+            <span class="form-line" style="width: 150px;"></span>
+        </p>
+        <p>
+            <span class="font-bold">Nghề nghiệp:</span>
+            <span class="form-line" style="width: 300px;"></span>
+        </p>
+        <p>
+            <span class="font-bold">Thu nhập bình quân/ năm (đồng):</span>
+            <span class="form-line" style="width: 200px;"></span>
+        </p>
+        <p>
+            <span class="font-bold">Phương thức nhận tiền</span>
+            <span class="font-italic">(MB Life sẽ tự động hoàn phí cho BMBH đối với các khoản thanh toán liên quan đến
+                Yêu cầu bảo hiểm):</span>
+        </p>
+        <p>
+            <span class="checkbox">&#9744;</span> Nhận tiền qua tài khoản Ngân hàng
+        </p>
+        <p>
+            <span class="font-bold">Số tài khoản:</span>
+            <span class="form-line" style="width: 300px;"></span>
+        </p>
+        <p>
+            <span class="font-bold">Ngân hàng:</span>
+            <span class="form-line" style="width: 300px;"></span>
+        </p>
+        <p>
+            <span class="font-bold">Địa chỉ nhận thư:</span>
+            <span class="form-line" style="width: 100%;"></span>
+            <br>
+            <span class="form-line" style="width: 100%;"></span>
+        </p>
+        <p>
+            <span class="font-bold">Địa chỉ thường trú:</span>
+            <span class="font-italic">(địa chỉ ghi trên hộ khẩu hoặc trong CSDL quốc gia về dân cư - VNeID):</span>
+            <br>
+            <span class="form-line" style="width: 100%;"></span>
+        </p>
+        <p>
+            <span class="font-bold">Email:</span>
+            <span class="form-line" style="width: 250px;"></span>
+            <span class="font-bold">Số điện thoại di động:</span>
+            <span class="form-line" style="width: 200px;"></span>
+        </p>
+        <p>
+            <span class="font-bold">BMBH/NĐBH đồng ý để MB Life liên lạc cho mục đích cung cấp các chương trình tiếp
+                thị:</span>
+            <span class="checkbox">&#9744;</span> Email và điện thoại
+        </p>
+        <h2>II. THÔNG TIN SẢN PHẨM BẢO HIỂM</h2>
+        <div style="margin: 6px 0 12px 0;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAvQAAAAHCAYAAABnRdmIAAACQklEQVR4AeyYMUvcYBjHnyfJ6XUo2BY6lOaQFhzaqf0GkbZToVPDbcalQ+nUpYNLpP0K/QB2aAp28Bv0oNChggini1GOQxQE0UMH9Uzy+LwnHOd+4r3mH/K7cMuR+z3/vPknDmGDARiAARiAARiAARiAARiw1kC/0AsJtybiic37c/7avS81AAfIADJwNQPwMQwfzUff/M/fm/7bvwc1UA4HH5ea/v/6G3/r1bMagINRykD93Zz/tJ74T94v1IA9DszMJqM/VX36YKW39ws90TxndPq1KIp0jBwAB8gAMoAMXEMGKt2T9Pjh3X8Vx0tBORycu27q5pKyHtlx01KA/2nFnPPxO6t5hTaL6lgK7HGgM9uQfHeaSHpl3nwMFPp1FhGXmDyt+4DgATlABpCB4WdAF94Ki/4us8egFA505p7edj1zZHOPBTp3cw2AG8+Ddh2TS0C969MWD0zskePwQJ8nR0++t8/TcyF2lrXUJ5aA8xSBAzhABqzLQGFmtiRijqAcHijRh7hEb746ewICBzIiDrQA/ta3uYk2Q0BijYNC5JeuJ7v6El5HeLn3C31MsfzsjC9MdV5GO50qgANkABm4RRkYnTWtOf1i5jVPfjrsrkSgHA4er+zNHu2fz7a7DyIAB6OUAZGpD60zb6a1vREBexy0z9yo/aO+SqSvCuhy6xd6/Spa6gumMA8ozgAcIAPIADIw/AyEi2Eehpw3giAD5XAQx0EWNBrAFgclOs9FXY/I0IgzAvY4MDMbKPPa4ekCAAD//1kWNDsAAAAGSURBVAMA1W9Y0WfVm8YAAAAASUVORK5CYII="
+                style="width: 100%; height: auto; max-height: 5px; display: block; border: none;" alt="Divider">
+        </div>
+        <p>
+            <span>1. Sản phẩm bảo hiểm (Thông tin chi tiết tại Tài liệu minh họa đính kèm Yêu cầu bảo hiểm
+                (YCBH))</span>
+        </p>
+        <p>
+            <span>1.1. Sản phẩm bảo hiểm chính:</span>
+        </p>
+        <p>
+            <span class="font-bold">Tên sản phẩm:</span> Bệnh Lý Nghiêm Trọng – MB Đồng Hành <span class="form-line"
+                style="width: 200px;"></span>
+        </p>
+        <p>
+            <span class="font-bold">Số tiền bảo hiểm (đồng):</span>
+            <span class="form-line" style="width: 300px;"></span>
+        </p>
+        <p>
+            <span class="font-bold">Thời hạn bảo hiểm:</span>
+            <span class="form-line" style="width: 200px;"></span>
+        </p>
+        <p>
+            <span class="font-bold">Phí bảo hiểm (đồng):</span>
+            <span class="form-line" style="width: 200px;"></span>
+        </p>
+        <p>
+            <span>1.2. Sản phẩm bảo hiểm bán kèm:</span>
+        </p>
+        <table class="table-gray-pink-border">
+            <thead>
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th>Phiên bản sản phẩm</th>
+                    <th>Quyền lợi bảo hiểm (QLBH)</th>
+                    <th>Số tiền bảo hiểm (đồng)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2" class="font-bold bg-gray">Bảo hiểm bệnh lý nghiêm trọng</td>
+                    <td rowspan="2" class="bg-gray">Bản Tiêu chuẩn</td>
+                    <td>QLBH 3 Bệnh lý nghiêm trọng (QLBH cơ bản)</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>QLBH Bệnh lý nghiêm trọng theo giới tính</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Thông tin Thời hạn bảo hiểm và Phí bảo hiểm Sản phẩm bán kèm</p>
+        <table class="table-gray-pink-border">
+            <thead>
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th>Thời hạn bảo hiểm</th>
+                    <th>Thời hạn đóng phí</th>
+                    <th>Phí bảo hiểm định kỳ (đồng)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bảo hiểm bệnh lý nghiêm trọng</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="font-bold">Tổng phí bảo hiểm định kỳ của sản phẩm bán kèm:</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <span>2. Tổng Phí bảo hiểm ước tính hợp đồng (đồng):</span>
+            <span class="form-line" style="width: 250px;"></span> (Bao gồm Phí bảo hiểm của sản phẩm chính và sản phẩm
+            bán kèm)
+        </p>
+        <p>
+            <span>3. Định kỳ đóng phí:</span>
+            <span class="form-line" style="width: 300px;"></span>
+        </p>
+        <h2>III. THÔNG TIN NGƯỜI THỤ HƯỞNG (NTH)</h2>
+        <div style="margin: 6px 0 12px 0;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAvQAAAAHCAYAAABnRdmIAAACQklEQVR4AeyYMUvcYBjHnyfJ6XUo2BY6lOaQFhzaqf0GkbZToVPDbcalQ+nUpYNLpP0K/QB2aAp28Bv0oNChggini1GOQxQE0UMH9Uzy+LwnHOd+4r3mH/K7cMuR+z3/vPknDmGDARiAARiAARiAARiAARiw1kC/0AsJtybiic37c/7avS81AAfIADJwNQPwMQwfzUff/M/fm/7bvwc1UA4HH5ea/v/6G3/r1bMagINRykD93Zz/tJ74T94v1IA9DszMJqM/VX36YKW39ws90TxndPq1KIp0jBwAB8gAMoAMXEMGKt2T9Pjh3X8Vx0tBORycu27q5pKyHtlx01KA/2nFnPPxO6t5hTaL6lgK7HGgM9uQfHeaSHpl3nwMFPp1FhGXmDyt+4DgATlABpCB4WdAF94Ki/4us8egFA505p7edj1zZHOPBTp3cw2AG8+Ddh2TS0C969MWD0zskePwQJ8nR0++t8/TcyF2lrXUJ5aA8xSBAzhABqzLQGFmtiRijqAcHijRh7hEb746ewICBzIiDrQA/ta3uYk2Q0BijYNC5JeuJ7v6El5HeLn3C31MsfzsjC9MdV5GO50qgANkABm4RRkYnTWtOf1i5jVPfjrsrkSgHA4er+zNHu2fz7a7DyIAB6OUAZGpD60zb6a1vREBexy0z9yo/aO+SqSvCuhy6xd6/Spa6gumMA8ozgAcIAPIADIw/AyEi2Eehpw3giAD5XAQx0EWNBrAFgclOs9FXY/I0IgzAvY4MDMbKPPa4ekCAAD//1kWNDsAAAAGSURBVAMA1W9Y0WfVm8YAAAAASUVORK5CYII="
+                style="width: 100%; height: auto; max-height: 5px; display: block; border: none;" alt="Divider">
+        </div>
+        <table
+            style="width: 100%; border-collapse: collapse; table-layout: fixed; word-break: break-word; box-sizing: border-box; margin-bottom: 15px;">
+            <thead>
+                <tr
+                    style="background-color: #e981a6; color: #ffffff; text-align: center; font-weight: bold; font-size: 10.5pt;">
+                    <th style="border: 1px solid #000; padding: 6px;">Họ và tên người thụ hưởng của sản phẩm chính</th>
+                    <th style="border: 1px solid #000; padding: 6px;">Giới tính</th>
+                    <th style="border: 1px solid #000; padding: 6px;">Ngày sinh</th>
+                    <th style="border: 1px solid #000; padding: 6px;">Loại giấy tờ tùy thân</th>
+                    <th style="border: 1px solid #000; padding: 6px;">Số giấy tờ tùy thân</th>
+                    <th style="border: 1px solid #000; padding: 6px;">Số điện thoại</th>
+                    <th style="border: 1px solid #000; padding: 6px;">Quan hệ với NĐBH</th>
+                    <th style="border: 1px solid #000; padding: 6px;">Tỷ lệ % thụ hưởng</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="height: 60px;">
+                    <td style="border: 1px solid #000; padding: 6px;"></td>
+                    <td style="border: 1px solid #000; padding: 6px;"></td>
+                    <td style="border: 1px solid #000; padding: 6px;"></td>
+                    <td style="border: 1px solid #000; padding: 6px;"></td>
+                    <td style="border: 1px solid #000; padding: 6px;"></td>
+                    <td style="border: 1px solid #000; padding: 6px;"></td>
+                    <td style="border: 1px solid #000; padding: 6px;"></td>
+                    <td style="border: 1px solid #000; padding: 6px;"></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="font-italic">Người thụ hưởng của sản phẩm bán kèm là Bên mua bảo hiểm theo quy định về nhận quyền lợi
+            bảo hiểm tại quy tắc điều khoản Sản phẩm bán kèm, trừ trường hợp các bên có chỉ định khác.</p>
+        <h2>IV. THÔNG TIN CHUNG VÀ THÔNG TIN SỨC KHỎE CỦA BMBH/NĐBH</h2>
+        <div style="margin: 6px 0 12px 0;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAvQAAAAHCAYAAABnRdmIAAACQklEQVR4AeyYMUvcYBjHnyfJ6XUo2BY6lOaQFhzaqf0GkbZToVPDbcalQ+nUpYNLpP0K/QB2aAp28Bv0oNChggini1GOQxQE0UMH9Uzy+LwnHOd+4r3mH/K7cMuR+z3/vPknDmGDARiAARiAARiAARiAARiw1kC/0AsJtybiic37c/7avS81AAfIADJwNQPwMQwfzUff/M/fm/7bvwc1UA4HH5ea/v/6G3/r1bMagINRykD93Zz/tJ74T94v1IA9DszMJqM/VX36YKW39ws90TxndPq1KIp0jBwAB8gAMoAMXEMGKt2T9Pjh3X8Vx0tBORycu27q5pKyHtlx01KA/2nFnPPxO6t5hTaL6lgK7HGgM9uQfHeaSHpl3nwMFPp1FhGXmDyt+4DgATlABpCB4WdAF94Ki/4us8egFA505p7edj1zZHOPBTp3cw2AG8+Ddh2TS0C969MWD0zskePwQJ8nR0++t8/TcyF2lrXUJ5aA8xSBAzhABqzLQGFmtiRijqAcHijRh7hEb746ewICBzIiDrQA/ta3uYk2Q0BijYNC5JeuJ7v6El5HeLn3C31MsfzsjC9MdV5GO50qgANkABm4RRkYnTWtOf1i5jVPfjrsrkSgHA4er+zNHu2fz7a7DyIAB6OUAZGpD60zb6a1vREBexy0z9yo/aO+SqSvCuhy6xd6/Spa6gumMA8ozgAcIAPIADIw/AyEi2Eehpw3giAD5XAQx0EWNBrAFgclOs9FXY/I0IgzAvY4MDMbKPPa4ekCAAD//1kWNDsAAAAGSURBVAMA1W9Y0WfVm8YAAAAASUVORK5CYII="
+                style="width: 100%; height: auto; max-height: 5px; display: block; border: none;" alt="Divider">
+        </div>
+        <table>
+            <thead>
+                <tr class="table-gray-pink-border">
+                    <th rowspan="2" style="width: 75%;">THÔNG TIN SỨC KHỎE KÊ KHAI</th>
+                    <th colspan="2">BMBH/NĐBH</th>
+                </tr>
+                <tr class="table-gray-pink-border">
+                    <th style="width: 12.5%;">Có</th>
+                    <th style="width: 12.5%;">Không</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span class="font-bold">1. Quý khách có hút thuốc không?</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="checkbox">&#9744;</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="checkbox">&#9745;</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="font-bold">2. Quý khách đã từng mắc bất kỳ bệnh lý sau đây không?</span>
+                        <ul>
+                            <li>Ung thư, u, nang, bướu hoặc bất kỳ loại khối u nào.</li>
+                            <li>Tăng huyết áp, tăng cholesterol máu, đái tháo đường hoặc bệnh tuyến giáp.</li>
+                            <li>Nhồi máu cơ tim, tiếng thổi tại tim, bệnh van tim, đau ngực, khó thở, rối loạn nhịp tim
+                                hoặc bệnh lý tim, mạch khác.</li>
+                            <li>Đột quỵ, cơn thiếu máu não thoáng qua, liệt, động kinh, co giật, hoặc đau đầu kéo dài.
+                            </li>
+                            <li>Hen suyễn, viêm phế quản, viêm phổi, lao phổi hoặc bất kỳ bệnh hô hấp khác.</li>
+                            <li>Viêm gan B, viêm gan C, các bệnh gan mật.</li>
+                            <li>Viêm, loét dạ dày hoặc tá tràng, đi ngoài ra máu, trĩ, hoặc bất kỳ bệnh của dạ dày hoặc
+                                ruột.</li>
+                            <li>Thoát vị đĩa đệm, bệnh gút, viêm khớp, đau khớp, đau lưng mãn tính.</li>
+                            <li>Bệnh thận, bệnh của bàng quang hoặc các bệnh của hệ tiết niệu, sinh dục.</li>
+                            <li>Suy giảm thính lực, thị lực, suy giảm khả năng nói hoặt bất kỳ bệnh của tai, mắt(1), mũi
+                                và họng.</li>
+                            <li>Thiếu máu, tan máu bẩm sinh (thalassemia), hoặc bất kỳ bệnh máu</li>
+                            <li>Lupus ban đỏ hệ thống (SLE), viêm khớp dạng thấp hoặc bất kỳ bệnh của hệ thống miễn dịch
+                            </li>
+                            <li>Cơn hoảng loạn, lo âu, trầm cảm hoặc bất kỳ bệnh tâm thần, bệnh thần kinh.</li>
+                            <li>Dị tật bẩm sinh, khiếm khuyết thể chất hoặc dị dạng</li>
+                            <li>Đã từng nhận tư vấn y tế hoặc điều trị liên quan đến AIDS (bao gồm HIV dương tính hoặc
+                                bất kỳ bệnh lây qua đường tình dục).</li>
+                        </ul>
+                        <p class="font-italic">(1) Không bao gồm tật khúc xạ hoặc nhiễm trùng cấp tính chỉ xảy ra một
+                            lần đã hồi phục</p>
+                    </td>
+                    <td class="text-center">
+                        <span class="checkbox">&#9744;</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="checkbox">&#9745;</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="font-bold">3. Trong vòng 3 năm qua, Quý khách có từng:</span>
+                        <ul>
+                            <li>Nhập viện để điều trị bệnh hoặc chấn thương từ 5 ngày liên tiếp trở lên (2).</li>
+                            <li>Được kê toa thuốc hoặc điều trị y tế liên tục từ 7 ngày trở lên.</li>
+                            <li>Đã từng thực hiện 1 trong các xét nghiệm sau đây với kết quả bất thường và được tư vấn
+                                phải điều trị: xét nghiệm máu, phân, nước tiểu, chụp X-quang phổi, nhũ ảnh, siêu âm, xét
+                                nghiệm tế bào cổ tử cung, điện tâm đồ (ECG), sinh thiết tế bào học, chụp MRI hoặc cắt
+                                lớp vi tính.</li>
+                            <li>Được tư vấn thực hiện các kiểm tra y tế chuyên sâu, hoặc đang chờ kết quả xét nghiệm,
+                                điều trị hoặc phẫu thuật.</li>
+                        </ul>
+                        <p class="font-italic">(2) Vui lòng chọn "Không" nếu nhập viện do cảm cúm, ngộ độc thực phẩm
+                            hoặc do chấn thương/tai nạn và đã hoàn toàn hồi phục, không cần theo dõi trong ít nhất 6
+                            tháng và không gặp biến chứng</p>
+                    </td>
+                    <td class="text-center">
+                        <span class="checkbox">&#9744;</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="checkbox">&#9745;</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="font-bold">4. Quý khách đã từng có hợp đồng bảo hiểm Nhân thọ hoặc Bệnh hiểm nghèo,
+                            Tai nạn hoặc Bảo hiểm sức khỏe bị từ chối, tạm hoãn hoặc chỉ được chấp nhận với điều kiện
+                            kèm theo (ví dụ: tăng phí, loại trừ quyền lợi) không?</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="checkbox">&#9744;</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="checkbox">&#9745;</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="font-italic">
+            <span class="font-bold">LƯU Ý:</span> BMBH & NĐBH chịu trách nhiệm đảm bảo thông tin được kê khai là chính
+            xác, trung thực, đầy đủ và chịu hoàn toàn trách nhiệm về nội dung thông tin đã kê khai dù là trong trường
+            hợp BMBH/NĐBH trực tiếp kê khai hay ủy quyền kê khai thông tin. Việc kê khai chỉ được coi là hoàn tất khi
+            BMBH/NĐBH xác nhận thông tin. Trường hợp thông tin kê khai chưa chính xác, đầy đủ, BMBH/NĐBH có trách nhiệm
+            cập nhật thông tin chính.
+        </p>
+        <h2>V. THÔNG TIN VỀ TUÂN THỦ FATCA</h2>
+        <div style="margin: 6px 0 12px 0;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAvQAAAAHCAYAAABnRdmIAAACQklEQVR4AeyYMUvcYBjHnyfJ6XUo2BY6lOaQFhzaqf0GkbZToVPDbcalQ+nUpYNLpP0K/QB2aAp28Bv0oNChggini1GOQxQE0UMH9Uzy+LwnHOd+4r3mH/K7cMuR+z3/vPknDmGDARiAARiAARiAARiAARiw1kC/0AsJtybiic37c/7avS81AAfIADJwNQPwMQwfzUff/M/fm/7bvwc1UA4HH5ea/v/6G3/r1bMagINRykD93Zz/tJ74T94v1IA9DszMJqM/VX36YKW39ws90TxndPq1KIp0jBwAB8gAMoAMXEMGKt2T9Pjh3X8Vx0tBORycu27q5pKyHtlx01KA/2nFnPPxO6t5hTaL6lgK7HGgM9uQfHeaSHpl3nwMFPp1FhGXmDyt+4DgATlABpCB4WdAF94Ki/4us8egFA505p7edj1zZHOPBTp3cw2AG8+Ddh2TS0C969MWD0zskePwQJ8nR0++t8/TcyF2lrXUJ5aA8xSBAzhABqzLQGFmtiRijqAcHijRh7hEb746ewICBzIiDrQA/ta3uYk2Q0BijYNC5JeuJ7v6El5HeLn3C31MsfzsjC9MdV5GO50qgANkABm4RRkYnTWtOf1i5jVPfjrsrkSgHA4er+zNHu2fz7a7DyIAB6OUAZGpD60zb6a1vREBexy0z9yo/aO+SqSvCuhy6xd6/Spa6gumMA8ozgAcIAPIADIw/AyEi2Eehpw3giAD5XAQx0EWNBrAFgclOs9FXY/I0IgzAvY4MDMbKPPa4ekCAAD//1kWNDsAAAAGSURBVAMA1W9Y0WfVm8YAAAAASUVORK5CYII="
+                style="width: 100%; height: auto; max-height: 5px; display: block; border: none;" alt="Divider">
+        </div>
+        <table>
+            <thead>
+                <tr class="table-gray-pink-border">
+                    <th rowspan="2" style="width: 75%;">THÔNG TIN FATCA</th>
+                    <th colspan="2">BMBH/NĐBH</th>
+                </tr>
+                <tr class="table-gray-pink-border">
+                    <th style="width: 12.5%;">Có</th>
+                    <th style="width: 12.5%;">Không</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Quý khách (BMBH/NĐBH) có thuộc một trong các trường hợp sau đây không:</p>
+                        <ul>
+                            <li>Là công dân hoặc thường trú tại Hoa Kỳ; hoặc</li>
+                            <li>Sinh tại Hoa Kỳ; hoặc</li>
+                            <li>Có địa chỉ thường trú, địa chỉ hòm thư, địa chỉ liên lạc, gửi/giữ thư tại Hoa Kỳ; hoặc
+                            </li>
+                            <li>Có số điện thoại tại Hoa Kỳ; hoặc</li>
+                            <li>Có yêu cầu thanh toán từ một tài khoản này sang tài khoản khác ở Hoa Kỳ; hoặc</li>
+                            <li>Có Giấy tờ ủy quyền hiện hành cho người có địa chỉ tại Hoa Kỳ.</li>
+                        </ul>
+                    </td>
+                    <td class="text-center">
+                        <span class="checkbox">&#9744;</span>
+                    </td>
+                    <td class="text-center">
+                        <span class="checkbox">&#9745;</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>VI. XÁC NHẬN VỀ KÊNH PHÂN PHỐI</h2>
+        <div style="margin: 6px 0 12px 0;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAvQAAAAHCAYAAABnRdmIAAACQklEQVR4AeyYMUvcYBjHnyfJ6XUo2BY6lOaQFhzaqf0GkbZToVPDbcalQ+nUpYNLpP0K/QB2aAp28Bv0oNChggini1GOQxQE0UMH9Uzy+LwnHOd+4r3mH/K7cMuR+z3/vPknDmGDARiAARiAARiAARiAARiw1kC/0AsJtybiic37c/7avS81AAfIADJwNQPwMQwfzUff/M/fm/7bvwc1UA4HH5ea/v/6G3/r1bMagINRykD93Zz/tJ74T94v1IA9DszMJqM/VX36YKW39ws90TxndPq1KIp0jBwAB8gAMoAMXEMGKt2T9Pjh3X8Vx0tBORycu27q5pKyHtlx01KA/2nFnPPxO6t5hTaL6lgK7HGgM9uQfHeaSHpl3nwMFPp1FhGXmDyt+4DgATlABpCB4WdAF94Ki/4us8egFA505p7edj1zZHOPBTp3cw2AG8+Ddh2TS0C969MWD0zskePwQJ8nR0++t8/TcyF2lrXUJ5aA8xSBAzhABqzLQGFmtiRijqAcHijRh7hEb746ewICBzIiDrQA/ta3uYk2Q0BijYNC5JeuJ7v6El5HeLn3C31MsfzsjC9MdV5GO50qgANkABm4RRkYnTWtOf1i5jVPfjrsrkSgHA4er+zNHu2fz7a7DyIAB6OUAZGpD60zb6a1vREBexy0z9yo/aO+SqSvCuhy6xd6/Spa6gumMA8ozgAcIAPIADIw/AyEi2Eehpw3giAD5XAQx0EWNBrAFgclOs9FXY/I0IgzAvY4MDMbKPPa4ekCAAD//1kWNDsAAAAGSURBVAMA1W9Y0WfVm8YAAAAASUVORK5CYII="
+                style="width: 100%; height: auto; max-height: 5px; display: block; border: none;" alt="Divider">
+        </div>
+        <p>BMBH xác nhận thực hiện yêu cầu bảo hiểm này thông qua Kênh phân phối trực tuyến</p>
+        <h2>VII. THỎA THUẬN GIAO DỊCH ĐIỆN TỬ VÀ XỬ LÝ DỮ LIỆU CÁ NHÂN</h2>
+        <div style="margin: 6px 0 12px 0;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAvQAAAAHCAYAAABnRdmIAAACQklEQVR4AeyYMUvcYBjHnyfJ6XUo2BY6lOaQFhzaqf0GkbZToVPDbcalQ+nUpYNLpP0K/QB2aAp28Bv0oNChggini1GOQxQE0UMH9Uzy+LwnHOd+4r3mH/K7cMuR+z3/vPknDmGDARiAARiAARiAARiAARiw1kC/0AsJtybiic37c/7avS81AAfIADJwNQPwMQwfzUff/M/fm/7bvwc1UA4HH5ea/v/6G3/r1bMagINRykD93Zz/tJ74T94v1IA9DszMJqM/VX36YKW39ws90TxndPq1KIp0jBwAB8gAMoAMXEMGKt2T9Pjh3X8Vx0tBORycu27q5pKyHtlx01KA/2nFnPPxO6t5hTaL6lgK7HGgM9uQfHeaSHpl3nwMFPp1FhGXmDyt+4DgATlABpCB4WdAF94Ki/4us8egFA505p7edj1zZHOPBTp3cw2AG8+Ddh2TS0C969MWD0zskePwQJ8nR0++t8/TcyF2lrXUJ5aA8xSBAzhABqzLQGFmtiRijqAcHijRh7hEb746ewICBzIiDrQA/ta3uYk2Q0BijYNC5JeuJ7v6El5HeLn3C31MsfzsjC9MdV5GO50qgANkABm4RRkYnTWtOf1i5jVPfjrsrkSgHA4er+zNHu2fz7a7DyIAB6OUAZGpD60zb6a1vREBexy0z9yo/aO+SqSvCuhy6xd6/Spa6gumMA8ozgAcIAPIADIw/AyEi2Eehpw3giAD5XAQx0EWNBrAFgclOs9FXY/I0IgzAvY4MDMbKPPa4ekCAAD//1kWNDsAAAAGSURBVAMA1W9Y0WfVm8YAAAAASUVORK5CYII="
+                style="width: 100%; height: auto; max-height: 5px; display: block; border: none;" alt="Divider">
+        </div>
+        <ol>
+            <li>
+                <span class="font-bold">Đăng ký giao dịch điện tử</span>
+                <br> Tôi/Chúng tôi xác nhận: <ol type="a">
+                    <li>Đồng ý giao kết các văn bản, thỏa thuận và/hoặc thực hiện các giao dịch giữa Tôi/Chúng tôi và MB
+                        Life liên quan đến YCBH/HĐBH (bao gồm cả YCBH này) thông qua phương tiện điện tử trên (các) nền
+                        tảng điện tử (website, ứng dụng...) do MB Life thiết lập và/hoặc đối tác cung cấp dịch vụ được
+                        MB Life ủy quyền (“Nền Tảng”).</li>
+                    <li>MB Life được quyền gửi thông tin về Tên đăng nhập, mật khẩu, mã xác thực một lần (OTP) và các
+                        thông tin khác liên quan tới giao dịch điện tử qua Email và/hoặc số điện thoại di động mà
+                        Tôi/Chúng tôi đăng ký với MB Life.</li>
+                    <li>Tôi/Chúng tôi đã đọc, hiểu và đồng ý tuân thủ các điều khoản áp dụng đối với giao dịch điện tử
+                        thực hiện thông qua Nền Tảng bao gồm nhưng không giới hạn ở Điều khoản sử dụng website và các
+                        ứng dụng điện tử được MB Life công bố trên website chính thức, Điều khoản cung cấp sản phẩm dịch
+                        vụ bảo hiểm trên môi trường mạng theo mã QR tại Mục 2 dưới đây (“Điều Khoản Giao Dịch Trực
+                        Tuyến”). Điều Khoản Giao Dịch Trực Tuyến là một phần đính kèm và không tách rời của Hợp đồng bảo
+                        hiểm được giao kết và/hoặc thực hiện thông qua phương tiện điện tử.</li>
+                    <li>Mọi giao dịch thực hiện thông qua Nền Tảng và tất cả các tài liệu đính kèm gửi cho MB Life với
+                        Tên đăng nhập và Mật khẩu của Tôi/Chúng tôi và/hoặc được Tôi/Chúng tôi xác nhận thông qua Nền
+                        Tảng đều có giá trị pháp lý và là cơ sở để MB Life xử lý các yêu cầu của Tôi/Chúng tôi tương tự
+                        như bản gốc được chính Tôi/Chúng tôi ký trực tiếp. Tôi/Chúng tôi cam kết chịu mọi trách nhiệm về
+                        tính hợp pháp của tất cả các tài liệu này.</li>
+                    <li>Mọi thông tin trao đổi gửi đến hoặc gửi từ Số điện thoại và/hoặc Email mà Tôi/Chúng tôi đã cung
+                        cấp/cập nhật cho MB Life mặc nhiên được hiểu là gửi đến hoặc gửi từ Tôi/Chúng tôi.</li>
+                    <li>Tôi/Chúng tôi cam kết bảo mật Tên đăng nhập, Mật khẩu truy cập, mã xác thực một lần (OTP) mà MB
+                        Life cung cấp và cam kết sẽ thông báo ngay cho MB Life khi phát hiện Tên đăng nhập, Mật khẩu, mã
+                        OTP bị tiết lộ trái phép và/hoặc không còn thuộc sự kiểm soát của Tôi/Chúng tôi.</li>
+                    <li>Tôi/Chúng tôi sẽ luôn duy trì Số điện thoại, Email trong tình trạng nhận được thông tin và sẽ
+                        thông báo cho MB Life nếu có bất kỳ thay đổi nào. MB Life sẽ không phải chịu bất kỳ trách nhiệm
+                        nào trong trường hợp Số điện thoại và/hoặc Email của Tôi/Chúng tôi không thể nhận được thông tin
+                        vì bất cứ lý do gì.</li>
+                </ol>
+            </li>
+            <li>
+                <span class="font-bold">Thỏa thuận xử lý dữ liệu cá nhân</span>
+                <br> Bằng việc đồng ý với Quy định chương trình này, BMBH/NĐBH xác nhận đã đọc, hiểu rõ và tự nguyện
+                đồng ý hoàn toàn với nội dung của Chính sách bảo mật và Bảo vệ dữ liệu cá nhân được đăng tải công khai
+                trên website chính thức của MB Life tại (https://mblife.vn/page/chinh-sach-bao-mat) và đồng ý cho phép
+                xử lý Dữ liệu cá nhân của mình và/hoặc dữ liệu cá nhân do tôi cung cấp theo Chính Sách.
+            </li>
+        </ol>
+        <h2>VIII. CAM KẾT CỦA BÊN MUA BẢO HIỂM/NGƯỜI ĐƯỢC BẢO HIỂM / NGƯỜI ĐẠI DIỆN THEO PHÁP LUẬT CỦA NGƯỜI ĐƯỢC BẢO
+            HIỂM</h2>
+        <div style="margin: 6px 0 12px 0;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAvQAAAAHCAYAAABnRdmIAAACQklEQVR4AeyYMUvcYBjHnyfJ6XUo2BY6lOaQFhzaqf0GkbZToVPDbcalQ+nUpYNLpP0K/QB2aAp28Bv0oNChggini1GOQxQE0UMH9Uzy+LwnHOd+4r3mH/K7cMuR+z3/vPknDmGDARiAARiAARiAARiAARiw1kC/0AsJtybiic37c/7avS81AAfIADJwNQPwMQwfzUff/M/fm/7bvwc1UA4HH5ea/v/6G3/r1bMagINRykD93Zz/tJ74T94v1IA9DszMJqM/VX36YKW39ws90TxndPq1KIp0jBwAB8gAMoAMXEMGKt2T9Pjh3X8Vx0tBORycu27q5pKyHtlx01KA/2nFnPPxO6t5hTaL6lgK7HGgM9uQfHeaSHpl3nwMFPp1FhGXmDyt+4DgATlABpCB4WdAF94Ki/4us8egFA505p7edj1zZHOPBTp3cw2AG8+Ddh2TS0C969MWD0zskePwQJ8nR0++t8/TcyF2lrXUJ5aA8xSBAzhABqzLQGFmtiRijqAcHijRh7hEb746ewICBzIiDrQA/ta3uYk2Q0BijYNC5JeuJ7v6El5HeLn3C31MsfzsjC9MdV5GO50qgANkABm4RRkYnTWtOf1i5jVPfjrsrkSgHA4er+zNHu2fz7a7DyIAB6OUAZGpD60zb6a1vREBexy0z9yo/aO+SqSvCuhy6xd6/Spa6gumMA8ozgAcIAPIADIw/AyEi2Eehpw3giAD5XAQx0EWNBrAFgclOs9FXY/I0IgzAvY4MDMbKPPa4ekCAAD//1kWNDsAAAAGSURBVAMA1W9Y0WfVm8YAAAAASUVORK5CYII="
+                style="width: 100%; height: auto; max-height: 5px; display: block; border: none;" alt="Divider">
+        </div>
+        <ol>
+            <li>Tôi/Chúng tôi xác nhận rằng YCBH được kê khai, hoàn tất trong thời gian Tôi/Chúng tôi đang cư trú tại
+                Việt Nam. Tôi/chúng tôi đã được tư vấn, giải thích đầy đủ các thông tin, số liệu trong Tài liệu minh họa
+                Hợp đồng bảo hiểm, YCBH, Quy tắc, điều khoản sản phẩm bảo hiểm/Quyền lợi bảo hiểm bán kèm, Quyền và
+                nghĩa vụ của BMBH/NĐBH, hiểu rõ các trường hợp loại trừ bảo hiểm, các loại phí, chi phí, phương thức
+                phân bổ phí bảo hiểm và hoàn toàn tự nguyện, không bị ép buộc khi tham gia sản phẩm bảo hiểm.</li>
+            <li>Tôi/Chúng tôi cam kết những nội dung kê khai tại YCBH này và các thông tin khác mà Tôi/ Chúng tôi cung
+                cấp cho MB Life, bác sỹ hoặc Bên thứ ba do MB Life chỉ định là đầy đủ, chính xác và trung thực, là cơ sở
+                để MB Life đánh giá khả năng chấp nhận bảo hiểm. Mọi thông tin trao đổi bằng lời nói trái với các nội
+                dung của YCBH và Quy tắc, điều khoản của Hợp đồng bảo hiểm sẽ không có hiệu lực. Tôi/Chúng tôi hiểu rõ
+                và đồng ý rằng MB Life có quyền đề nghị NĐBH đi kiểm tra sức khỏe và việc MB Life tiến hành kiểm tra,
+                thẩm định sức khỏe của NĐBH (nếu có) không thay thế cho nghĩa vụ kê khai trung thực của Tôi/Chúng tôi.
+                Tôi/Chúng tôi đồng ý rằng nếu BMBH/ NĐBH/Người đại diện theo pháp luật của NĐBH cố ý vi phạm nghĩa vụ kê
+                khai trung thực những thông tin mà nếu với thông tin chính xác MB Life sẽ không chấp nhận bảo hiểm, MB
+                Life sẽ không có nghĩa vụ giải quyết bất cứ Quyền lợi bảo hiểm nào.</li>
+            <li>Tôi/Chúng tôi đồng ý cho các cơ quan y tế, bệnh viện, bác sĩ, (các) công ty bảo hiểm khác, tổ chức, cá
+                nhân, khi nhận được bản sao YCBH này, được phép cung cấp cho MB Life tất cả các tài liệu hồ sơ bệnh án
+                về Tôi/Chúng tôi, bao gồm cả những thông tin, tài liệu về sức khỏe, y tế có liên quan đến BMBH/NĐBH nhằm
+                mục đích giao kết và thực hiện Hợp đồng bảo hiểm.</li>
+            <li>Tôi/Chúng tôi đồng ý cho MB Life được phép tiết lộ, chuyển giao hoặc sử dụng các dữ liệu cá nhân do
+                Tôi/Chúng tôi cung cấp trong các trường hợp sau: thu thập, sử dụng, chuyển giao theo yêu cầu của cơ quan
+                nhà nước có thẩm quyền hoặc cho mục đích thẩm định, tính toán phí bảo hiểm/phí bảo hiểm rủi ro, phát
+                hành hợp đồng bảo hiểm, thu phí bảo hiểm/phí bảo hiểm rủi ro, tái bảo hiểm, trích lập dự phòng nghiệp
+                vụ, dịch vụ khách hàng, giải quyết chi trả quyền lợi bảo hiểm, nghiên cứu thiết kế sản phẩm, phòng chống
+                gian lận, trục lợi bảo hiểm, nghiên cứu, đánh giá tình hình tài chính, khả năng thanh toán, mức độ đầy
+                đủ vốn, yêu cầu vốn, xử lý, lưu trữ và quản trị dữ liệu. Các trường hợp chuyển giao thông tin khác sẽ
+                được thực hiện theo quy định tại chính sách.</li>
+            <li>Tôi/Chúng tôi sẽ hoàn toàn chịu trách nhiệm về việc ủy quyền cho người khác thay Tôi/Chúng tôi kê khai
+                thông tin, nộp Phí bảo hiểm hay hoàn trả các khoản tạm ứng từ Giá trị hoàn lại cho MB Life. MB Life
+                không có trách nhiệm hoặc nghĩa vụ phải xác minh việc Tôi/Chúng tôi ủy quyền cho bên thứ ba. Tôi/Chúng
+                tôi sẽ cung cấp các chứng từ liên quan đến nguồn gốc các khoản thanh toán nói trên khi có yêu cầu.
+                Tôi/Chúng tôi xác nhận rằng mọi khoản tiền dùng để đóng phí bảo hiểm và/hoặc hoàn trả các khoản tạm ứng
+                từ Giá trị hoàn lại không có nguồn gốc từ hành vi phạm tội hoặc hoạt động vi phạm pháp luật phòng chống
+                rửa tiền của Việt Nam.</li>
+            <li>Tôi/Chúng tôi đồng ý sử dụng thông tin cư trú, địa chỉ thư điện tử (email) mà Tôi/Chúng tôi đăng ký với
+                MB Life để nhận bộ Hợp đồng bảo hiểm và các thông báo/tài liệu liên quan đến Hợp đồng bảo hiểm.
+                Tôi/Chúng tôi có trách nhiệm thông báo cho MB Life trong trường hợp có thay đổi các thông tin đã đăng
+                ký, bảo mật tài khoản email, mật khẩu sử dụng và các thông tin mà MB Life đã chuyển cho Tôi/Chúng tôi,
+                tự chịu trách nhiệm với mọi thiệt hại, tổn thất liên quan đến Hợp đồng bảo hiểm do việc Tôi/Chúng tôi
+                chậm/không thông báo thông tin thay đổi hoặc để lộ thông tin về Hợp đồng bảo hiểm và/hoặc địa chỉ thư
+                điện tử, mật khẩu sử dụng dẫn đến người khác có thể tiếp cận các thông tin mà MB Life cung cấp và/hoặc
+                thông tin trong thư điện tử bị sử dụng bởi một bên không có thẩm quyền, trừ khi do lỗi của MB Life.</li>
+            <li>Liên quan đến quy định về thuế tại Hoa Kỳ. Tôi/Chúng tôi đồng ý cung cấp thêm thông tin khi được yêu
+                cầu.</li>
+            <li>Trường hợp phát sinh yêu cầu kê khai bổ sung, thay đổi thông tin, NĐBH theo đây ủy quyền cho BMBH thay
+                mặt NĐBH xác nhận trên các tài liệu, chứng từ mà MB Life yêu cầu bổ sung. Thông tin, tài liệu được BMBH
+                xác nhận trên cơ sở ủy quyền tại mục này được hiểu là thông tin, tài liệu đó đã được chính NĐBH kê khai
+                và xác nhận; NĐBH & BMBH cam kết chịu hoàn toàn trách nhiệm về tính chính xác, trung thực và đầy đủ của
+                nội dung thông tin được kê khai và xác nhận dù là trực tiếp hay thông qua ủy quyền.</li>
+        </ol>
+        <h2>IX. LƯU Ý QUAN TRỌNG</h2>
+        <div style="margin: 6px 0 12px 0;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAvQAAAAHCAYAAABnRdmIAAACQklEQVR4AeyYMUvcYBjHnyfJ6XUo2BY6lOaQFhzaqf0GkbZToVPDbcalQ+nUpYNLpP0K/QB2aAp28Bv0oNChggini1GOQxQE0UMH9Uzy+LwnHOd+4r3mH/K7cMuR+z3/vPknDmGDARiAARiAARiAARiAARiw1kC/0AsJtybiic37c/7avS81AAfIADJwNQPwMQwfzUff/M/fm/7bvwc1UA4HH5ea/v/6G3/r1bMagINRykD93Zz/tJ74T94v1IA9DszMJqM/VX36YKW39ws90TxndPq1KIp0jBwAB8gAMoAMXEMGKt2T9Pjh3X8Vx0tBORycu27q5pKyHtlx01KA/2nFnPPxO6t5hTaL6lgK7HGgM9uQfHeaSHpl3nwMFPp1FhGXmDyt+4DgATlABpCB4WdAF94Ki/4us8egFA505p7edj1zZHOPBTp3cw2AG8+Ddh2TS0C969MWD0zskePwQJ8nR0++t8/TcyF2lrXUJ5aA8xSBAzhABqzLQGFmtiRijqAcHijRh7hEb746ewICBzIiDrQA/ta3uYk2Q0BijYNC5JeuJ7v6El5HeLn3C31MsfzsjC9MdV5GO50qgANkABm4RRkYnTWtOf1i5jVPfjrsrkSgHA4er+zNHu2fz7a7DyIAB6OUAZGpD60zb6a1vREBexy0z9yo/aO+SqSvCuhy6xd6/Spa6gumMA8ozgAcIAPIADIw/AyEi2Eehpw3giAD5XAQx0EWNBrAFgclOs9FXY/I0IgzAvY4MDMbKPPa4ekCAAD//1kWNDsAAAAGSURBVAMA1W9Y0WfVm8YAAAAASUVORK5CYII="
+                style="width: 100%; height: auto; max-height: 5px; display: block; border: none;" alt="Divider">
+        </div>
+        <ol>
+            <li>Đề nghị Quý khách kiểm tra lại toàn bộ YCBH và các tài liệu kèm theo để đảm bảo rằng Quý khách hoàn toàn
+                hài lòng và đồng ý với thông tin đã kê khai trước khi tự mình xác nhận toàn bộ nội dung YCBH và các tài
+                liệu kèm theo. Nếu MB Life phát hiện Bên mua bảo hiểm/Người được bảo hiểm/Người đại diện theo pháp luật
+                của Người được bảo hiểm không tự mình xác nhận nội dung YCBH, MB Life sẽ có quyền hủy bỏ Hợp đồng bảo
+                hiểm đã ký và giải quyết theo quy định của pháp luật và Quy tắc, điều khoản sản phẩm. <p>Quy trình tiếp
+                    nhận và giải quyết phản ánh, yêu cầu, khiếu nại của Khách hàng được đăng tải tại link: <br>
+                    <a href="https://mblife.vn/goc-bao-chi/quy-trinh-tiep-nhan-va-giai-quyet-thac-mac-khieu-nai-cua-nguoi-tieu-dung"
+                        style="color:#009fff;">https://mblife.vn/goc-bao-chi/quy-trinh-tiep-nhan-va-giai-quyet-thac-mac-khieu-nai-cua-nguoi-tieu-dung</a>
+                </p>
+                <p>Quy trình tiếp nhận yêu cầu Hủy/Chấm dứt hiệu lực Hợp đồng trước hạn của người tiêu dùng được đăng
+                    tải tại link: <br>
+                    <a href="https://mblife.vn/goc-bao-chi/quy-trinh-tiep-nhan-yeu-cau-huy-cham-dut-hop-dong-truoc-han-cua-nguoi-tieu-dung"
+                        style="color:#009fff;">https://mblife.vn/goc-bao-chi/quy-trinh-tiep-nhan-yeu-cau-huy-cham-dut-hop-dong-truoc-han-cua-nguoi-tieu-dung</a>
+                </p>
+            </li>
+            <li>Yêu cầu bảo hiểm này được xem là một bộ phận của Hợp đồng bảo hiểm khi YCBH được MB Life chấp nhận.</li>
+        </ol>
+        <br>
+        <br>
+        <p class="font-bold">Chữ ký của Bên mua Bảo hiểm/Người được bảo hiểm</p>
+        <div style="height: 100px;"></div>
+        <h2>X. CHỮ KÝ CỦA CHUYÊN VIÊN TƯ VẤN BẢO HIỂM</h2>
+        <div style="margin: 6px 0 12px 0;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAvQAAAAHCAYAAABnRdmIAAACQklEQVR4AeyYMUvcYBjHnyfJ6XUo2BY6lOaQFhzaqf0GkbZToVPDbcalQ+nUpYNLpP0K/QB2aAp28Bv0oNChggini1GOQxQE0UMH9Uzy+LwnHOd+4r3mH/K7cMuR+z3/vPknDmGDARiAARiAARiAARiAARiw1kC/0AsJtybiic37c/7avS81AAfIADJwNQPwMQwfzUff/M/fm/7bvwc1UA4HH5ea/v/6G3/r1bMagINRykD93Zz/tJ74T94v1IA9DszMJqM/VX36YKW39ws90TxndPq1KIp0jBwAB8gAMoAMXEMGKt2T9Pjh3X8Vx0tBORycu27q5pKyHtlx01KA/2nFnPPxO6t5hTaL6lgK7HGgM9uQfHeaSHpl3nwMFPp1FhGXmDyt+4DgATlABpCB4WdAF94Ki/4us8egFA505p7edj1zZHOPBTp3cw2AG8+Ddh2TS0C969MWD0zskePwQJ8nR0++t8/TcyF2lrXUJ5aA8xSBAzhABqzLQGFmtiRijqAcHijRh7hEb746ewICBzIiDrQA/ta3uYk2Q0BijYNC5JeuJ7v6El5HeLn3C31MsfzsjC9MdV5GO50qgANkABm4RRkYnTWtOf1i5jVPfjrsrkSgHA4er+zNHu2fz7a7DyIAB6OUAZGpD60zb6a1vREBexy0z9yo/aO+SqSvCuhy6xd6/Spa6gumMA8ozgAcIAPIADIw/AyEi2Eehpw3giAD5XAQx0EWNBrAFgclOs9FXY/I0IgzAvY4MDMbKPPa4ekCAAD//1kWNDsAAAAGSURBVAMA1W9Y0WfVm8YAAAAASUVORK5CYII="
+                style="width: 100%; height: auto; max-height: 5px; display: block; border: none;" alt="Divider">
+        </div>
+        <p class="font-bold">Chuyên viên tư vấn bảo hiểm</p>
+        <p class="font-italic">(Ký và ghi rõ họ tên bằng chữ thường)</p>
+        <div style="height: 50px;"></div>
+        <p>Mã số: <span class="form-line" style="width: 200px;"></span>
+        </p>
+        <p>Khu vực: <span class="form-line" style="width: 200px;"></span>
+        </p>
+        <p>Chi nhánh/PGD: <span class="form-line" style="width: 200px;"></span>
+        </p>
+    </div>
+    <div class="page-break"></div>
+    <div>
+        <h1 style="color:#060606; margin-top: 18px;">TÀI LIỆU MINH HỌA <br>HỢP ĐỒNG BỆNH LÝ NGHIÊM TRỌNG – MB ĐỒNG HÀNH
+        </h1>
+        <div style="margin: 6px 0 12px 0;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAvQAAAAHCAYAAABnRdmIAAACQklEQVR4AeyYMUvcYBjHnyfJ6XUo2BY6lOaQFhzaqf0GkbZToVPDbcalQ+nUpYNLpP0K/QB2aAp28Bv0oNChggini1GOQxQE0UMH9Uzy+LwnHOd+4r3mH/K7cMuR+z3/vPknDmGDARiAARiAARiAARiAARiw1kC/0AsJtybiic37c/7avS81AAfIADJwNQPwMQwfzUff/M/fm/7bvwc1UA4HH5ea/v/6G3/r1bMagINRykD93Zz/tJ74T94v1IA9DszMJqM/VX36YKW39ws90TxndPq1KIp0jBwAB8gAMoAMXEMGKt2T9Pjh3X8Vx0tBORycu27q5pKyHtlx01KA/2nFnPPxO6t5hTaL6lgK7HGgM9uQfHeaSHpl3nwMFPp1FhGXmDyt+4DgATlABpCB4WdAF94Ki/4us8egFA505p7edj1zZHOPBTp3cw2AG8+Ddh2TS0C969MWD0zskePwQJ8nR0++t8/TcyF2lrXUJ5aA8xSBAzhABqzLQGFmtiRijqAcHijRh7hEb746ewICBzIiDrQA/ta3uYk2Q0BijYNC5JeuJ7v6El5HeLn3C31MsfzsjC9MdV5GO50qgANkABm4RRkYnTWtOf1i5jVPfjrsrkSgHA4er+zNHu2fz7a7DyIAB6OUAZGpD60zb6a1vREBexy0z9yo/aO+SqSvCuhy6xd6/Spa6gumMA8ozgAcIAPIADIw/AyEi2Eehpw3giAD5XAQx0EWNBrAFgclOs9FXY/I0IgzAvY4MDMbKPPa4ekCAAD//1kWNDsAAAAGSURBVAMA1W9Y0WfVm8YAAAAASUVORK5CYII="
+                style="width: 100%; height: auto; max-height: 5px; display: block; border: none;" alt="Divider">
+        </div>
+        <h3 class="font-bold">A. THÔNG TIN CHUNG</h3>
+        <p>
+            <span class="font-bold">A1. THÔNG TIN VỀ CÔNG TY TNHH BẢO HIỂM NHÂN THỌ MB AGEAS</span>
+        </p>
+        <p>Công ty TNHH Bảo hiểm nhân thọ MB Ageas hoạt động trong lĩnh vực Bảo hiểm Nhân thọ, Bảo hiểm sức khỏe và Đầu
+            tư tài chính theo Giấy phép thành lập và hoạt động số 74/GP/KDBH do Bộ Tài chính cấp ngày 21/7/2016. Vốn
+            điều lệ: 1500 tỷ đồng. Địa chỉ trụ sở chính: Tầng 15, Tòa nhà 21 Cát Linh, phường Ô Chợ Dừa, Thành phố Hà
+            Nội. Điện thoại: (+84) 24 222 9 6666; Fax: (+84) 24 626 9 8080. Website: mblife.vn.</p>
+        <p>
+            <span class="font-bold">A2. THÔNG TIN TƯ VẤN VIÊN/ĐẠI LÝ</span>
+        </p>
+        <table class="table-gray">
+            <tbody>
+                <tr>
+                    <td style="width: 40%;">Tên Chuyên viên tư vấn/Đại lý bảo hiểm cá nhân (Mã số đại lý)</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Số chứng chỉ đại lý bảo hiểm</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Điện thoại</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table-gray">
+            <tbody>
+                <tr>
+                    <td style="width: 40%;">Tên của Đại lý tổ chức</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ của Đại lý tổ chức</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Nội dung được ủy quyền theo Hợp đồng đại lý</td>
+                    <td>Tư vấn sản phẩm bảo hiểm; giới thiệu sản phẩm bảo hiểm; chào bán sản phẩm bảo hiểm; thu xếp việc
+                        giao kết hợp đồng bảo hiểm. Phạm vi ủy quyền có thể được điều chỉnh theo thỏa thuận giữa DNBH và
+                        Đại lý bảo hiểm tại từng thời điểm.</td>
+                </tr>
+                <tr>
+                    <td>Tên (Mã số đại lý) của nhân viên/Chuyên viên tư vấn của Đại lý tổ chức thực hiện hoạt động đại
+                        lý bảo hiểm</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Số chứng chỉ đại lý bảo hiểm của nhân viên /Chuyên viên tư vấn của Đại lý tổ chức thực hiện hoạt
+                        động đại lý bảo hiểm</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <span class="font-bold">A3. THÔNG TIN KHÁCH HÀNG</span>
+        </p>
+        <table class="table-gray">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Họ và tên</th>
+                    <th>Giới tính</th>
+                    <th>Ngày sinh</th>
+                    <th>Số giấy tờ tùy thân</th>
+                    <th>Tuổi bảo hiểm</th>
+                    <th>Nhóm nghề</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="font-bold bg-gray">Bên mua bảo hiểm</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="font-bold bg-gray">Người được bảo hiểm chính</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="font-bold">B. THÔNG TIN HỢP ĐỒNG</h3>
+        <table class="table-gray">
+            <thead>
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th>Người được bảo hiểm</th>
+                    <th>Thời hạn Bảo hiểm</th>
+                    <th>Thời hạn đóng phí (năm)</th>
+                    <th>Số tiền bảo hiểm (đồng)</th>
+                    <th>Phí bảo hiểm định kỳ (đồng)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="6" class="font-bold bg-gray">Sản phẩm chính</td>
+                </tr>
+                <tr>
+                    <td>Sản phẩm bảo hiểm Bệnh lý nghiêm trọng – MB đồng hành</td>
+                    <td></td>
+                    <td class="text-center">1 năm</td>
+                    <td class="text-center">1</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="font-bold bg-gray">Sản phẩm bán kèm</td>
+                </tr>
+                <tr>
+                    <td>Sản phẩm Bảo hiểm Bệnh lý nghiêm trọng – Bản Cơ bản</td>
+                    <td></td>
+                    <td class="text-center">1 năm</td>
+                    <td class="text-center">1</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="font-bold">C. QUYỀN LỢI CỦA SẢN PHẨM BẢO HIỂM BỆNH LÝ NGHIÊM TRỌNG – MB ĐỒNG HÀNH CHO NGƯỜI ĐƯỢC BẢO
+            HIỂM CHÍNH</h3>
+        <table class="table-gray">
+            <thead>
+                <tr>
+                    <th style="width: 30%;">Quyền lợi bảo hiểm</th>
+                    <th>Chi tiết</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center">
+                        <span class="font-bold">QUYỀN LỢI BẢO HIỂM CƠ BẢN (*)</span>
+                        <br>Quyền lợi bảo hiểm Tử vong hoặc Thương tật toàn bộ vĩnh viễn (TTTBVV) cơ bản
+                    </td>
+                    <td>Nếu Người được bảo hiểm bị Tử vong hoặc TTTBVV, MB Life sẽ trả Quyền lợi bảo hiểm Tử vong hoặc
+                        Thương tật toàn bộ vĩnh viễn (TTTBVV) cơ bản bằng <span class="font-italic">100% Số tiền bảo
+                            hiểm</span>. </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="font-italic">(*) Mỗi Quyền lợi bảo hiểm chỉ được trả 1 lần duy nhất trong Thời hạn Hợp đồng. MB Life
+            sẽ khấu trừ Khoản nợ (nếu có) trước khi chi trả Quyền lợi bảo hiểm. <br> (*) Trường hợp Người được bảo hiểm
+            dưới 4 tuổi, các Quyền lợi bảo hiểm sẽ được điều chỉnh theo quy định tại Quy tắc, Điều khoản sản phẩm. </p>
+        <h3 class="font-bold">D. QUYỀN LỢI CỦA SẢN PHẨM BẢO HIỂM BỆNH LÝ NGHIÊM TRỌNG</h3>
+        <p class="font-bold">Sản phẩm Bảo hiểm cho Người được bảo hiểm chính:</p>
+        <table class="table-gray">
+            <tbody>
+                <tr>
+                    <td rowspan="2" class="font-bold bg-gray" style="width: 25%;">Sản phẩm bảo hiểm Bệnh lý nghiêm trọng
+                        - Bản Cơ bản</td>
+                    <td class="font-bold bg-gray" style="width: 25%;">Quyền lợi bảo hiểm 03 Bệnh lý nghiêm trọng (BLNT)
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Quyền lợi bảo hiểm cơ bản</li>
+                            <li>Chi trả trong trường hợp Người được bảo hiểm mắc những BLNT giai đoạn sau bao gồm: Ung
+                                thư nghiêm trọng, Đột quỵ, Nhồi máu cơ tim.</li>
+                            <li>Giới hạn chi trả: Trả <span class="font-italic">100% số tiền bảo hiểm</span> cho mỗi
+                                BLNT, tối đa 02 lần cho 02 BLNT khác nhau. Khoảng thời gian tối thiểu giữa các lần mắc
+                                BLNT giai đoạn sau là 12 tháng. </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-bold bg-gray">Quyền lợi bảo hiểm Bệnh lý nghiêm trọng (BLNT) theo giới tính</td>
+                    <td>
+                        <ul>
+                            <li>Quyền lợi bảo hiểm nâng cao</li>
+                            <li>Chi trả trong trường hợp Người được bảo hiểm mắc những bệnh Ung thư nghiêm trọng theo
+                                giới tính <span class="font-italic">(danh sách BLNT theo giới tính được quy định cụ thể
+                                    trong điều khoản sản phẩm)</span>
+                            </li>
+                            <li>Giới hạn chi trả: Trả <span class="font-italic">25% số tiền bảo hiểm</span>, duy nhất 1
+                                lần. </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="font-bold">LƯU Ý</p>
+        <ol>
+            <li>Tài liệu này nhằm giúp Quý khách hiểu rõ hơn về quyền lợi bảo hiểm và phí bảo hiểm. Để biết thêm chi
+                tiết, Quý khách vui lòng liên hệ Nhân viên tư vấn và/hoặc tham khảo Quy tắc, Điều khoản sản phẩm.</li>
+            <li>Các số liệu trong Tài liệu minh họa này được xác định tại thời điểm minh họa, với giả định không có yêu
+                cầu nào của Quý khách làm thay đổi các giả định này trong Thời hạn hợp đồng, và Phí bảo hiểm dành cho
+                Người được bảo hiểm có điều kiện tiêu chuẩn. Phí bảo hiểm thực thu có thể thay đổi phụ thuộc kết quả
+                đánh giá rủi ro.</li>
+            <li>Quý khách lưu ý tuân thủ các quy định theo Quy tắc, điều khoản sản phẩm để đảm bảo quyền và lợi ích của
+                mình, đặc biệt là nghĩa vụ về đóng phí và kê khai thông tin. Việc giao kết hợp đồng bảo hiểm là một cam
+                kết dài hạn, việc bên mua bảo hiểm chấm dứt hợp đồng bảo hiểm có thể dẫn đến việc không nhận lại được
+                giá trị tương đương với khoản phí bảo hiểm đã đóng.</li>
+        </ol>
+        <br>
+        <table
+            style="width: 100%; table-layout: fixed; border-collapse: collapse; border: none; box-sizing: border-box;">
+            <tr style="border: none;">
+                <!-- Cột 1: Bên mua bảo hiểm -->
+                <td style="border: none; width: 50%; vertical-align: top; padding-right: 15px; box-sizing: border-box;">
+                    <p class="font-bold">XÁC NHẬN CỦA BÊN MUA BẢO HIỂM</p>
+                    <p style="text-align: justify; word-wrap: break-word;">Tôi, Bên mua bảo hiểm ký tên dưới đây, xác
+                        nhận đã được Chuyên viên tư vấn của MB Life có tên và mã số như trong tài liệu này giải thích và
+                        tư vấn rõ ràng, đầy đủ về Tài liệu minh họa cũng như Quy tắc, Điều khoản sản phẩm bảo hiểm An
+                        Yên Sống Khỏe và các sản phẩm bảo hiểm bán kèm.</p>
+                    <p style="text-align: justify; word-wrap: break-word;">Tôi cũng xác nhận đã đọc và hiểu rõ các nội
+                        dung của Tài liệu minh họa này, kể cả các lưu ý, các đặc điểm, quyền lợi và trách nhiệm của Tôi
+                        khi tham gia bảo hiểm.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <!-- Phần nhập liệu linh hoạt -->
+                    <div style="display: flex; align-items: flex-end; margin-bottom: 8px;">
+                        <span style="white-space: nowrap;">Chữ ký:</span>
+                        <span style="flex-grow: 1; border-bottom: 1px dotted #000; margin-left: 8px;"></span>
+                    </div>
+                    <div style="display: flex; align-items: flex-end; margin-bottom: 8px;">
+                        <span style="white-space: nowrap;">Họ và tên:</span>
+                        <span style="flex-grow: 1; border-bottom: 1px dotted #000; margin-left: 8px;"></span>
+                    </div>
+                    <div style="display: flex; align-items: flex-end; margin-bottom: 8px;">
+                        <span style="white-space: nowrap;">Ngày/tháng/năm:</span>
+                        <span style="flex-grow: 1; border-bottom: 1px dotted #000; margin-left: 8px;"></span>
+                    </div>
+                </td>
+                <!-- Cột 2: Chuyên viên tư vấn -->
+                <td style="border: none; width: 50%; vertical-align: top; padding-left: 15px; box-sizing: border-box;">
+                    <p class="font-bold">XÁC NHẬN CỦA CHUYÊN VIÊN TƯ VẤN BẢO HIỂM</p>
+                    <p style="text-align: justify; word-wrap: break-word;">Tôi, Chuyên viên tư vấn ký tên dưới đây, cam
+                        kết đã giải thích và tư vấn rõ ràng, đầy đủ cho Bên mua bảo hiểm về nội dung Tài liệu minh họa
+                        cũng như Quy tắc, Điều khoản sản phẩm bảo hiểm An Yên Sống Khỏe và các sản phẩm bảo hiểm bán
+                        kèm.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <!-- Phần nhập liệu linh hoạt -->
+                    <div style="display: flex; align-items: flex-end; margin-bottom: 8px;">
+                        <span style="white-space: nowrap;">Chữ ký:</span>
+                        <span style="flex-grow: 1; border-bottom: 1px dotted #000; margin-left: 8px;"></span>
+                    </div>
+                    <div style="display: flex; align-items: flex-end; margin-bottom: 8px;">
+                        <span style="white-space: nowrap;">Họ và tên:</span>
+                        <span style="flex-grow: 1; border-bottom: 1px dotted #000; margin-left: 8px;"></span>
+                    </div>
+                    <div style="display: flex; align-items: flex-end; margin-bottom: 8px;">
+                        <span style="white-space: nowrap;">Ngày/tháng/năm:</span>
+                        <span style="flex-grow: 1; border-bottom: 1px dotted #000; margin-left: 8px;"></span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="page-break"></div>
+    <div>
+        <h2 class="text-center" style="margin-top:20px;">BIỂU PHÍ VÀ SỐ TIỀN BẢO HIỂM</h2>
+        <p class="text-center font-bold color-secondary">Sản phẩm Bệnh lý nghiêm trọng – MB Đồng hành</p>
+        <p class="text-center font-italic" style="color:#4a4a49;">Thời hạn bảo hiểm 1 năm | Đơn vị: VNĐ</p>
+        <div style="margin: 6px 0 12px 0;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAvQAAAAHCAYAAABnRdmIAAACQklEQVR4AeyYMUvcYBjHnyfJ6XUo2BY6lOaQFhzaqf0GkbZToVPDbcalQ+nUpYNLpP0K/QB2aAp28Bv0oNChggini1GOQxQE0UMH9Uzy+LwnHOd+4r3mH/K7cMuR+z3/vPknDmGDARiAARiAARiAARiAARiw1kC/0AsJtybiic37c/7avS81AAfIADJwNQPwMQwfzUff/M/fm/7bvwc1UA4HH5ea/v/6G3/r1bMagINRykD93Zz/tJ74T94v1IA9DszMJqM/VX36YKW39ws90TxndPq1KIp0jBwAB8gAMoAMXEMGKt2T9Pjh3X8Vx0tBORycu27q5pKyHtlx01KA/2nFnPPxO6t5hTaL6lgK7HGgM9uQfHeaSHpl3nwMFPp1FhGXmDyt+4DgATlABpCB4WdAF94Ki/4us8egFA505p7edj1zZHOPBTp3cw2AG8+Ddh2TS0C969MWD0zskePwQJ8nR0++t8/TcyF2lrXUJ5aA8xSBAzhABqzLQGFmtiRijqAcHijRh7hEb746ewICBzIiDrQA/ta3uYk2Q0BijYNC5JeuJ7v6El5HeLn3C31MsfzsjC9MdV5GO50qgANkABm4RRkYnTWtOf1i5jVPfjrsrkSgHA4er+zNHu2fz7a7DyIAB6OUAZGpD60zb6a1vREBexy0z9yo/aO+SqSvCuhy6xd6/Spa6gumMA8ozgAcIAPIADIw/AyEi2Eehpw3giAD5XAQx0EWNBrAFgclOs9FXY/I0IgzAvY4MDMbKPPa4ekCAAD//1kWNDsAAAAGSURBVAMA1W9Y0WfVm8YAAAAASUVORK5CYII="
+                style="width: 100%; height: auto; max-height: 5px; display: block; border: none;" alt="Divider">
+        </div>
+        <table class="table-fee">
+            <thead>
+                <tr>
+                    <th colspan="4" style="background-color: #f6a9d1; color: #fff;">BIỂU PHÍ NAM GIỚI</th>
+                </tr>
+                <tr>
+                    <th style="width: 15%;">Tuổi</th>
+                    <th style="width: 30%;">Tổng quyền lợi combo TLP+CI trị giá 25,000VNĐ/tháng</th>
+                    <th style="width: 30%;">Phí BH CI: 24,000VNĐ/ tháng <br>(Bản Tiêu chuẩn) </th>
+                    <th style="width: 25%;">Phí BH TLP: 1,000VNĐ/ tháng <br>(Bản Tiêu chuẩn) </th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">18</td>
+                    <td class="bg-pink-extremely-light">-</td>
+                    <td class="bg-pink-extremely-light">-</td>
+                    <td class="bg-pink-extremely-light">2.400.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">19</td>
+                    <td class="bg-pink-extremely-light">-</td>
+                    <td class="bg-pink-extremely-light">-</td>
+                    <td class="bg-pink-extremely-light">2.300.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">20</td>
+                    <td class="bg-pink-extremely-light">-</td>
+                    <td class="bg-pink-extremely-light">-</td>
+                    <td class="bg-pink-extremely-light">2.300.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">21</td>
+                    <td class="bg-pink-extremely-light">-</td>
+                    <td class="bg-pink-extremely-light">-</td>
+                    <td class="bg-pink-extremely-light">2.300.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">22</td>
+                    <td class="bg-pink-extremely-light">-</td>
+                    <td class="bg-pink-extremely-light">-</td>
+                    <td class="bg-pink-extremely-light">2.300.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">23</td>
+                    <td class="bg-pink-extremely-light">-</td>
+                    <td class="bg-pink-extremely-light">-</td>
+                    <td class="bg-pink-extremely-light">2.400.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">24</td>
+                    <td class="bg-pink-extremely-light">475.300.000</td>
+                    <td class="bg-pink-extremely-light">472.900.000</td>
+                    <td class="bg-pink-extremely-light">2.400.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">25</td>
+                    <td class="bg-pink-extremely-light">435.800.000</td>
+                    <td class="bg-pink-extremely-light">433.300.000</td>
+                    <td class="bg-pink-extremely-light">2.500.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">26</td>
+                    <td class="bg-pink-extremely-light">385.600.000</td>
+                    <td class="bg-pink-extremely-light">383.100.000</td>
+                    <td class="bg-pink-extremely-light">2.500.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">27</td>
+                    <td class="bg-pink-extremely-light">336.200.000</td>
+                    <td class="bg-pink-extremely-light">333.700.000</td>
+                    <td class="bg-pink-extremely-light">2.500.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">28</td>
+                    <td class="bg-pink-extremely-light">304.500.000</td>
+                    <td class="bg-pink-extremely-light">302.000.000</td>
+                    <td class="bg-pink-extremely-light">2.500.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">29</td>
+                    <td class="bg-pink-extremely-light">261.100.000</td>
+                    <td class="bg-pink-extremely-light">258.600.000</td>
+                    <td class="bg-pink-extremely-light">2.500.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">30</td>
+                    <td class="bg-pink-extremely-light">235.000.000</td>
+                    <td class="bg-pink-extremely-light">232.500.000</td>
+                    <td class="bg-pink-extremely-light">2.500.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">31</td>
+                    <td class="bg-pink-extremely-light">207.000.000</td>
+                    <td class="bg-pink-extremely-light">204.300.000</td>
+                    <td class="bg-pink-extremely-light">2.700.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">32</td>
+                    <td class="bg-pink-extremely-light">181.000.000</td>
+                    <td class="bg-pink-extremely-light">178.400.000</td>
+                    <td class="bg-pink-extremely-light">2.600.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">33</td>
+                    <td class="bg-pink-extremely-light">159.200.000</td>
+                    <td class="bg-pink-extremely-light">156.700.000</td>
+                    <td class="bg-pink-extremely-light">2.500.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">34</td>
+                    <td class="bg-pink-extremely-light">137.600.000</td>
+                    <td class="bg-pink-extremely-light">135.200.000</td>
+                    <td class="bg-pink-extremely-light">2.400.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">35</td>
+                    <td class="bg-pink-extremely-light">118.900.000</td>
+                    <td class="bg-pink-extremely-light">116.600.000</td>
+                    <td class="bg-pink-extremely-light">2.300.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">36</td>
+                    <td class="bg-pink-extremely-light">105.900.000</td>
+                    <td class="bg-pink-extremely-light">103.800.000</td>
+                    <td class="bg-pink-extremely-light">2.100.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">37</td>
+                    <td class="bg-pink-extremely-light">94.200.000</td>
+                    <td class="bg-pink-extremely-light">92.200.000</td>
+                    <td class="bg-pink-extremely-light">2.000.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">38</td>
+                    <td class="bg-pink-extremely-light">83.300.000</td>
+                    <td class="bg-pink-extremely-light">81.500.000</td>
+                    <td class="bg-pink-extremely-light">1.800.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">39</td>
+                    <td class="bg-pink-extremely-light">74.200.000</td>
+                    <td class="bg-pink-extremely-light">72.500.000</td>
+                    <td class="bg-pink-extremely-light">1.700.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">40</td>
+                    <td class="bg-pink-extremely-light">66.500.000</td>
+                    <td class="bg-pink-extremely-light">64.900.000</td>
+                    <td class="bg-pink-extremely-light">1.600.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">41</td>
+                    <td class="bg-pink-extremely-light">59.200.000</td>
+                    <td class="bg-pink-extremely-light">57.800.000</td>
+                    <td class="bg-pink-extremely-light">1.400.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">42</td>
+                    <td class="bg-pink-extremely-light">52.700.000</td>
+                    <td class="bg-pink-extremely-light">51.400.000</td>
+                    <td class="bg-pink-extremely-light">1.300.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">43</td>
+                    <td class="bg-pink-extremely-light">48.900.000</td>
+                    <td class="bg-pink-extremely-light">47.700.000</td>
+                    <td class="bg-pink-extremely-light">1.200.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">44</td>
+                    <td class="bg-pink-extremely-light">45.700.000</td>
+                    <td class="bg-pink-extremely-light">44.600.000</td>
+                    <td class="bg-pink-extremely-light">1.100.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">45</td>
+                    <td class="bg-pink-extremely-light">43.000.000</td>
+                    <td class="bg-pink-extremely-light">42.000.000</td>
+                    <td class="bg-pink-extremely-light">1.000.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">46</td>
+                    <td class="bg-pink-extremely-light">40.200.000</td>
+                    <td class="bg-pink-extremely-light">39.200.000</td>
+                    <td class="bg-pink-extremely-light">1.000.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">47</td>
+                    <td class="bg-pink-extremely-light">37.600.000</td>
+                    <td class="bg-pink-extremely-light">36.700.000</td>
+                    <td class="bg-pink-extremely-light">900.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">48</td>
+                    <td class="bg-pink-extremely-light">35.200.000</td>
+                    <td class="bg-pink-extremely-light">34.400.000</td>
+                    <td class="bg-pink-extremely-light">800.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">49</td>
+                    <td class="bg-pink-extremely-light">32.600.000</td>
+                    <td class="bg-pink-extremely-light">31.800.000</td>
+                    <td class="bg-pink-extremely-light">800.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">50</td>
+                    <td class="bg-pink-extremely-light">29.700.000</td>
+                    <td class="bg-pink-extremely-light">29.000.000</td>
+                    <td class="bg-pink-extremely-light">700.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">51</td>
+                    <td class="bg-pink-extremely-light">27.300.000</td>
+                    <td class="bg-pink-extremely-light">26.700.000</td>
+                    <td class="bg-pink-extremely-light">600.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">52</td>
+                    <td class="bg-pink-extremely-light">24.900.000</td>
+                    <td class="bg-pink-extremely-light">24.300.000</td>
+                    <td class="bg-pink-extremely-light">600.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">53</td>
+                    <td class="bg-pink-extremely-light">22.500.000</td>
+                    <td class="bg-pink-extremely-light">22.000.000</td>
+                    <td class="bg-pink-extremely-light">500.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">54</td>
+                    <td class="bg-pink-extremely-light">20.400.000</td>
+                    <td class="bg-pink-extremely-light">19.900.000</td>
+                    <td class="bg-pink-extremely-light">500.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">55</td>
+                    <td class="bg-pink-extremely-light">18.400.000</td>
+                    <td class="bg-pink-extremely-light">17.900.000</td>
+                    <td class="bg-pink-extremely-light">500.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">56</td>
+                    <td class="bg-pink-extremely-light">16.900.000</td>
+                    <td class="bg-pink-extremely-light">16.500.000</td>
+                    <td class="bg-pink-extremely-light">400.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">57</td>
+                    <td class="bg-pink-extremely-light">15.500.000</td>
+                    <td class="bg-pink-extremely-light">15.100.000</td>
+                    <td class="bg-pink-extremely-light">400.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">58</td>
+                    <td class="bg-pink-extremely-light">14.100.000</td>
+                    <td class="bg-pink-extremely-light">13.800.000</td>
+                    <td class="bg-pink-extremely-light">300.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">59</td>
+                    <td class="bg-pink-extremely-light">12.900.000</td>
+                    <td class="bg-pink-extremely-light">12.600.000</td>
+                    <td class="bg-pink-extremely-light">300.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">60</td>
+                    <td class="bg-pink-extremely-light">11.700.000</td>
+                    <td class="bg-pink-extremely-light">11.400.000</td>
+                    <td class="bg-pink-extremely-light">300.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">61</td>
+                    <td class="bg-pink-extremely-light">10.600.000</td>
+                    <td class="bg-pink-extremely-light">10.300.000</td>
+                    <td class="bg-pink-extremely-light">300.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">62</td>
+                    <td class="bg-pink-extremely-light">9.500.000</td>
+                    <td class="bg-pink-extremely-light">9.300.000</td>
+                    <td class="bg-pink-extremely-light">200.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">63</td>
+                    <td class="bg-pink-extremely-light">8.600.000</td>
+                    <td class="bg-pink-extremely-light">8.400.000</td>
+                    <td class="bg-pink-extremely-light">200.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">64</td>
+                    <td class="bg-pink-extremely-light">7.800.000</td>
+                    <td class="bg-pink-extremely-light">7.600.000</td>
+                    <td class="bg-pink-extremely-light">200.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">65</td>
+                    <td class="bg-pink-extremely-light">7.100.000</td>
+                    <td class="bg-pink-extremely-light">6.900.000</td>
+                    <td class="bg-pink-extremely-light">200.000</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table class="table-fee">
+            <thead>
+                <tr>
+                    <th colspan="4" style="background-color: #ae4078; color: #fff;">BIỂU PHÍ NỮ GIỚI</th>
+                </tr>
+                <tr>
+                    <th style="width: 15%;">Tuổi</th>
+                    <th style="width: 30%;">Tổng quyền lợi combo TLP+C1 trị giá 25,000VNĐ/tháng</th>
+                    <th style="width: 30%;">Phí BH CI: 24,000VNĐ/ tháng <br>(Bản Tiêu chuẩn) </th>
+                    <th style="width: 25%;">Phí BH TLP: 1,000VNĐ/ tháng <br>(Bản Tiêu chuẩn) </th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">18</td>
+                    <td class="bg-pink-extremely-light">300.100.000</td>
+                    <td class="bg-pink-extremely-light">295.600.000</td>
+                    <td class="bg-pink-extremely-light">4.500.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">19</td>
+                    <td class="bg-pink-extremely-light">280.300.000</td>
+                    <td class="bg-pink-extremely-light">275.900.000</td>
+                    <td class="bg-pink-extremely-light">4.400.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">20</td>
+                    <td class="bg-pink-extremely-light">258.900.000</td>
+                    <td class="bg-pink-extremely-light">254.600.000</td>
+                    <td class="bg-pink-extremely-light">4.300.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">21</td>
+                    <td class="bg-pink-extremely-light">238.600.000</td>
+                    <td class="bg-pink-extremely-light">234.400.000</td>
+                    <td class="bg-pink-extremely-light">4.200.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">22</td>
+                    <td class="bg-pink-extremely-light">220.200.000</td>
+                    <td class="bg-pink-extremely-light">216.100.000</td>
+                    <td class="bg-pink-extremely-light">4.100.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">23</td>
+                    <td class="bg-pink-extremely-light">206.300.000</td>
+                    <td class="bg-pink-extremely-light">202.300.000</td>
+                    <td class="bg-pink-extremely-light">4.000.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">24</td>
+                    <td class="bg-pink-extremely-light">183.400.000</td>
+                    <td class="bg-pink-extremely-light">179.500.000</td>
+                    <td class="bg-pink-extremely-light">3.900.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">25</td>
+                    <td class="bg-pink-extremely-light">167.100.000</td>
+                    <td class="bg-pink-extremely-light">163.200.000</td>
+                    <td class="bg-pink-extremely-light">3.900.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">26</td>
+                    <td class="bg-pink-extremely-light">146.000.000</td>
+                    <td class="bg-pink-extremely-light">142.200.000</td>
+                    <td class="bg-pink-extremely-light">3.800.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">27</td>
+                    <td class="bg-pink-extremely-light">126.600.000</td>
+                    <td class="bg-pink-extremely-light">123.000.000</td>
+                    <td class="bg-pink-extremely-light">3.600.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">28</td>
+                    <td class="bg-pink-extremely-light">110.700.000</td>
+                    <td class="bg-pink-extremely-light">107.200.000</td>
+                    <td class="bg-pink-extremely-light">3.500.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">29</td>
+                    <td class="bg-pink-extremely-light">98.100.000</td>
+                    <td class="bg-pink-extremely-light">94.700.000</td>
+                    <td class="bg-pink-extremely-light">3.400.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">30</td>
+                    <td class="bg-pink-extremely-light">88.200.000</td>
+                    <td class="bg-pink-extremely-light">84.900.000</td>
+                    <td class="bg-pink-extremely-light">3.300.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">31</td>
+                    <td class="bg-pink-extremely-light">80.300.000</td>
+                    <td class="bg-pink-extremely-light">77.200.000</td>
+                    <td class="bg-pink-extremely-light">3.100.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">32</td>
+                    <td class="bg-pink-extremely-light">74.100.000</td>
+                    <td class="bg-pink-extremely-light">71.100.000</td>
+                    <td class="bg-pink-extremely-light">3.000.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">33</td>
+                    <td class="bg-pink-extremely-light">69.000.000</td>
+                    <td class="bg-pink-extremely-light">66.100.000</td>
+                    <td class="bg-pink-extremely-light">2.900.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">34</td>
+                    <td class="bg-pink-extremely-light">64.300.000</td>
+                    <td class="bg-pink-extremely-light">61.600.000</td>
+                    <td class="bg-pink-extremely-light">2.700.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">35</td>
+                    <td class="bg-pink-extremely-light">60.600.000</td>
+                    <td class="bg-pink-extremely-light">58.000.000</td>
+                    <td class="bg-pink-extremely-light">2.600.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">36</td>
+                    <td class="bg-pink-extremely-light">57.100.000</td>
+                    <td class="bg-pink-extremely-light">54.700.000</td>
+                    <td class="bg-pink-extremely-light">2.400.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">37</td>
+                    <td class="bg-pink-extremely-light">54.200.000</td>
+                    <td class="bg-pink-extremely-light">51.900.000</td>
+                    <td class="bg-pink-extremely-light">2.300.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">38</td>
+                    <td class="bg-pink-extremely-light">51.800.000</td>
+                    <td class="bg-pink-extremely-light">49.700.000</td>
+                    <td class="bg-pink-extremely-light">2.100.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">39</td>
+                    <td class="bg-pink-extremely-light">48.700.000</td>
+                    <td class="bg-pink-extremely-light">46.800.000</td>
+                    <td class="bg-pink-extremely-light">1.900.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">40</td>
+                    <td class="bg-pink-extremely-light">46.400.000</td>
+                    <td class="bg-pink-extremely-light">44.600.000</td>
+                    <td class="bg-pink-extremely-light">1.800.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">41</td>
+                    <td class="bg-pink-extremely-light">43.600.000</td>
+                    <td class="bg-pink-extremely-light">42.000.000</td>
+                    <td class="bg-pink-extremely-light">1.600.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">42</td>
+                    <td class="bg-pink-extremely-light">41.400.000</td>
+                    <td class="bg-pink-extremely-light">39.900.000</td>
+                    <td class="bg-pink-extremely-light">1.500.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">43</td>
+                    <td class="bg-pink-extremely-light">39.400.000</td>
+                    <td class="bg-pink-extremely-light">38.000.000</td>
+                    <td class="bg-pink-extremely-light">1.400.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">44</td>
+                    <td class="bg-pink-extremely-light">37.300.000</td>
+                    <td class="bg-pink-extremely-light">36.000.000</td>
+                    <td class="bg-pink-extremely-light">1.300.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">45</td>
+                    <td class="bg-pink-extremely-light">35.100.000</td>
+                    <td class="bg-pink-extremely-light">33.900.000</td>
+                    <td class="bg-pink-extremely-light">1.200.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">46</td>
+                    <td class="bg-pink-extremely-light">32.700.000</td>
+                    <td class="bg-pink-extremely-light">31.600.000</td>
+                    <td class="bg-pink-extremely-light">1.100.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">47</td>
+                    <td class="bg-pink-extremely-light">30.400.000</td>
+                    <td class="bg-pink-extremely-light">29.300.000</td>
+                    <td class="bg-pink-extremely-light">1.100.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">48</td>
+                    <td class="bg-pink-extremely-light">28.700.000</td>
+                    <td class="bg-pink-extremely-light">27.700.000</td>
+                    <td class="bg-pink-extremely-light">1.000.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">49</td>
+                    <td class="bg-pink-extremely-light">27.000.000</td>
+                    <td class="bg-pink-extremely-light">26.100.000</td>
+                    <td class="bg-pink-extremely-light">900.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">50</td>
+                    <td class="bg-pink-extremely-light">25.500.000</td>
+                    <td class="bg-pink-extremely-light">24.600.000</td>
+                    <td class="bg-pink-extremely-light">900.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">51</td>
+                    <td class="bg-pink-extremely-light">24.100.000</td>
+                    <td class="bg-pink-extremely-light">23.300.000</td>
+                    <td class="bg-pink-extremely-light">800.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">52</td>
+                    <td class="bg-pink-extremely-light">22.800.000</td>
+                    <td class="bg-pink-extremely-light">22.000.000</td>
+                    <td class="bg-pink-extremely-light">800.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">53</td>
+                    <td class="bg-pink-extremely-light">21.500.000</td>
+                    <td class="bg-pink-extremely-light">20.800.000</td>
+                    <td class="bg-pink-extremely-light">700.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">54</td>
+                    <td class="bg-pink-extremely-light">20.300.000</td>
+                    <td class="bg-pink-extremely-light">19.700.000</td>
+                    <td class="bg-pink-extremely-light">600.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">55</td>
+                    <td class="bg-pink-extremely-light">19.300.000</td>
+                    <td class="bg-pink-extremely-light">18.700.000</td>
+                    <td class="bg-pink-extremely-light">600.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">56</td>
+                    <td class="bg-pink-extremely-light">18.400.000</td>
+                    <td class="bg-pink-extremely-light">17.800.000</td>
+                    <td class="bg-pink-extremely-light">600.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">57</td>
+                    <td class="bg-pink-extremely-light">17.500.000</td>
+                    <td class="bg-pink-extremely-light">17.000.000</td>
+                    <td class="bg-pink-extremely-light">500.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">58</td>
+                    <td class="bg-pink-extremely-light">16.700.000</td>
+                    <td class="bg-pink-extremely-light">16.200.000</td>
+                    <td class="bg-pink-extremely-light">500.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">59</td>
+                    <td class="bg-pink-extremely-light">16.200.000</td>
+                    <td class="bg-pink-extremely-light">15.700.000</td>
+                    <td class="bg-pink-extremely-light">500.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">60</td>
+                    <td class="bg-pink-extremely-light">15.500.000</td>
+                    <td class="bg-pink-extremely-light">15.000.000</td>
+                    <td class="bg-pink-extremely-light">500.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">61</td>
+                    <td class="bg-pink-extremely-light">14.900.000</td>
+                    <td class="bg-pink-extremely-light">14.500.000</td>
+                    <td class="bg-pink-extremely-light">400.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">62</td>
+                    <td class="bg-pink-extremely-light">14.300.000</td>
+                    <td class="bg-pink-extremely-light">13.900.000</td>
+                    <td class="bg-pink-extremely-light">400.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">63</td>
+                    <td class="bg-pink-extremely-light">13.800.000</td>
+                    <td class="bg-pink-extremely-light">13.400.000</td>
+                    <td class="bg-pink-extremely-light">400.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">64</td>
+                    <td class="bg-pink-extremely-light">13.100.000</td>
+                    <td class="bg-pink-extremely-light">12.800.000</td>
+                    <td class="bg-pink-extremely-light">300.000</td>
+                </tr>
+                <tr>
+                    <td class="bg-pink-light font-bold color-primary">65</td>
+                    <td class="bg-pink-extremely-light">12.500.000</td>
+                    <td class="bg-pink-extremely-light">12.200.000</td>
+                    <td class="bg-pink-extremely-light">300.000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
